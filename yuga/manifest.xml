@@ -1,0 +1,17 @@
+<manifest>
+    <remote name="github" fetch="http://github.com" revision="refs/heads/cm-14.1" />
+
+    <!--  sony specific  -->
+    <project path="device/sony/common" name="LineageOS/android_device_sony_common" revision="cm-14.1" remote="github" />
+    <project path="vendor/sony" name="TheMuppets/proprietary_vendor_sony" revision="cm-14.1" remote="github" />
+    <project path="hardware/sony/thermanager" name="LineageOS/android_hardware_sony_thermanager" revision="cm-14.1" remote="github" />
+    <project path="external/stlport" name="LineageOS/android_external_stlport" revision="cm-14.1" remote="github" />
+    <project path="external/elfutils" name="LineageOS/android_external_elfutils" groups="pdk" revision="cm-14.1" remote="github" />
+    <!-- qcom specific -->
+    <project path="device/qcom/common" name="LineageOS/android_device_qcom_common" revision="cm-14.1" remote="github" />
+    <project path="device/qcom/sepolicy" name="LineageOS/android_device_qcom_sepolicy" revision="cm-14.1" remote="github" />
+    <!--  yuga specific  -->
+    <project path="device/sony/yuga" name="LNJ2/android_device_sony_yuga" revision="halium-7.1" remote="github" />
+    <project path="kernel/sony/apq8064" name="LNJ2/android_kernel_sony_apq8064" revision="halium-7.1" remote="github" />
+    <project path="device/sony/fusion3-common" name="LineageOS/android_device_sony_fusion3-common" revision="cm-14.1" remote="github" />
+</manifest>

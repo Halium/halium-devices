@@ -1,0 +1,35 @@
+#!/bin/bash
+
+export DEVICE=$@
+JOBS=${JOBS:=12}
+
+if [ -z $DEVICE ]; then
+	echo "Please specify a device codename"
+	exit 0
+fi
+
+if [ -d $DEVICE ]; then
+	echo "*****************************************"
+	echo "Configuring for device $DEVICE"
+	echo "*****************************************"
+
+	if [ -f ../../.repo/local_manifests/device.xml ]; then
+		rm ../../.repo/local_manifests/device.xml
+	elif ! [ -d ../../.repo/local_manifests/ ]; then
+		mkdir ../../.repo/local_manifests/
+	fi
+
+	ln $DEVICE/manifest.xml ../../.repo/local_manifests/device.xml
+
+	repo sync --network-only -c -j$JOBS
+	repo sync --local-only -c -j$JOBS
+
+	source ../../build/envsetup.sh
+
+	breakfast $DEVICE
+
+	echo
+	echo "*******************************************************************************************"
+	echo "Run mka hybris-boot to buid the initrd, and then mka systemimage to build the android image"
+	echo "*******************************************************************************************"
+fi
