@@ -1,0 +1,7 @@
+<manifest>
+  <project path="device/qcom/common" name="android_device_qcom_common" remote="los" />
+  <project path="device/qcom/sepolicy" name="android_device_qcom_sepolicy" remote="los" />
+  <project path="device/fairphone/FP2" name="z3ntu/android_device_fairphone_fp2" remote="hal" />
+  <project path="kernel/fairphone/msm8974" name="z3ntu/android_kernel_fairphone_msm8974" remote="hal" />
+  <project path="vendor/fairphone/FP2" name="FairBlobs/proprietary_vendor_fairphone" remote="hal" />
+</manifest>
