@@ -1,0 +1,5 @@
+<manifest>
+    <project name="Halium/android_device_lge_hammerhead" path="device/lge/hammerhead" remote="hal" /> 
+    <project name="TheMuppets/proprietary_vendor_lge" path="vendor/lge" remote="hal" />
+    <project name="Halium/android_kernel_lge_hammerhead" path="kernel/lge/hammerhead" remote="hal" />
+</manifest>
