@@ -13,19 +13,26 @@ if [ -d $DEVICE ]; then
 	echo "Configuring for device $DEVICE"
 	echo "*****************************************"
 
-	if [ -f ../../.repo/local_manifests/device.xml ]; then
-		rm ../../.repo/local_manifests/device.xml
-	elif ! [ -d ../../.repo/local_manifests/ ]; then
-		mkdir ../../.repo/local_manifests/
+	export REPO_ROOT=../..
+
+	# Test if there is already a device configured and the folder exists
+	if [ -f $REPO_ROOT/.repo/local_manifests/device.xml ]; then
+		rm $REPO_ROOT/.repo/local_manifests/device.xml
+	elif ! [ -d $REPO_ROOT/.repo/local_manifests/ ]; then
+		mkdir $REPO_ROOT/.repo/local_manifests/
 	fi
 
-	ln $DEVICE/manifest.xml ../../.repo/local_manifests/device.xml
+	# Link the device manifest to the local_manifests folder
+	ln $DEVICE/manifest.xml $REPO_ROOT/.repo/local_manifests/device.xml
 
+	# Synchronize new new sources
 	repo sync --network-only -c -j$JOBS
 	repo sync --local-only -c -j$JOBS
 
-	source ../../build/envsetup.sh
+	# Set up build environment
+	source $REPO_ROOT/build/envsetup.sh
 
+	# Configure build environment for the specified device
 	breakfast $DEVICE
 
 	echo
