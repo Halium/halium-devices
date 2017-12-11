@@ -3,17 +3,18 @@
 export DEVICE=$@
 JOBS=${JOBS:=12}
 
+export DEVICES_ROOT="$(dirname "$(readlink -f "${0}")")"
+export REPO_ROOT=$DEVICES_ROOT"/../.."
+
 if [ -z $DEVICE ]; then
 	echo "Please specify a device codename"
 	exit 0
 fi
 
-if [ -d $DEVICE ]; then
+if [ -d $DEVICES_ROOT/$DEVICE ]; then
 	echo "*****************************************"
 	echo "I: Configuring for device $DEVICE"
 	echo "*****************************************"
-
-	export REPO_ROOT=../..
 
 	# Test if there is already a device configured and the folder exists
 	if [ -f $REPO_ROOT/.repo/local_manifests/device.xml ]; then
@@ -23,7 +24,7 @@ if [ -d $DEVICE ]; then
 	fi
 
 	# Link the device manifest to the local_manifests folder
-	ln $DEVICE/manifest.xml $REPO_ROOT/.repo/local_manifests/device.xml
+	ln $DEVICES_ROOT/$DEVICE/manifest.xml $REPO_ROOT/.repo/local_manifests/device.xml
 
 	# Synchronize new new sources
 	repo sync --network-only -c -j$JOBS
