@@ -4,8 +4,8 @@ This repository is supposed to be placed in $REPO_ROOT/halium/devices
 
 Invoke the script using
 
-`. ./setup.sh <device codename>`
+`. ./setup <device codename>`
 
 You can set the number of jobs for repo to use by adding
 
-`JOBS=<number> . ./setup.sh <device codename>`
+`JOBS=<number> . ./setup <device codename>`
