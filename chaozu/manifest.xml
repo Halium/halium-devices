@@ -1,8 +1,8 @@
 <manifest>
     <remote name="github" fetch="http://github.com" revision="refs/heads/cm-14.1" />
 
-    <project path="kernel/bq/msm8937" name="JBBgameich/android_kernel_bq_msm8937" revision="halium-7.1" remote="github" />
-    <project path="device/bq/chaozu" name="JBBgameich/android_device_bq_chaozu" revision="cm-14.1" remote="github" />
+    <project path="kernel/bq/msm8937" name="JBBgameich/android_kernel_bq_msm8937" revision="halium-7.1-bq" remote="github" />
+    <project path="device/bq/chaozu" name="JBBgameich/android_device_bq_chaozu" revision="halium-7.1" remote="github" />
     <project path="vendor/bq" name="JBBgameich/proprietary_vendor_bq" revision="halium-7.1" remote="github" />
     
     <!-- dependencies -->
