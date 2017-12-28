@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+	<project path="device/lge/mako" name="android_device_lge_mako" remote="110101011" />
+	<project path="kernel/lge/mako" name="lge-kernel-mako" remote="110101011" />
+	<project path="external/stlport" name="android_external_stlport" remote="110101011" />
+	
+	<project path="vendor/lge" name="proprietary_vendor_lge" remote="110101011" />
+</manifest>
