@@ -1,11 +1,18 @@
-This script can automatically configure your Halium tree for building for the specified device.
+# halium-devices
 
-This repository is supposed to be placed in $REPO_ROOT/halium/devices
+This is a collection of local manifests for halium supported devices, it also
+has a script, that can automatically configure your Halium tree for building for
+a certain device.
 
-Invoke the script using
+It is recommended to clone this repository into `$REPO_ROOT/halium/devices`.
 
-`. ./setup <device codename>`
+### Usage
 
-You can set the number of jobs for repo to use by adding
+* `. ./setup <device codename>`
 
-`JOBS=<number> . ./setup <device codename>`
+You can set the number of parallel repo jobs by adding:
+* `JOBS=<repo jobs> . ./setup <device codename>`
+
+Alternatively you can also pass the device codename by environment variable:
+* `DEVICE=<device codename> . ./setup`
+
