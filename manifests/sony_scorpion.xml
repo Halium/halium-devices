@@ -2,7 +2,7 @@
 <manifest>
 	<project path="device/sony/scorpion" name="LNJ2/android_device_sony_scorpion" remote="hal" />
 	<project path="device/sony/scorpion_windy" name="LNJ2/android_device_sony_scorpion_windy" remote="hal" />
-	<project path="kernel/sony/msm8974" name="android_kernel_sony_msm8974" remote="los" />
+	<project path="kernel/sony/msm8974" name="LNJ2/android_kernel_sony_msm8974" remote="hal" />
 	<project path="device/sony/shinano-common" name="android_device_sony_shinano-common" remote="los" />
 	<project path="device/sony/msm8974-common" name="android_device_sony_msm8974-common" remote="los" />
 	<project path="device/sony/common" name="android_device_sony_common" remote="los" />
