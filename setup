@@ -27,8 +27,8 @@ if [ -f $DEVICES_ROOT/manifests/*$DEVICE.xml ]; then
 	ln $DEVICES_ROOT/manifests/*$DEVICE.xml $REPO_ROOT/.repo/local_manifests/device.xml
 
 	# Synchronize new new sources
-	repo sync --network-only -c -j$JOBS
-	repo sync --local-only -c -j$JOBS
+	repo sync --network-only -c -j$JOBS -q
+	repo sync --local-only -c -j$JOBS -q
 
 	# Set up build environment
 	source $REPO_ROOT/build/envsetup.sh
