@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+	<project path="device/sony/castor" name="LNJ2/android_device_sony_castor" remote="hal" />
+	<project path="device/sony/castor_windy" name="android_device_sony_castor_windy" remote="los" />
+	<project path="kernel/sony/msm8974" name="LNJ2/android_kernel_sony_msm8974" remote="hal" />
+	<project path="device/sony/shinano-common" name="android_device_sony_shinano-common" remote="los" />
+	<project path="device/sony/msm8974-common" name="android_device_sony_msm8974-common" remote="los" />
+	<project path="device/sony/common" name="android_device_sony_common" remote="los" />
+
+	<project path="vendor/sony" name="proprietary_vendor_sony" revision="cm-13.0" remote="them" />
+
+	<project path="device/qcom/common" name="android_device_qcom_common" remote="los" />
+	<project path="device/qcom/sepolicy" name="android_device_qcom_sepolicy" remote="los" />
+
+	<project path="hardware/sony/thermanager" name="android_hardware_sony_thermanager" remote="los" />
+	<project path="hardware/sony/macaddrsetup" name="android_hardware_sony_macaddrsetup" remote="los" />
+
+	<project path="external/elfutils" name="android_external_elfutils" remote="los" />
+	<project path="external/stlport" name="android_external_stlport" remote="los" />
+	<project path="external/ant-wireless/antradio-library" name="android_external_ant-wireless_antradio-library" remote="los" />
+</manifest>
