@@ -1,0 +1,5 @@
+<manifest>
+    <project path="device/lge/bullhead" name="Halium/android_device_lge_bullhead" remote="hal" />
+    <project path="kernel/lge/bullhead" name="Halium/android_kernel_lge_bullhead" remote="hal" />
+    <project path="vendor/lge" name="proprietary_vendor_lge" remote="them" />
+</manifest> 
