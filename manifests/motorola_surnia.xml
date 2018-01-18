@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
-  <project path="device/motorola/harpia" name="android_device_motorola_harpia" remote="los" />
+  <project path="device/motorola/surnia" name="android_device_motorola_surnia" remote="los" />
   <project path="device/motorola/msm8916-common" name="LNJ2/android_device_motorola_msm8916-common" remote="hal" />
   <project path="device/motorola/qcom-common" name="android_device_motorola_qcom-common" remote="los" />
   <project path="device/qcom/common" name="android_device_qcom_common" remote="los" />
