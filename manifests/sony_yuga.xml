@@ -4,7 +4,7 @@
 	<project path="vendor/sony" name="proprietary_vendor_sony" revision="cm-14.1" remote="them" />
 
 	<project path="device/sony/common" name="android_device_sony_common" revision="cm-14.1" remote="los" />
-	<project path="device/sony/fusion3-common" name="android_device_sony_fusion3-common" revision="cm-14.1" remote="los" />
+	<project path="device/sony/fusion3-common" name="android_device_sony_fusion3-common" remote="los" />
 	<project path="device/qcom/common" name="android_device_qcom_common" revision="cm-14.1" remote="los" />
 	<project path="device/qcom/sepolicy" name="android_device_qcom_sepolicy" revision="cm-14.1" remote="los" />
 	<project path="external/stlport" name="android_external_stlport" revision="cm-14.1" remote="los" />
