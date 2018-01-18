@@ -11,7 +11,7 @@ if [ -z $DEVICE ]; then
 	exit 0
 fi
 
-if [ -f $DEVICES_ROOT/manifests/*$DEVICE.xml ]; then
+if [ -f $DEVICES_ROOT/manifests/*_$DEVICE.xml ]; then
 	echo "*****************************************"
 	echo "Configuring for device $DEVICE"
 	echo "*****************************************"
@@ -24,7 +24,7 @@ if [ -f $DEVICES_ROOT/manifests/*$DEVICE.xml ]; then
 	fi
 
 	# Link the device manifest to the local_manifests folder
-	ln $DEVICES_ROOT/manifests/*$DEVICE.xml $REPO_ROOT/.repo/local_manifests/device.xml
+	ln $DEVICES_ROOT/manifests/*_$DEVICE.xml $REPO_ROOT/.repo/local_manifests/device.xml
 
 	# Synchronize new new sources
 	repo sync --network-only -c -j$JOBS -q
