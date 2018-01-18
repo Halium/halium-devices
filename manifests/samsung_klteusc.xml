@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+  <project path="device/samsung/klteusc" name="android_device_samsung_klteusc" remote="los" />
+  <project path="device/samsung/klte-common" name="android_device_samsung_klte-common" remote="los" />
+  <project path="device/samsung/msm8974-common" name="android_device_samsung_msm8974-common" remote="los" />
+  <project path="device/samsung/qcom-common" name="LNJ2/android_device_samsung_qcom-common" remote="hal" />
+  <project path="device/qcom/common" name="android_device_qcom_common" remote="los" />
+  <project path="device/qcom/sepolicy" name="android_device_qcom_sepolicy" remote="los" />
+  <project path="kernel/samsung/msm8974" name="LNJ2/android_kernel_samsung_msm8974" remote="hal" />
+  <project path="hardware/samsung" name="LNJ2/android_hardware_samsung" remote="hal" />
+  <project path="vendor/samsung" name="proprietary_vendor_samsung" remote="them" />
+  <project path="external/stlport" name="android_external_stlport" remote="los" />
+</manifest>
