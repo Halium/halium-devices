@@ -11,7 +11,9 @@ if [ -z $DEVICE ]; then
 	exit 0
 fi
 
-if [ -f $DEVICES_ROOT/manifests/*_$DEVICE.xml ]; then
+if ! [ -f $DEVICES_ROOT/manifests/*_$DEVICE.xml ]; then
+	echo "The given device is not supported. :("
+else
 	echo "*****************************************"
 	echo "Configuring for device $DEVICE"
 	echo "*****************************************"
