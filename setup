@@ -31,15 +31,4 @@ else
 	# Synchronize new new sources
 	repo sync --network-only -c -j$JOBS -q
 	repo sync --local-only -c -j$JOBS -q
-
-	# Set up build environment
-	source $REPO_ROOT/build/envsetup.sh
-
-	# Configure build environment for the specified device
-	breakfast $DEVICE
-
-	echo
-	echo "*******************************************************************************************"
-	echo "Run mka hybris-boot to buid the initrd, and then mka systemimage to build the android image"
-	echo "*******************************************************************************************"
 fi
