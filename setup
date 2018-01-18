@@ -31,11 +31,4 @@ else
 	# Synchronize new new sources
 	repo sync --network-only -c -j$JOBS -q
 	repo sync --local-only -c -j$JOBS -q
-
-	# Set up build environment
-	source $REPO_ROOT/build/envsetup.sh
-
-	# Configure build environment for the specified device
-	breakfast $DEVICE
-	lunch lineage_${DEVICE}-userdebug
 fi
