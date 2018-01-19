@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
-	<remote name="z2-dev" fetch="https://github.com/z2-dev" revision="cm-14.1" />
 	<remote name="S-8506" fetch="https://github.com/S-8506" revision="cm-14.1" />
 
-	<project path="device/zuk/z2_plus" name="android_device_zuk_z2_plus" remote="z2-dev" />
+	<project path="device/zuk/z2_plus" name="android_device_zuk_z2_plus" remote="S-8506" />
 	<project path="device/zuk/msm8996-common" name="android_device_zuk_msm8996-common" remote="S-8506" />
 	<project path="device/qcom/sepolicy" name="android_device_qcom_sepolicy" remote="S-8506" />
-	<project path="vendor/zuk" name="proprietary_vendor_zuk" remote="z2-dev" />
-	<project path="kernel/zuk/z2_plus" name="android_kernel_zuk_msm8996" remote="z2-dev" />	
+	<project path="vendor/zuk" name="proprietary_vendor_zuk" remote="S-8506" />
+	<project path="kernel/zuk/z2_plus" name="android_kernel_zuk_msm8996" remote="S-8506" />	
 	<project path="vendor/qcom/opensource/cryptfs_hw" name="android_vendor_qcom_opensource_cryptfs_hw" remote="los" />	
 </manifest>
