@@ -1,14 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
-	<project path="device/wingtech/wt88047" name="android_device_wingtech_wt88047" revision="cm-14.1" remote="los" />
-	
-	<project path="device/cyanogen/msm8916-common" name="android_device_cyanogen_msm8916-common" revision="cm-14.1" remote="los" />
-	<project path="kernel/wingtech/msm8916" name="android_kernel_wingtech_msm8916" revision="cm-14.1" remote="los" />
-	<project path="external/stlport" name="android_external_stlport" revision="cm-14.1" remote="los" />
-	<project name="android_device_qcom_sepolicy" path="device/qcom/sepolicy" revision="cm-14.1" remote="los" />
-	<project name="android_device_qcom_common" path="device/qcom/common" revision="cm-14.1" remote="los" />
-	
+        <project path="device/wingtech/wt88047" name="android_device_wingtech_wt88047" remote="los" />
 
-	<project path="vendor/wingtech" name="proprietary_vendor_wingtech" revision="cm-14.1" remote="them" />
-
+        <project path="device/cyanogen/msm8916-common" name="android_device_cyanogen_msm8916-common" remote="los" />
+        <project path="kernel/wingtech/msm8916" name="android_kernel_wingtech_msm8916" remote="los" />
+        <project path="external/stlport" name="android_external_stlport" remote="los" />
+        <project name="android_device_qcom_sepolicy" path="device/qcom/sepolicy" remote="los" />
+        <project name="android_device_qcom_common" path="device/qcom/common" remote="los" />
+        <project path="vendor/wingtech" name="proprietary_vendor_wingtech" remote="them" />
 </manifest>
