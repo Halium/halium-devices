@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+
+<remote name="lyo"
+    fetch="https://github.com/Lyokanthrope"
+    revision="cm-14.1" />
+
+<project path="device/moto/shamu" name="android_device_moto_shamu" remote="lyo" revision="cm-14.1" />
+<project path="kernel/moto/shamu" name="android_kernel_moto_shamu" remote="lyo" revision="cm-14.1" />
+<project path="vendor/moto" name="proprietary_vendor_motorola" remote="them" revision="cm-14.1" />
+<project path="halium/ubports-boot" name="ubports/ubports-boot" remote="hal" revision="master" />
+
+</manifest>
