@@ -1,7 +1,7 @@
 <manifest>
-    <remote name="jonnius"
-        fetch="https://github.com/jonnius"
-        revision="halium-7.1" />
+	<remote name="jonnius"
+		fetch="https://github.com/jonnius"
+		revision="halium-7.1" />
 
 	<project path="device/sony/taoshan" name="android_device_sony_taoshan" remote="jonnius" />
 	<project path="kernel/sony/msm8930" name="android_kernel_sony_msm8930" remote="jonnius" />
