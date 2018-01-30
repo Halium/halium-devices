@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+<project path="device/samsung/herolte" name="android_device_samsung_herolte" remote="los" />
+<project path="device/samsung/hero-common" name="android_device_samsung_hero-common" remote="los" />
+<project path="hardware/samsung" name="LNJ2/android_hardware_samsung" remote="hal" />
+<project path="hardware/samsung_slsi-cm/exynos" name="android_hardware_samsung_slsi-cm_exynos" remote="los" />
+<project path="hardware/samsung_slsi-cm/exynos5" name="android_hardware_samsung_slsi-cm_exynos5" remote="los" />
+<project path="hardware/samsung_slsi-cm/exynos8890" name="android_hardware_samsung_slsi-cm_exynos8890" remote="los" />
+<project path="hardware/samsung_slsi-cm/openmax" name="android_hardware_samsung_slsi-cm_openmax" remote="los" />
+<project path="kernel/samsung/universal8890" name="ZeroPointEnergy/android_kernel_samsung_universal8890" remote="hal" />
+<project path="vendor/samsung" name="proprietary_vendor_samsung" remote="them"/>
+</manifest>
