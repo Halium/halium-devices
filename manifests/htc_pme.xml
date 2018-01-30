@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
 
-  <project name="proprietary_vendor_htc" path="vendor/htc" revision="cm-14.1" remote="them" />
-  <project name="Halium/android_device_htc_pme" path="device/htc/pme" revision="halium-7.1" remote="hal" />
-  <project name="Halium/android_kernel_htc_msm8996" path="kernel/htc/msm8996" revision="halium-7.1" remote="hal" />
+  <project name="proprietary_vendor_htc" path="vendor/htc" remote="them" />
+  <project name="Halium/android_device_htc_pme" path="device/htc/pme" remote="hal" />
+  <project name="Halium/android_kernel_htc_msm8996" path="kernel/htc/msm8996" remote="hal" />
 
-  <project name="android_device_qcom_common" path="device/qcom/common" revision="cm-14.1" remote="los" />
-  <project name="android_device_qcom_sepolicy" path="device/qcom/sepolicy" revision="cm-14.1" remote="los" />
-  <project name="android_vendor_qcom_opensource_cryptfs_hw" path="vendor/qcom/opensource/cryptfs_hw/" revision="cm-14.1" remote="los" />
+  <project name="android_device_qcom_common" path="device/qcom/common" remote="los" />
+  <project name="android_device_qcom_sepolicy" path="device/qcom/sepolicy" remote="los" />
+  <project name="android_vendor_qcom_opensource_cryptfs_hw" path="vendor/qcom/opensource/cryptfs_hw" remote="los" />
 </manifest>
