@@ -1,6 +1,4 @@
 <manifest>
-    <remote name="github" fetch="http://github.com" revision="refs/heads/cm-14.1" />
-
     <project path="kernel/bq/msm8937" name="android_kernel_bq_msm8937" remote="los" />
     <project path="device/bq/tenshi" name="android_device_bq_tenshi" remote="los" />
     <project path="vendor/bq" name="proprietary_vendor_bq" remote="them" />
