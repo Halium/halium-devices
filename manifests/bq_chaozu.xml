@@ -1,16 +1,14 @@
 <manifest>
-    <remote name="github" fetch="http://github.com" revision="refs/heads/cm-14.1" />
-
-    <project path="kernel/bq/msm8937" name="JBBgameich/android_kernel_bq_msm8937" revision="halium-7.1-bq" remote="github" />
-    <project path="device/bq/chaozu" name="JBBgameich/android_device_bq_chaozu" revision="halium-7.1" remote="github" />
-    <project path="vendor/bq" name="JBBgameich/proprietary_vendor_bq" revision="halium-7.1" remote="github" />
+    <project path="kernel/bq/msm8937" name="JBBgameich/android_kernel_bq_msm8937" remote="hal" />
+    <project path="device/bq/chaozu" name="JBBgameich/android_device_bq_chaozu" remote="hal" />
+    <project path="vendor/bq" name="JBBgameich/proprietary_vendor_bq" remote="hal" />
     
     <!-- dependencies -->
-    <project path="device/qcom/common" name="lineageos/android_device_qcom_common" groups="pdk" remote="github" />
-    <project path="external/stlport" name="lineageos/android_external_stlport" groups="pdk" remote="github" />
-    <project path="external/bson" name="lineageos/android_external_bson" groups="pdk" remote="github" />
+    <project path="device/qcom/common" name="android_device_qcom_common" groups="pdk" remote="los" />
+    <project path="external/stlport" name="android_external_stlport" groups="pdk" remote="los" />
+    <project path="external/bson" name="android_external_bson" groups="pdk" remote="los" />
     
     <!-- fixes -->
     <remove-project path="hardware/qcom/audio-caf/msm8937" name="android_hardware_qcom_audio" />
-    <project path="hardware/qcom/audio-caf/msm8937" name="LNJ2/android_hardware_qcom_audio" groups="qcom,qcom_audio" revision="cm-14.1-caf-8937" remote="github" />
+    <project path="hardware/qcom/audio-caf/msm8937" name="LNJ2/android_hardware_qcom_audio" groups="qcom,qcom_audio" revision="halium-7.1-caf-8937" remote="hal" />
 </manifest> 
