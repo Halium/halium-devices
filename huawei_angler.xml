@@ -1,0 +1,5 @@
+<manifest>
+    <project path="device/huawei/angler" name="android_device_huawei_angler" remote="los" revision="cm-14.1" />
+    <project path="kernel/huawei/angler" name="android_kernel_huawei_angler" remote="los" />
+    <project path="vendor/huawei" name="proprietary_vendor_huawei" remote="them" />
+</manifest>
