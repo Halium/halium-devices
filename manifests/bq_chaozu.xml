@@ -1,5 +1,5 @@
 <manifest>
-    <project path="kernel/bq/msm8937" name="JBBgameich/android_kernel_bq_msm8937" remote="hal" />
+    <project path="kernel/bq/msm8937" name="JBBgameich/android_kernel_bq_msm8937" remote="hal" revision="halium-7.1-bq" />
     <project path="device/bq/chaozu" name="JBBgameich/android_device_bq_chaozu" remote="hal" />
     <project path="vendor/bq" name="JBBgameich/proprietary_vendor_bq" remote="hal" />
     
@@ -7,7 +7,8 @@
     <project path="device/qcom/common" name="android_device_qcom_common" groups="pdk" remote="los" />
     <project path="external/stlport" name="android_external_stlport" groups="pdk" remote="los" />
     <project path="external/bson" name="android_external_bson" groups="pdk" remote="los" />
-    
+    <project path="device/qcom/sepolicy" name="android_device_qcom_sepolicy" remote="los" />
+
     <!-- fixes -->
     <remove-project path="hardware/qcom/audio-caf/msm8937" name="android_hardware_qcom_audio" />
     <project path="hardware/qcom/audio-caf/msm8937" name="LNJ2/android_hardware_qcom_audio" groups="qcom,qcom_audio" revision="halium-7.1-caf-8937" remote="hal" />
