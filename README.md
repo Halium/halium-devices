@@ -4,7 +4,7 @@ This is a collection of local manifests for halium supported devices, it also
 has a script, that will automatically configure repo to use a specific device
 manifest and check it out.
 
-It is recommended to clone this repository into `$REPO_ROOT/halium/devices`.
+This repository is located at `$REPO_ROOT/halium/devices`.
 
 ### Usage
 
