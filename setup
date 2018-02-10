@@ -31,4 +31,14 @@ else
 	# Synchronize new new sources
 	repo sync --network-only -c -j$JOBS -q
 	repo sync --local-only -c -j$JOBS -q
+
+	# Refresh the vendor repository so apks and jars are not copied
+	# For this to work, all apks and jars need to be removed from device/$vendor/$codename/proprietary-files.txt
+
+	DEVICE_TREE=$REPO_ROOT/device/*/$DEVICE
+
+	if [ -f $DEVICE_TREE/setup-makefiles.sh ]; then
+		echo "I: Refreshing vendor repository"
+		(cd $DEVICE_TREE; ./setup-makefiles.sh)
+	fi
 fi
