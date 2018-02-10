@@ -35,11 +35,10 @@ else
 	# Refresh the vendor repository so apks and jars are not copied
 	# For this to work, all apks and jars need to be removed from device/$vendor/$codename/proprietary-files.txt
 
-	SETUP_MAKEFILES=$REPO_ROOT/device/*/$DEVICE/setup-makefiles.sh
+	DEVICE_TREE=$REPO_ROOT/device/*/$DEVICE
 
-	if [ -f $SETUP_MAKEFILES ]; then
+	if [ -f $DEVICE_TREE/setup-makefiles.sh ]; then
 		echo "I: Refreshing vendor repository"
-		chmod +x $SETUP_MAKEFILES
-		$SETUP_MAKEFILES
+		(cd $DEVICE_TREE; ./setup-makefiles.sh)
 	fi
 fi
