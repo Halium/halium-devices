@@ -1,7 +1,7 @@
 <manifest>
     <project path="kernel/bq/msm8937" name="Halium/android_kernel_bq_msm8937" remote="hal" revision="halium-7.1-chaozu" />
     <project path="device/bq/chaozu" name="JBBgameich/android_device_bq_chaozu" remote="hal" />
-    <project path="vendor/bq" name="JBBgameich/proprietary_vendor_bq" remote="hal" />
+    <project path="vendor/bq" name="JBBgameich/proprietary_vendor_bq" revision="cm-14.1" remote="hal" />
     
     <!-- dependencies -->
     <project path="device/qcom/common" name="android_device_qcom_common" groups="pdk" remote="los" />
