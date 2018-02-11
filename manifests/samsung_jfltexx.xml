@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
-    <project path="device/samsung/jfltexx" name="android_device_samsung_jfltexx" remote="los" revision="cm-14.1" />
-    <project path="device/samsung/jf-common" name="android_device_samsung_jf-common" remote="los" revision="cm-14.1" />
-    <project path="device/samsung/msm8960-common" name="android_device_samsung_msm8960-common" remote="los" revision="cm-14.1" />
+    <project path="device/samsung/jfltexx" name="android_device_samsung_jfltexx" remote="los" />
+    <project path="device/samsung/jf-common" name="android_device_samsung_jf-common" remote="los" />
+    <project path="device/samsung/msm8960-common" name="android_device_samsung_msm8960-common" remote="los" />
     <project path="device/samsung/qcom-common" name="Halium/android_device_samsung_qcom-common" remote="hal" />
-    <project path="hardware/samsung" name="android_hardware_samsung" remote="los" revision="cm-14.1" />
-    <project path="kernel/samsung/jf" name="android_kernel_samsung_jf" remote="los" revision="cm-14.1" />
-    <project path="vendor/samsung" name="proprietary_vendor_samsung" remote="them" revision="cm-14.1" />
-    <project name="android_device_qcom_sepolicy" path="device/qcom/sepolicy" remote="los" revision="cm-14.1" />
+    <project path="hardware/samsung" name="android_hardware_samsung" remote="los" />
+    <project path="kernel/samsung/jf" name="android_kernel_samsung_jf" remote="los" />
+    <project path="vendor/samsung" name="proprietary_vendor_samsung" remote="them" />
+    <project name="android_device_qcom_sepolicy" path="device/qcom/sepolicy" remote="los" />
 </manifest>
