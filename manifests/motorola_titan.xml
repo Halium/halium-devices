@@ -2,18 +2,12 @@
 <manifest>
 	<remote name="wh"
             fetch="https://github.com/walidham"
-            revision="master" />
+            revision="halium-5.1" />
 
-	<project path="device/motorola/titan" name="android_device_motorola_titan" remote="wh" revision="halium-5.1" />
-	
-  <project path="device/motorola/msm8226-common" name="android_device_motorola_msm8226-common" remote="wh" revision="halium-5.1" />
-
+	<project path="device/motorola/titan" name="android_device_motorola_titan" remote="wh" />
+	<project path="device/motorola/msm8226-common" name="android_device_motorola_msm8226-common" remote="wh" />
 	<project path="kernel/motorola/msm8226" name="android_kernel_motorola_msm8226" revision="halium-5.1-stable" remote="wh" />
-
-	<project path="device/motorola/qcom/common" name="android_device_qcom_common" remote="cm" revision="cm-12.1" />
-
-	<project path="device/motorola/qcom/sepolicy" name="android_device_qcom_sepolicy" remote="cm" revision="cm-12.1" />
-
-	<project path="vendor/motorola" name="proprietary_vendor_motorola" remote="them" revision="cm-12.1" />
-
+	<project path="device/motorola/qcom/common" name="android_device_qcom_common" remote="cm" />
+	<project path="device/motorola/qcom/sepolicy" name="android_device_qcom_sepolicy" remote="cm" />
+	<project path="vendor/motorola" name="proprietary_vendor_motorola" remote="them" />
 </manifest>
