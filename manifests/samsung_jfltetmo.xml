@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+    <remote name="github" fetch="https://github.com/Qiangong2/" />
+    <project path="device/samsung/jfltetmo" name="halium_device_samsung_jfltetmo" remote="github" revision="halium" />
+    <project path="kernel/samsung/jf" name="halium_kernel_samsung_jf" remote="github" revision="halium" />
+    <project path="device/samsung/jf-common" name="halium_device_samsung_jf-common" remote="github" revision="halium" />
+    <project path="device/qcom/common" name="halium_device_qcom_common" remote="github" revision="halium" />
+    <project path="external/stlport" name="halium_external_stlport" remote="github" revision="halium" />
+    <project path="device/samsung/qcom-common" name="halium_device_samsung_qcom-common" remote="github" revision="halium" />
+    <project path="hardware/samsung" name="halium_hardware_samsung" remote="github" revision="halium" />
+    <project path="vendor/samsung" name="proprietary_vendor_samsung" remote="github" revision="halium" />
+    <project path="packages/resources/devicesettings" name="halium_packages_resources_devicesettings" remote="github" revision="halium" />
+</manifest>
