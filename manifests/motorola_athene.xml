@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
-  <project path="device/motorola/athene" name="android_device_motorola_athene" remote="los" />
+  <project path="device/motorola/athene" name="chillaranand/android_device_motorola_athene" remote="hal" />
   <project path="device/motorola/qcom-common" name="android_device_motorola_qcom-common" remote="los" />
   <project path="device/qcom/common" name="android_device_qcom_common" remote="los" />
   <project path="device/qcom/sepolicy" name="android_device_qcom_sepolicy" remote="los" />
