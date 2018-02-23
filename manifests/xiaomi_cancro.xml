@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+
+  <remote name="github" fetch="http://github.com" revision="refs/heads/cm-14.1" />
+  <remote name="los" fetch="https://github.com/LineageOS" revision="refs/heads/cm-14.1" />
+  
+	<project path="device/xiaomi/cancro" name="lineageos/android_device_xiaomi_cancro" remote="github" />
+	<project path="kernel/xiaomi/cancro" name="lineageos/android_kernel_xiaomi_cancro" remote="github"/>
+	<project path="device/qcom/common" name="lineageos/android_device_qcom_common" remote="github"/>
+  <project path="device/qcom/sepolicy" name="lineageos/android_device_qcom_sepolicy" remote="github"/>
+  
+</manifest>
