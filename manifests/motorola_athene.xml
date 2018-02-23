@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
-  <remote name="github" fetch="ssh://git@github.com/" />
   <project path="device/motorola/athene" name="android_device_motorola_athene" remote="los" />
   <project path="device/motorola/qcom-common" name="android_device_motorola_qcom-common" remote="los" />
   <project path="device/qcom/common" name="android_device_qcom_common" remote="los" />
