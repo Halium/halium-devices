@@ -8,7 +8,7 @@
     <project path="kernel/samsung/jf" name="android_kernel_samsung_jf" remote="Qiangong2" />
     <project path="device/samsung/jf-common" name="android_device_samsung_jf-common" remote="Qiangong2" />
     <project path="device/qcom/common" name="android_device_qcom_common" remote="lineageos" />
-    <project path="external/stlport" name="android_external_stlport" remote="Qiangong2" revision="halium" />
+    <project path="external/stlport" name="android_external_stlport" remote="lineageos" />
     <project path="device/samsung/qcom-common" name="android_device_samsung_qcom-common" remote="lineageos" />
     <project path="hardware/samsung" name="android_hardware_samsung" remote="lineageos" />
     <project path="vendor/samsung" name="proprietary_vendor_samsung" remote="TheMuppets" revision="cm-14.1" />
