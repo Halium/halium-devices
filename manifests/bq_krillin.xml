@@ -6,8 +6,6 @@
     <project path="kernel/bq/krillin" name="halium-krillin/android_kernel_bq_krillin" remote="hal"/>
     <project path="vendor/bq/krillin" name="Pablito2020/android_vendor_bq_krillin" remote="github"/>
 
-<!--     Dependencies -->
-    <project path="external/stlport" name="android_external_stlport" remote="los"/>
     <project path="device/common" name="lineageos/android_device_common" revision="refs/heads/staging/cm-14.0" remote="github"/>
     <project path="external/curl" name="platform/external/curl" groups="pdk" remote="aosp" />
 </manifest>

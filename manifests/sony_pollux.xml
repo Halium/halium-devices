@@ -6,9 +6,6 @@
 
 	<project path="device/sony/common" name="android_device_sony_common" revision="cm-14.1" remote="los" />
 	<project path="device/sony/fusion3-common" name="Halium/android_device_sony_fusion3-common" remote="hal" />
-	<project path="device/qcom/common" name="android_device_qcom_common" revision="cm-14.1" remote="los" />
-	<project path="device/qcom/sepolicy" name="android_device_qcom_sepolicy" revision="cm-14.1" remote="los" />
-	<project path="external/stlport" name="android_external_stlport" revision="cm-14.1" remote="los" />
 	<project path="external/elfutils" name="android_external_elfutils" groups="pdk" revision="cm-14.1" remote="los" />
 	<project path="hardware/sony/thermanager" name="android_hardware_sony_thermanager" revision="cm-14.1" remote="los" />
 </manifest>

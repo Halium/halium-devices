@@ -5,8 +5,6 @@
     <project path="device/samsung/jfltetmo" name="android_device_samsung_jfltetmo" remote="Qiangong2" />
     <project path="kernel/samsung/jf" name="android_kernel_samsung_jf" remote="Qiangong2" />
     <project path="device/samsung/jf-common" name="android_device_samsung_jf-common" remote="Qiangong2" />
-    <project path="device/qcom/common" name="android_device_qcom_common" remote="los" />
-    <project path="external/stlport" name="android_external_stlport" remote="los" />
     <project path="device/samsung/qcom-common" name="android_device_samsung_qcom-common" remote="los" />
     <project path="hardware/samsung" name="android_hardware_samsung" remote="los" />
     <project path="vendor/samsung" name="proprietary_vendor_samsung" remote="them" />
