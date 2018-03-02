@@ -4,10 +4,7 @@
   <project path="device/samsung/hlte-common" name="LNJ2/android_device_samsung_hlte-common" remote="hal" />
   <project path="device/samsung/msm8974-common" name="android_device_samsung_msm8974-common" remote="los" />
   <project path="device/samsung/qcom-common" name="Halium/android_device_samsung_qcom-common" remote="hal" />
-  <project path="device/qcom/common" name="android_device_qcom_common" remote="los" />
-  <project path="device/qcom/sepolicy" name="android_device_qcom_sepolicy" remote="los" />
   <project path="kernel/samsung/msm8974" name="LNJ2/android_kernel_samsung_msm8974" remote="hal" />
   <project path="hardware/samsung" name="Halium/android_hardware_samsung" remote="hal" />
   <project path="vendor/samsung" name="proprietary_vendor_samsung" remote="them" />
-  <project path="external/stlport" name="android_external_stlport" remote="los" />
 </manifest>

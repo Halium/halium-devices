@@ -4,8 +4,5 @@
 
         <project path="device/cyanogen/msm8916-common" name="android_device_cyanogen_msm8916-common" remote="hal" />
         <project path="kernel/wingtech/msm8916" name="android_kernel_wingtech_msm8916" remote="hal" />
-        <project path="external/stlport" name="android_external_stlport" remote="los" />
-        <project name="android_device_qcom_sepolicy" path="device/qcom/sepolicy" remote="los" />
-        <project name="android_device_qcom_common" path="device/qcom/common" remote="los" />
         <project path="vendor/wingtech" name="proprietary_vendor_wingtech" remote="them" />
 </manifest>
