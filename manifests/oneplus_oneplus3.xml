@@ -5,6 +5,4 @@
   <project path="kernel/oneplus/msm8996" name="Halium/android_kernel_oneplus_msm8996" remote="hal" />
   
   <project path="device/oppo/common" name="android_device_oppo_common" remote="los" />
-  <project path="device/qcom/sepolicy" name="android_device_qcom_sepolicy" remote="los" />
-  <project path="vendor/qcom/opensource/cryptfs_hw" name="android_vendor_qcom_opensource_cryptfs_hw" remote="los" />
 </manifest>
