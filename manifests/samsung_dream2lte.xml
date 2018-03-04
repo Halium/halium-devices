@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
-    
   <project path="device/samsung/dream2lte" name="universal8895/android_device_samsung_dream2lte" remote="hal" revision="cm-14.1" />
   <project path="device/samsung/universal8895-common" name="vanyasem/android_device_samsung_universal8895-common" remote="hal" />
   <project path="hardware/samsung" name="vanyasem/android_hardware_samsung" remote="hal" />
