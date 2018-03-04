@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+  <remote name="universal8895" fetch="https://github.com/universal8895" revision="cm-14.1" />
+
+  <project path="device/samsung/dream2lte" name="android_device_samsung_dream2lte" remote="universal8895" />
+  <project path="device/samsung/universal8895-common" name="vanyasem/android_device_samsung_universal8895-common" remote="hal" />
+  <project path="hardware/samsung" name="vanyasem/android_hardware_samsung" remote="hal" />
+  <project path="hardware/samsung_slsi-cm/exynos" name="android_hardware_samsung_slsi-cm_exynos" remote="universal8895" />
+  <project path="hardware/samsung_slsi-cm/exynos5" name="android_hardware_samsung_slsi-cm_exynos5" remote="universal8895" />
+  <project path="hardware/samsung_slsi-cm/exynos8895" name="android_hardware_samsung_slsi-cm_exynos8895" remote="universal8895" />
+  <project path="kernel/samsung/universal8895" name="vanyasem/android_kernel_samsung_universal8895" remote="hal" />
+  <project path="vendor/samsung" name="proprietary_vendor_samsung" remote="universal8895" />
+</manifest>
