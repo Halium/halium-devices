@@ -1,9 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
-
   <project name="proprietary_vendor_htc" path="vendor/htc" remote="them" />
   <project name="Halium/android_device_htc_pme" path="device/htc/pme" remote="hal" />
   <project name="Halium/android_kernel_htc_msm8996" path="kernel/htc/msm8996" remote="hal" />
-
-  <project name="android_vendor_qcom_opensource_cryptfs_hw" path="vendor/qcom/opensource/cryptfs_hw" remote="los" />
 </manifest>
