@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+<project path="device/lge/d855" name="android_device_lge_d855" remote="los" /> 
+<project path="device/lge/g3-common" name="android_device_lge_g3-common" remote="los" />
+<project path="vendor/lge/" name="proprietary_vendor_lge" remote="them" />
+<project path="kernel/lge/g3" name="android_kernel_lge_g3" remote="los" />
+</manifest>
