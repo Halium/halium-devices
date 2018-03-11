@@ -33,12 +33,12 @@ else
 	repo sync --local-only -c -j$JOBS -q
 
 	# Refresh the vendor repository so apks and jars are not copied
-	# For this to work, all apks and jars need to be removed from device/$vendor/$codename/proprietary-files.txt
+	# For this to work, all apks and jars will be removed by the grep command below that will strip them from the device/$vendor/$codename/proprietary-*.txt files
 
 	DEVICE_TREE=$REPO_ROOT/device/*/$DEVICE
 
 	if [ -f $DEVICE_TREE/setup-makefiles.sh ]; then
 		echo "I: Refreshing vendor repository"
-		(cd $DEVICE_TREE; ./setup-makefiles.sh)
+		(cd $DEVICE_TREE; for i in `find . -name "proprietary-*.txt"`; do grep -r -v -E '(^.*\.{1}(jar|apk)[|]?.*)' $i > $i".tmp" && mv $i".tmp" $i; done; ./setup-makefiles.sh)
 	fi
 fi
