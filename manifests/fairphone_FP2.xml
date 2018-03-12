@@ -1,7 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <manifest>
-  <project path="device/qcom/common" name="android_device_qcom_common" remote="cm" />
-  <project path="device/qcom/sepolicy" name="android_device_qcom_sepolicy" remote="cm" />
-  <project path="device/fairphone/FP2" name="Halium/android_device_fairphone_fp2" remote="halium" />
-  <project path="kernel/fairphone/msm8974" name="Halium/android_kernel_fairphone_msm8974" remote="halium" />
-  <project path="vendor/fairphone" name="FairBlobs/proprietary_vendor_fairphone" remote="halium" />
+    <project path="device/fairphone/FP2" name="Halium/android_device_fairphone_fp2" remote="halium" />
+    <project path="device/qcom/common" name="android_device_qcom_common" remote="cm" />
+    <project path="device/qcom/sepolicy" name="android_device_qcom_sepolicy" remote="cm" />
+
+    <project path="kernel/fairphone/msm8974" name="Halium/android_kernel_fairphone_msm8974" remote="halium" />
+
+    <project path="vendor/fairphone" name="FairBlobs/proprietary_vendor_fairphone" remote="halium" />
 </manifest>
