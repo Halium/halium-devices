@@ -1,11 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <manifest>
-    <remote name="github" fetch="http://github.com" revision="refs/heads/cm-14.1" />
+    <remote name="github" 
+            fetch="http://github.com" 
+            revision="refs/heads/cm-14.1" />
 
-<!--     Device -->
-    <project path="device/bq/krillin" name="halium-krillin/android_device_bq_krillin" remote="hal"/>
-    <project path="kernel/bq/krillin" name="halium-krillin/android_kernel_bq_krillin" remote="hal"/>
-    <project path="vendor/bq/krillin" name="Pablito2020/android_vendor_bq_krillin" remote="github"/>
+    <project path="device/bq/krillin" name="halium-krillin/android_device_bq_krillin" remote="hal" />
+    <project path="device/common" name="lineageos/android_device_common" revision="refs/heads/staging/cm-14.0" remote="github" />
 
-    <project path="device/common" name="lineageos/android_device_common" revision="refs/heads/staging/cm-14.0" remote="github"/>
     <project path="external/curl" name="platform/external/curl" groups="pdk" remote="aosp" />
+
+    <project path="kernel/bq/krillin" name="halium-krillin/android_kernel_bq_krillin" remote="hal" />
+
+    <project path="vendor/bq/krillin" name="Pablito2020/android_vendor_bq_krillin" remote="github" />
 </manifest>

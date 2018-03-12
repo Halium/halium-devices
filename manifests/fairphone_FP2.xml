@@ -1,5 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <manifest>
-  <project path="device/fairphone/FP2" name="Halium/android_device_fairphone_fp2" remote="hal" />
-  <project path="kernel/fairphone/msm8974" name="Halium/android_kernel_fairphone_msm8974" remote="hal" />
-  <project path="vendor/fairphone/FP2" name="FairBlobs/proprietary_vendor_fairphone" remote="hal" />
+    <project path="device/fairphone/FP2" name="Halium/android_device_fairphone_fp2" remote="hal" />
+
+    <project path="kernel/fairphone/msm8974" name="Halium/android_kernel_fairphone_msm8974" remote="hal" />
+
+    <project path="vendor/fairphone/FP2" name="FairBlobs/proprietary_vendor_fairphone" remote="hal" />
 </manifest>

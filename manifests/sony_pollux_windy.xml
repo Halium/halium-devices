@@ -1,11 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <manifest>
-	<project path="device/sony/pollux_windy" name="android_device_sony_pollux_windy" remote="los" />
-	<project path="device/sony/pollux-common" name="android_device_sony_pollux-common" remote="los" />
-	<project path="kernel/sony/apq8064" name="Halium/android_kernel_sony_apq8064" remote="hal" />
-	<project path="vendor/sony" name="proprietary_vendor_sony" revision="cm-14.1" remote="them" />
+    <project path="device/sony/common" name="android_device_sony_common" revision="cm-14.1" remote="los" />
+    <project path="device/sony/fusion3-common" name="Halium/android_device_sony_fusion3-common" remote="hal" />
+    <project path="device/sony/pollux_windy" name="android_device_sony_pollux_windy" remote="los" />
+    <project path="device/sony/pollux-common" name="android_device_sony_pollux-common" remote="los" />
 
-	<project path="device/sony/common" name="android_device_sony_common" revision="cm-14.1" remote="los" />
-	<project path="device/sony/fusion3-common" name="Halium/android_device_sony_fusion3-common" remote="hal" />
-	<project path="external/elfutils" name="android_external_elfutils" groups="pdk" revision="cm-14.1" remote="los" />
-	<project path="hardware/sony/thermanager" name="android_hardware_sony_thermanager" revision="cm-14.1" remote="los" />
+    <project path="external/elfutils" name="android_external_elfutils" groups="pdk" revision="cm-14.1" remote="los" />
+
+    <project path="hardware/sony/thermanager" name="android_hardware_sony_thermanager" revision="cm-14.1" remote="los" />
+
+    <project path="kernel/sony/apq8064" name="Halium/android_kernel_sony_apq8064" remote="hal" />
+
+    <project path="vendor/sony" name="proprietary_vendor_sony" revision="cm-14.1" remote="them" />
 </manifest>

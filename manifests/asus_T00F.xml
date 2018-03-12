@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
-  <remote name="zf"
-	fetch="http://github.com/zenfone-legacy"
-	revision="refs/heads/cm-14.1" />
-  
-  <project name="Halium/android_device_asus_T00F" path="device/asus/T00F" remote="hal" />
-  <project name="Halium/android_kernel_asus_T00F" path="kernel/asus/T00F" remote="hal" />
-  <project name="proprietary_vendor_asus" path="vendor/asus" remote="zf" />
-  
+    <remote name="zf"
+            fetch="http://github.com/zenfone-legacy"
+            revision="refs/heads/cm-14.1" />
+
+    <project path="device/asus/T00F" name="Halium/android_device_asus_T00F" remote="hal" />
+
+    <project path="kernel/asus/T00F" name="Halium/android_kernel_asus_T00F" remote="hal" />
+
+    <project path="vendor/asus" name="proprietary_vendor_asus" remote="zf" />
 </manifest>
