@@ -36,55 +36,71 @@ else
     # Refresh the device & common repositories so apks and jars are not copied
     # For this to work, all apks and jars need to be removed from device/$VENDOR/$DEVICE/*proprietary-files*.txt and device/$VENDOR/$DEVICE_COMMON/*proprietary-files*.txt
 
-    #A device can have multiple commons as it seems, so we store them in DEVICE_COMMON_TEMP and loop through them later.
-    DEVICE_COMMON_TEMP=$(ls -d $REPO_ROOT/device/$VENDOR/*common* 2>/dev/null | rev | cut -d "/" -f1 | rev )
+    # A device can have multiple commons as it seems, so we store them in DEVICE_COMMON_TEMP and loop through them later.
+    DEVICE_COMMON_TEMP=$(ls -d $REPO_ROOT/device/$VENDOR/*common* 2>/dev/null | rev | cut -d "/" -f1 | rev)
     DEVICE_TREE=$REPO_ROOT/device/$VENDOR/$DEVICE
 
-    if [ -f $DEVICE_TREE/setup-makefiles.sh ]; then
-        echo "*******************************************"
-        echo "I: Refreshing device vendor repository: /device/"$VENDOR/$DEVICE
-        (cd $DEVICE_TREE; for i in `find . -name "*proprietary-*.txt"`; do echo "I: Processing proprietary blob file: "$i; grep -r -v -E '(^.*\.{1}(jar|apk)[|]?.*)' $i > $i".tmp" && mv $i".tmp" $i; done; ./setup-makefiles.sh; )
     echo "*******************************************"
+    if [ -f $DEVICE_TREE/setup-makefiles.sh ]; then
+        echo "I: Refreshing device vendor repository: vendor/"$VENDOR/$DEVICE
+        (
+            cd $DEVICE_TREE
+            for i in $(find . -name "*proprietary-*.txt"); do
+                echo "I: Processing proprietary blob file: "$i
+                grep -r -v -E '(^.*\.{1}(jar|apk)[|]?.*)' $i >$i".tmp" && mv $i".tmp" $i
+            done
+            ./setup-makefiles.sh
+        )
     fi
 
-    #Since we don't use SELinux we want to make sure we remove the ",context=u....:s0" from the fstab file(s) in the $DEVICE folder so we can mount the partitions without issues
-    cd $DEVICE_TREE && for j in `find . -name "fstab.*"`; do echo "I: Processing fstab file: "$j; sed -r 's/([,][c][o][n][t][e][x][t][=].*[:][s][0])//' $j > $j".tmp" && mv $j".tmp" $j; done;
+    # Since we don't use SELinux we want to make sure we remove the ",context=u....:s0" from the fstab file(s) in the $DEVICE folder so we can mount the partitions without issues
+    cd $DEVICE_TREE && for j in $(find . -name "fstab.*"); do
+        echo "I: Processing fstab file: "$j
+        sed -r 's/([,][c][o][n][t][e][x][t][=].*[:][s][0])//' $j >$j".tmp" && mv $j".tmp" $j
+    done
 
-    #Loop through values in $DEVICE_COMMON_TEMP
+    # Loop through values in $DEVICE_COMMON_TEMP
     if [ -n "$DEVICE_COMMON_TEMP" ]; then
-        echo "*******************************************"
-        for k in $DEVICE_COMMON_TEMP;
-            do echo "I: Procession device vendor common folder: /device/"$VENDOR/$k; COMMON_TREE=$REPO_ROOT/device/$VENDOR/$k;
+        for k in $DEVICE_COMMON_TEMP; do
+            echo "I: Procession device vendor common folder: /vendor/"$VENDOR/$k
+            COMMON_TREE=$REPO_ROOT/device/$VENDOR/$k
 
-            #We need to have $VENDOR, $DEVICE and $DEVICE_COMMON or $PLATFORM_COMMON available for setup-makefiles.sh in the common repository, therefore export them.
-            export VENDOR;
-            export DEVICE;
-            DEVICE_COMMON_HOLDER=$DEVICE_COMMON;
-            DEVICE_COMMON=${DEVICE_COMMON:=$k};
-            export DEVICE_COMMON=$DEVICE_COMMON;
-            PLATFORM_COMMON_HOLDER=$PLATFORM_COMMON;
-            PLATFORM_COMMON=${PLATFORM_COMMON:=$DEVICE_COMMON}
-            export PLATFORM_COMMON=$PLATFORM_COMMON;
+            # We need to have $VENDOR, $DEVICE and $DEVICE_COMMON or $PLATFORM_COMMON available for setup-makefiles.sh in the common repository, therefore export them.
+            export VENDOR
+            export DEVICE
+            DEVICE_COMMON_HOLDER=$DEVICE_COMMON
+            export DEVICE_COMMON=${DEVICE_COMMON:=$k}
+            PLATFORM_COMMON_HOLDER=$PLATFORM_COMMON
+            export ${PLATFORM_COMMON:=$DEVICE_COMMON}
 
             if [ -f $COMMON_TREE/setup-makefiles.sh ]; then
-                (cd $COMMON_TREE; for l in `find . -name "*proprietary-*.txt"`; do echo "I: Processing proprietary blob file: "$l; grep -r -v -E '(^.*\.{1}(jar|apk)[|]?.*)' $l > $l".tmp" && mv $l".tmp" $l; done; ./setup-makefiles.sh; )
+                (
+                    cd $COMMON_TREE
+                    for l in $(find . -name "*proprietary-*.txt"); do
+                        echo "I: Processing proprietary blob file: "$l
+                        grep -r -v -E '(^.*\.{1}(jar|apk)[|]?.*)' $l >$l".tmp" && mv $l".tmp" $l
+                    done
+                    ./setup-makefiles.sh
+                )
             fi
 
-            #Since we don't use SELinux we want to make sure we remove the ",context=u....:s0" from the fstab file(s) in the $DEVICE_COMMON folder so we can mount the partitions without issues
-            cd $COMMON_TREE && for m in `find . -name "fstab.*"`; do echo "I: Processing fstab file: "$m; sed -r 's/([,][c][o][n][t][e][x][t][=].*[:][s][0])//' $m > $m".tmp" && mv $m".tmp" $m; done;
-            #Since we can have multiple common repos we need to make sure to set back the original values in case they exist. Otherwise unset the value.
+            # Since we don't use SELinux we want to make sure we remove the ",context=u....:s0" from the fstab file(s) in the $DEVICE_COMMON folder so we can mount the partitions without issues
+            cd $COMMON_TREE && for m in $(find . -name "fstab.*"); do
+                echo "I: Processing fstab file: "$m
+                sed -r 's/([,][c][o][n][t][e][x][t][=].*[:][s][0])//' $m >$m".tmp" && mv $m".tmp" $m
+            done
+            # Since we can have multiple common repos we need to make sure to set back the original values in case they exist. Otherwise unset the value.
             if [ -n "$DEVICE_COMMON_HOLDER" ]; then
-                DEVICE_COMMON=$DEVICE_COMMON_HOLDER;
+                DEVICE_COMMON=$DEVICE_COMMON_HOLDER
             else
                 unset DEVICE_COMMON
             fi
             if [ -n "$PLATFORM_COMMON_HOLDER" ]; then
-                PLATFORM_COMMON=$PLATFORM_COMMON_HOLDER;
+                PLATFORM_COMMON=$PLATFORM_COMMON_HOLDER
             else
                 unset PLATFORM_COMMON
             fi
-            echo "*******************************************"
         done
-    echo "*******************************************"
     fi
+    echo "*******************************************"
 fi
