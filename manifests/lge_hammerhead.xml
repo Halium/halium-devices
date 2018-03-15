@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <manifest>
     <project name="Halium/android_device_lge_hammerhead" path="device/lge/hammerhead" remote="halium" />
     <project name="TheMuppets/proprietary_vendor_lge" path="vendor/lge" revision="cm-12.1" remote="halium" />
