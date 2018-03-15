@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
-  <project name="proprietary_vendor_htc" path="vendor/htc" remote="them" />
-  <project name="Halium/android_device_htc_pme" path="device/htc/pme" remote="hal" />
-  <project name="Halium/android_kernel_htc_msm8996" path="kernel/htc/msm8996" remote="hal" />
+    <project path="device/htc/pme" name="Halium/android_device_htc_pme" remote="hal" />
+
+    <project path="kernel/htc/msm8996" name="Halium/android_kernel_htc_msm8996" remote="hal" />
+
+    <project path="vendor/htc" name="proprietary_vendor_htc" remote="them" />
 </manifest>

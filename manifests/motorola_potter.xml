@@ -1,15 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
-  <remote name="usb"
-    fetch="https://github.com/universalsuperbox"
-    revision="halium-7.1" />
-  <remote name="boulzordev"
-    fetch="https://github.com/boulzordev"
-    revision="cm-14.1" />
+    <remote name="usb"
+            fetch="https://github.com/universalsuperbox"
+            revision="halium-7.1" />
 
-  <project name="android_device_motorola_potter" path="device/motorola/potter" remote="usb" />
-  <project name="android_kernel_motorola_msm8953" path="kernel/motorola/msm8953" remote="usb" />
-  <project name="android_vendor_motorola_potter" path="vendor/motorola/potter" remote="boulzordev" revision="master" />
-  <project name="android_packages_resources_devicesettings" path="packages/resources/devicesettings" remote="los"/>
-  <project name="android_external_bluetooth_bluedroid" path="external/bluetooth/bluedroid" remote="los" revision="cm-12.1" />
+    <remote name="boulzordev"
+            fetch="https://github.com/boulzordev"
+            revision="cm-14.1" />
+
+    <project path="device/motorola/potter" name="android_device_motorola_potter" remote="usb" />
+
+    <project path="external/bluetooth/bluedroid" name="android_external_bluetooth_bluedroid" remote="los" revision="cm-12.1" />
+
+    <project path="kernel/motorola/msm8953" name="android_kernel_motorola_msm8953" remote="usb" />
+
+    <project path="packages/resources/devicesettings" name="android_packages_resources_devicesettings" remote="los" />
+
+    <project path="vendor/motorola/potter" name="android_vendor_motorola_potter" remote="boulzordev" revision="master" />
 </manifest>

@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
-	<project path="device/motorola/titan" name="Halium/android_device_motorola_titan" remote="hal" />
-	<project path="device/motorola/msm8226-common" name="Halium/android_device_motorola_msm8226-common" remote="hal" />
-	<project path="kernel/motorola/msm8226" name="Halium/android_kernel_motorola_msm8226" remote="hal" />
+    <project path="device/motorola/msm8226-common" name="Halium/android_device_motorola_msm8226-common" remote="hal" />
+    <project path="device/motorola/titan" name="Halium/android_device_motorola_titan" remote="hal" />
 
-	<project path="vendor/motorola" name="proprietary_vendor_motorola" remote="them" />
+    <project path="kernel/motorola/msm8226" name="Halium/android_kernel_motorola_msm8226" remote="hal" />
+
+    <project path="vendor/motorola" name="proprietary_vendor_motorola" remote="them" />
 </manifest>

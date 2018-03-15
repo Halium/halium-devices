@@ -1,13 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <manifest>
-	<remote name="jonnius"
-		fetch="https://github.com/jonnius"
-		revision="halium-7.1" />
+    <remote name="jonnius"
+            fetch="https://github.com/jonnius"
+            revision="halium-7.1" />
 
-	<project path="device/sony/taoshan" name="android_device_sony_taoshan" remote="jonnius" />
-	<project path="kernel/sony/msm8930" name="android_kernel_sony_msm8930" remote="jonnius" />
-	<project path="vendor/sony" name="proprietary_vendor_sony" remote="them" />
+    <project path="device/sony/common" name="android_device_sony_common" remote="los" />
+    <project path="device/sony/taoshan" name="android_device_sony_taoshan" remote="jonnius" />
 
-	<project path="device/sony/common" name="android_device_sony_common" remote="los" />
-	<project path="external/elfutils" name="android_external_elfutils" groups="pdk" remote="los" />
-	<project path="hardware/sony/thermanager" name="android_hardware_sony_thermanager" remote="los" />
+    <project path="external/elfutils" name="android_external_elfutils" groups="pdk" remote="los" />
+
+    <project path="hardware/sony/thermanager" name="android_hardware_sony_thermanager" remote="los" />
+
+    <project path="kernel/sony/msm8930" name="android_kernel_sony_msm8930" remote="jonnius" />
+
+    <project path="vendor/sony" name="proprietary_vendor_sony" remote="them" />
 </manifest>

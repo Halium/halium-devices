@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
-  <project path="device/asus/deb" name="android_device_asus_deb" remote="los" />
-  <project path="device/asus/flo" name="android_device_asus_flo" remote="los" />
-  <project path="kernel/google/msm" name="doniks/android_kernel_google_msm" remote="hal" />
-  <project path="vendor/asus" name="proprietary_vendor_asus" remote="them" />
+    <project path="device/asus/deb" name="android_device_asus_deb" remote="los" />
+    <project path="device/asus/flo" name="android_device_asus_flo" remote="los" />
+
+    <project path="kernel/google/msm" name="doniks/android_kernel_google_msm" remote="hal" />
+
+    <project path="vendor/asus" name="proprietary_vendor_asus" remote="them" />
 </manifest>
