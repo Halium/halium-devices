@@ -71,7 +71,7 @@ else
             DEVICE_COMMON_HOLDER=$DEVICE_COMMON
             export DEVICE_COMMON=${DEVICE_COMMON:=$k}
             PLATFORM_COMMON_HOLDER=$PLATFORM_COMMON
-            export ${PLATFORM_COMMON:=$DEVICE_COMMON}
+            export PLATFORM_COMMON=${PLATFORM_COMMON:=$DEVICE_COMMON}
 
             if [ -f $COMMON_TREE/setup-makefiles.sh ]; then
                 (
