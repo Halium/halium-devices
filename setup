@@ -38,11 +38,14 @@ else
 
     # A device can have multiple commons as it seems, so we store them in DEVICE_COMMON_TEMP and loop through them later.
     DEVICE_COMMON_TEMP=$(ls -d $REPO_ROOT/device/$VENDOR/*common* 2>/dev/null | rev | cut -d "/" -f1 | rev)
+    VENDOR_COMMON_TEMP=$(ls -d $REPO_ROOT/vendor/$VENDOR/*common* 2>/dev/null | rev | cut -d "/" -f1 | rev)
+
     DEVICE_TREE=$REPO_ROOT/device/$VENDOR/$DEVICE
+    VENDOR_TREE=$REPO_ROOT/vendor/$VENDOR
 
     echo "*******************************************"
     if [ -f $DEVICE_TREE/setup-makefiles.sh ]; then
-        echo "I: Refreshing device vendor repository: vendor/"$VENDOR/$DEVICE
+        echo "I: Refreshing device vendor repository: device/"$VENDOR/$DEVICE
         (
             cd $DEVICE_TREE
             for i in $(find . -name "*proprietary-*.txt"); do
@@ -59,11 +62,25 @@ else
         sed -r 's/([,][c][o][n][t][e][x][t][=].*[:][s][0])//' $j >$j".tmp" && mv $j".tmp" $j
     done
 
+    # We want to kill the LiveWallPaper feature since we don't need it and it requires hard patching in 5.1 based devices, so we just kill it generically instead, it exists in both the Device and/or Vendor tree and in .mk and .sh files.
+    # Since sed and grep don't have any nice and clean solutions to deal with newlines, we use a quick perl line instead.
+    cd $DEVICE_TREE && for j in $(find . -name "*.mk"); do
+        echo "I: Processing .mk file: "$j" in device tree: "$DEVICE_TREE
+        perl -0 -i -pe 's/([#].*[w][a][l][l][p][a][p][e][r].*[\S\s][P][R][O][D][U][C][T][_][P][A][C][K][A][G][E][S]\s[:+][=]\s[\\]{1,2}[\S\s])(.*[\\]{1,2}[\S\s])*(.*[\S\s]){1}//gim' $j &&
+        perl -0 -i -pe 's/([#].*[w][a][l][l][p][a][p][e][r].*[\S\s][P][R][O][D][U][C][T][_][C][O][P][Y][_][F][I][L][E][S]\s[:+][=]\s[\\]{1,2}[\S\s].*[w][a][l][l][p][a][p][e][r][.][x][m][l].*[\S\s])//gim' $j
+    done
+
+    cd $DEVICE_TREE && for j in $(find . -name "setup-makefiles.sh"); do
+        echo "I: Processing setup-makefiles.sh file: "$j" in device tree: "$DEVICE_TREE
+        perl -0 -i -pe 's/([#].*[w][a][l][l][p][a][p][e][r].*[\S\s][P][R][O][D][U][C][T][_][P][A][C][K][A][G][E][S]\s[:+][=]\s[\\]{1,2}[\S\s])(.*[\\]{1,2}[\S\s])*(.*[\S\s]){1}//gim' $j &&
+        perl -0 -i -pe 's/([#].*[w][a][l][l][p][a][p][e][r].*[\S\s][P][R][O][D][U][C][T][_][C][O][P][Y][_][F][I][L][E][S]\s[:+][=]\s[\\]{1,2}[\S\s].*[w][a][l][l][p][a][p][e][r][.][x][m][l].*[\S\s])//gim' $j
+    done
+
     # Loop through values in $DEVICE_COMMON_TEMP
     if [ -n "$DEVICE_COMMON_TEMP" ]; then
         for k in $DEVICE_COMMON_TEMP; do
-            echo "I: Procession device vendor common folder: /vendor/"$VENDOR/$k
-            COMMON_TREE=$REPO_ROOT/device/$VENDOR/$k
+            echo "I: Procession device vendor common folder: /device/"$VENDOR/$k
+            DEVICE_COMMON_TREE=$REPO_ROOT/device/$VENDOR/$k
 
             # We need to have $VENDOR, $DEVICE and $DEVICE_COMMON or $PLATFORM_COMMON available for setup-makefiles.sh in the common repository, therefore export them.
             export VENDOR
@@ -73,9 +90,9 @@ else
             PLATFORM_COMMON_HOLDER=$PLATFORM_COMMON
             export PLATFORM_COMMON=${PLATFORM_COMMON:=$DEVICE_COMMON}
 
-            if [ -f $COMMON_TREE/setup-makefiles.sh ]; then
+            if [ -f $DEVICE_COMMON_TREE/setup-makefiles.sh ]; then
                 (
-                    cd $COMMON_TREE
+                    cd $DEVICE_COMMON_TREE
                     for l in $(find . -name "*proprietary-*.txt"); do
                         echo "I: Processing proprietary blob file: "$l
                         grep -r -v -E '(^.*\.{1}(jar|apk)[|]?.*)' $l >$l".tmp" && mv $l".tmp" $l
@@ -85,7 +102,74 @@ else
             fi
 
             # Since we don't use SELinux we want to make sure we remove the ",context=u....:s0" from the fstab file(s) in the $DEVICE_COMMON folder so we can mount the partitions without issues
-            cd $COMMON_TREE && for m in $(find . -name "fstab.*"); do
+            cd $DEVICE_COMMON_TREE && for m in $(find . -name "fstab.*"); do
+                echo "I: Processing fstab file: "$m
+                sed -r 's/([,][c][o][n][t][e][x][t][=].*[:][s][0])//' $m >$m".tmp" && mv $m".tmp" $m
+            done
+            # Since we can have multiple common repos we need to make sure to set back the original values in case they exist. Otherwise unset the value.
+            if [ -n "$DEVICE_COMMON_HOLDER" ]; then
+                DEVICE_COMMON=$DEVICE_COMMON_HOLDER
+            else
+                unset DEVICE_COMMON
+            fi
+            if [ -n "$PLATFORM_COMMON_HOLDER" ]; then
+                PLATFORM_COMMON=$PLATFORM_COMMON_HOLDER
+            else
+                unset PLATFORM_COMMON
+            fi
+        done
+    fi
+
+    # We want to kill the LiveWallPaper feature in the vendor tree too, just to be sure.
+    cd $VENDOR_TREE/$DEVICE && for j in $(find . -name "*.mk"); do
+        echo "I: Processing .mk file: "$j" in vendor tree: "$VENDOR_TREE/$DEVICE
+        perl -0 -i -pe 's/([#].*[w][a][l][l][p][a][p][e][r].*[\S\s][P][R][O][D][U][C][T][_][P][A][C][K][A][G][E][S]\s[:+][=]\s[\\]{1,2}[\S\s])(.*[\\]{1,2}[\S\s])*(.*[\S\s]){1}//gim' $j &&
+        perl -0 -i -pe 's/([#].*[w][a][l][l][p][a][p][e][r].*[\S\s][P][R][O][D][U][C][T][_][C][O][P][Y][_][F][I][L][E][S]\s[:+][=]\s[\\]{1,2}[\S\s].*[w][a][l][l][p][a][p][e][r][.][x][m][l].*[\S\s])//gim' $j
+    done
+
+    cd $VENDOR_TREE/$DEVICE && for j in $(find . -name "setup-makefiles.sh"); do
+        echo "I: Processing setup-makefiles.sh file: "$j" in vendor tree: "$VENDOR_TREE/$DEVICE
+        perl -0 -i -pe 's/([#].*[w][a][l][l][p][a][p][e][r].*[\S\s][P][R][O][D][U][C][T][_][P][A][C][K][A][G][E][S]\s[:+][=]\s[\\]{1,2}[\S\s])(.*[\\]{1,2}[\S\s])*(.*[\S\s]){1}//gim' $j &&
+        perl -0 -i -pe 's/([#].*[w][a][l][l][p][a][p][e][r].*[\S\s][P][R][O][D][U][C][T][_][C][O][P][Y][_][F][I][L][E][S]\s[:+][=]\s[\\]{1,2}[\S\s].*[w][a][l][l][p][a][p][e][r][.][x][m][l].*[\S\s])//gim' $j
+    done
+
+    # Loop through values in $VENDOR_COMMON_TEMP
+    if [ -n "$VENDOR_COMMON_TEMP" ]; then
+        for k in $VENDOR_COMMON_TEMP; do
+            echo "I: Procession vendor vendor common folder: /vendor/"$VENDOR/$k
+            VENDOR_COMMON_TREE=$REPO_ROOT/vendor/$VENDOR/$k
+
+            # We need to have $VENDOR, $DEVICE and $DEVICE_COMMON or $PLATFORM_COMMON available for setup-makefiles.sh in the common repository, therefore export them.
+            export VENDOR
+            export DEVICE
+            DEVICE_COMMON_HOLDER=$DEVICE_COMMON
+            export DEVICE_COMMON=${DEVICE_COMMON:=$k}
+            PLATFORM_COMMON_HOLDER=$PLATFORM_COMMON
+            export PLATFORM_COMMON=${PLATFORM_COMMON:=$DEVICE_COMMON}
+
+            if [ -f $VENDOR_COMMON_TREE/setup-makefiles.sh ]; then
+                (
+                    cd $VENDOR_COMMON_TREE
+                    for l in $(find . -name "*proprietary-*.txt"); do
+                        echo "I: Processing proprietary blob file: "$l
+                        grep -r -v -E '(^.*\.{1}(jar|apk)[|]?.*)' $l >$l".tmp" && mv $l".tmp" $l
+                    done
+                    for j in $(find . -name "*.mk"); do
+                        echo "I: Processing .mk file: "$j" in vendor common tree: "$VENDOR_COMMON_TREE
+                        perl -0 -i -pe 's/([#].*[w][a][l][l][p][a][p][e][r].*[\S\s][P][R][O][D][U][C][T][_][P][A][C][K][A][G][E][S]\s[:+][=]\s[\\]{1,2}[\S\s])(.*[\\]{1,2}[\S\s])*(.*[\S\s]){1}//gim' $j &&
+                        perl -0 -i -pe 's/([#].*[w][a][l][l][p][a][p][e][r].*[\S\s][P][R][O][D][U][C][T][_][C][O][P][Y][_][F][I][L][E][S]\s[:+][=]\s[\\]{1,2}[\S\s].*[w][a][l][l][p][a][p][e][r][.][x][m][l].*[\S\s])//gim' $j
+                    done
+                    for j in $(find . -name "setup-makefiles.sh"); do
+                        echo "I: Processing setup-makefiles.sh file: "$j" in vendor common tree: "$VENDOR_COMMON_TREE
+                        perl -0 -i -pe 's/([#].*[w][a][l][l][p][a][p][e][r].*[\S\s][P][R][O][D][U][C][T][_][P][A][C][K][A][G][E][S]\s[:+][=]\s[\\]{1,2}[\S\s])(.*[\\]{1,2}[\S\s])*(.*[\S\s]){1}//gim' $j &&
+                        perl -0 -i -pe 's/([#].*[w][a][l][l][p][a][p][e][r].*[\S\s][P][R][O][D][U][C][T][_][C][O][P][Y][_][F][I][L][E][S]\s[:+][=]\s[\\]{1,2}[\S\s].*[w][a][l][l][p][a][p][e][r][.][x][m][l].*[\S\s])//gim' $j
+                    done
+                    ./setup-makefiles.sh
+                )
+            fi
+
+            # Since we don't use SELinux we want to make sure we remove the ",context=u....:s0" from the fstab file(s) in the $VENDOR_COMMON folder so we can mount the partitions without issues
+            cd $VENDOR_COMMON_TREE && for m in $(find . -name "fstab.*"); do
                 echo "I: Processing fstab file: "$m
                 sed -r 's/([,][c][o][n][t][e][x][t][=].*[:][s][0])//' $m >$m".tmp" && mv $m".tmp" $m
             done
