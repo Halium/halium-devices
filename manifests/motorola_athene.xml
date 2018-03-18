@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+    <remote name="lyud"
+            fetch="https://github.com/Lyudmila17"
+            revision="halium-7.1" />
+
+    <project path="device/motorola/athene" name="android_device_motorola_athene" remote="lyud" />
+
+    <project path="kernel/motorola/msm8952" name="android_kernel_motorola_msm8952" remote="lyud" />
+
+    <project path="vendor/motorola/athene" name="vendor_motorola_athene" remote="lyud" />
+</manifest>
