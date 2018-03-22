@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+    <remote name="evervolv"
+            fetch="git://github.com/Evervolv/"
+            revision="lollipop-5.1"
+            review="review.evervolv.com"/>
+
+    <!-- We want to have an unpatched libhardware in order for both CAF and non-CAF devices to work -->
+    <remove-project name="ubports/android_hardware_libhardware" />
+    <project path="hardware/libhardware" name="android_hardware_libhardware" groups="pdk" remote="cm" />
+
+    <project path="device/hp/tenderloin" name="webos-ports/android_device_hp_tenderloin" remote="halium" revision="halium-5.1" />
+    <project path="device/hp/tenderloin-common" name="webos-ports/android_device_hp_tenderloin-common" remote="halium" revision="halium-5.1" />
+
+    <project path="hardware/atheros" name="android_hardware_atheros" remote="evervolv" />
+    <project path="hardware/qcom/audio-caf/msm8660" name="android_hardware_qcom_audio-caf" remote="evervolv" groups="qcom,qcom_audio" revision="lollipop-5.1-8960" />
+    <project path="hardware/qcom/display-caf/msm8660" name="webos-ports/android_hardware_qcom_display-caf" remote="halium" groups="qcom,qcom_display" revision="tenderloin/halium-5.1" />
+    <project path="hardware/qcom/media-caf/msm8660" name="android_hardware_qcom_media-caf" remote="evervolv" groups="qcom,qcom_media" revision="lollipop-5.1-8960" />
+
+    <project path="kernel/htc/msm8960" name="shr-distribution/linux" remote="halium" revision="tenderloin/3.4/cm-12.1" />
+
+    <project path="vendor/hp" name="android_vendor_hp" remote="evervolv"/>
+</manifest>
