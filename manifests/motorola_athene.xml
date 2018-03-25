@@ -9,4 +9,6 @@
     <project path="kernel/motorola/msm8952" name="android_kernel_motorola_msm8952" remote="lyud" />
 
     <project path="vendor/motorola/athene" name="vendor_motorola_athene" remote="lyud" />
+
+    <project path="external/bluetooth/bluedroid" name="android_external_bluetooth_bluedroid" remote="los" revision="cm-12.1" />
 </manifest>
