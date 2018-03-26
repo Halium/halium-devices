@@ -10,5 +10,5 @@
 
     <project path="vendor/motorola/athene" name="vendor_motorola_athene" remote="lyud" />
 
-    <project path="external/bluetooth/bluedroid" name="android_external_bluetooth_bluedroid" remote="los" revision="cm-12.1" />
+    <project path="android_system_bt" name="android_system_bt" remote="los" revision="cm-14.1" />
 </manifest>
