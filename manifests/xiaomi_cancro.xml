@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+  <project name="halium-cancro/android_device_xiaomi_cancro" path="device/xiaomi/cancro" remote="hal" />
+  <project name="halium-cancro/android_kernel_xiaomi_cancro" path="kernel/xiaomi/cancro" remote="hal" />
+  <project name="halium-cancro/proprietary_vendor_xiaomi_cancro" path="vendor/xiaomi/cancro" remote="hal" />
+</manifest>
