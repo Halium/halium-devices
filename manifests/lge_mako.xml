@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+    <!-- We want to have an unpatched libhardware in order for both CAF and non-CAF devices to work -->
+    <remove-project name="ubports/android_hardware_libhardware" />
+    <project path="hardware/libhardware" name="android_hardware_libhardware" groups="pdk" remote="cm" />
+
+    <project path="device/lge/mako" name="ubports/android_device_lge_mako" remote="halium" revision="ubp-5.1" />
+
+    <project path="kernel/google/msm" name="ubports/android_kernel_google_msm" remote="halium" revision="ubp-5.1" />
+
+    <project path="vendor/lge" name="TheMuppets/proprietary_vendor_lge" revision="cm-12.1" remote="halium" />
+</manifest>
