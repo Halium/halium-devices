@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+    <remote name="quazar"
+        fetch="https://github.com/ismaelbonato"
+        revision="halium-7.1" />
+
+    <project path="device/lge/v500" name="android_device_lge_v500" remote="quazar"/>
+    <project path="device/lge/gpad83-common" name="android_device_lge_gpad83-common" remote="quazar"/>
+    
+    <project path="kernel/lge/v500" name="android_kernel_lge_v500" remote="quazar"/>
+    
+    <project path="vendor/lge" name="proprietary_vendor_lge" remote="them" />
+</manifest>
