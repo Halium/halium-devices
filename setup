@@ -2,6 +2,8 @@
 
 DEVICE=${1:=${DEVICE}}
 JOBS=${JOBS:=12}
+ARGS=($@)
+REPO_ARGS=(${ARGS[@]:1})
 
 DEVICES_ROOT="$(dirname "$(readlink -f "${0}")")"
 REPO_ROOT="${DEVICES_ROOT}/../.."
@@ -30,8 +32,8 @@ else
     ln $DEVICES_ROOT/manifests/$VENDOR"_"$DEVICE.xml $REPO_ROOT/.repo/local_manifests/device.xml
 
     # Synchronize new new sources
-    repo sync --network-only -c -j$JOBS -q
-    repo sync --local-only -c -j$JOBS -q
+    repo sync --network-only -c -j$JOBS -q $REPO_ARGS
+    repo sync --local-only -c -j$JOBS -q $REPO_ARGS
 
     # Refresh the device & common repositories so apks and jars are not copied
     # For this to work, all apks and jars need to be removed from
