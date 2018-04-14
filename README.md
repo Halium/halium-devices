@@ -16,3 +16,6 @@ You can set the number of parallel repo jobs by adding:
 Alternatively you can also pass the device codename by environment variable:
 * `DEVICE=<device codename> ./setup`
 
+Additional arguments to repo can be just appended to the command, e.g to do a force sync:
+
+* `./setup <device codename> --force-sync`
