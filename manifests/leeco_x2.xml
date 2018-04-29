@@ -27,5 +27,4 @@
 <project path="vendor/leeco" 
          name="proprietary_vendor_leeco" 
          remote="them" />
-    
 </manifest>
