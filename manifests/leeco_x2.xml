@@ -8,7 +8,7 @@
     
     <project path="vendor/leeco/x2" name="proprietary_vendor_leeco" remote="them"  revision="cm-14.1" />
     
-    <project path="kernel/leeco/x2"  name="android_kernel_leeco_msm8996" remote="maylton" />
+    <project path="kernel/leeco/msm8996"  name="android_kernel_leeco_msm8996" remote="maylton" />
     
     <project path="device/leeco/msm8996-common" name="android_device_leeco_msm8996-common" remote="maylton" />
     
