@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+    <remote
+        name="maylton"
+        fetch="https://github.com/maylton"
+        revision="halium-7.1" />
+
+    <project path="device/leeco/x2" name="android_device_leeco_x2" remote="maylton" />
+    <project path="device/leeco/msm8996-common" name="android_device_leeco_msm8996-common" remote="maylton" />
+
+    <project path="kernel/leeco/msm8996" name="android_kernel_leeco_msm8996" remote="maylton" />
+
+    <project path="vendor/leeco" name="proprietary_vendor_leeco" remote="them" />
+</manifest>
