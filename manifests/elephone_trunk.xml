@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+    <project path="device/elephone/trunk" name="siljaer/android_device_elephone_trunk" remote="hal" />
+    <project path="device/cyanogen/msm8916-common" name="android_device_cyanogen_msm8916-common" remote="los" />
+
+    <project path="kernel/qcom/msm8916" name="siljaer/android_kernel_qcom_msm8916" remote="hal" />
+
+    <project path="vendor/elephone" name="siljaer/proprietary_vendor_elephone_trunk" remote="hal" />
+</manifest>
