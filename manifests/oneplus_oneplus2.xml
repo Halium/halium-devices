@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+	
+	<!-- We want to have an unpatched libhardware in order for both CAF and non-CAF devices to work -->
+	<remove-project name="ubports/android_hardware_libhardware" />
+	<project path="hardware/libhardware" name="android_hardware_libhardware" groups="pdk" remote="cm" />
+
+	<project path="device/qcom/common" name="android_device_qcom_common" remote="cm" />
+	<project path="device/qcom/sepolicy" name="android_device_qcom_sepolicy" remote="cm" />
+  <project path="device/oppo/common" name="android_device_oppo_common" remote="cm" />
+
+	<project path="device/oneplus/oneplus2" name="Vince1171/android_device_oneplus_oneplus2" remote="halium" revision="cm-12.1" />
+  <project path="kernel/oneplus/msm8994" name="Vince1171/android_kernel_oneplus_msm8994" remote="halium" revision="cm-12.1" />
+
+  <project path="vendor/oneplus" name="proprietary_vendor_oneplus" remote="ab2ut" />
+
+  <project path="external/ant-wireless/antradio-library" name="android_external_ant-wireless_antradio-library" remote="cm" />
+
+</manifest>
