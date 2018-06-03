@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+  <project path="device/motorola/falcon" name="android_device_motorola_falcon" remote="los" revision="cm-14.1" />
+  <project path="device/motorola/msm8226-common" name="android_device_motorola_msm8226-common" remote="los" revision="cm-14.1" />
+  <project path="vendor/motorola" name="proprietary_vendor_motorola" remote="them" revision="cm-14.1" />
+</manifest>
