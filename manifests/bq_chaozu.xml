@@ -6,8 +6,4 @@
     <project path="kernel/bq/msm8937" name="Halium/android_kernel_bq_msm8937" remote="hal" />
 
     <project path="vendor/bq" name="proprietary_vendor_bq" revision="cm-14.1" remote="them" />
-
-    <!-- fixes -->
-    <remove-project path="hardware/qcom/audio-caf/msm8937" name="android_hardware_qcom_audio" />
-    <project path="hardware/qcom/audio-caf/msm8937" name="LNJ2/android_hardware_qcom_audio" groups="qcom,qcom_audio" revision="halium-7.1-caf-8937" remote="hal" />
 </manifest> 
