@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+    <remote name="ewe"
+            fetch="https://github.com/ewentual"
+            revision="halium-7.1" />
+
+    <project path="device/sony/common" name="android_device_sony_common" remote="los" />
+    <project path="device/sony/nicki" name="halium_device_sony_nicki" remote="ewe" />
+
+    <project path="external/elfutils" name="android_external_elfutils" groups="pdk" remote="los" />
+
+    <project path="kernel/sony/msm8x27" name="halium_kernel_sony_msm8x27" remote="ewe" />
+
+    <project path="vendor/sony" name="proprietary_vendor_sony" remote="them" />
+</manifest>
