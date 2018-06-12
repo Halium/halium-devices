@@ -7,10 +7,10 @@
             fetch="https://github.com/HyperTeam" 
             revision="cm-14.1" />
 
-    <project path="device/xiaomi/land-1" name="android_device_xiaomi_land-1" remote="kek" />
+    <project path="device/xiaomi/land" name="android_device_xiaomi_land-1" remote="kek" />
     <project path="device/xiaomi/msm8937-common" name="android_device_xiaomi_msm8937-common" remote="kek" />
 
-    <project path="kernel/xiaomi/msm8937-1" name="android_kernel_xiaomi_msm8937-1" remote="kek" />
+    <project path="kernel/xiaomi/msm8937" name="android_kernel_xiaomi_msm8937-1" remote="kek" />
 
     <project path="vendor/xiaomi" name="proprietary_vendor_xiaomi" remote="HyperTeam" />
 </manifest>
