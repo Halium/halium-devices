@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+	<remote name="nex"
+            fetch="https://github.com/pajlow"
+            revision="cm-14.1" />
+	
+	<project path="device/nextbit/ether" name="android_device_nextbit_ether" remote="los"/>
+
+	<project path="kernel/nextbit/msm8992" name="android_kernel_nextbit_msm8992" remote="nex" />
+
+	<!-- <project path="device/qcom/common" name="android_device_qcom_common" remote="nex" /> -->
+
+	<project path="vendor/ether" name="proprietary_vendor_nextbit" remote="nex" />
+</manifest>
