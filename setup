@@ -6,7 +6,7 @@ ARGS=($@)
 REPO_ARGS=(${ARGS[@]:1})
 
 DEVICES_ROOT="$(dirname "$(readlink -f "${0}")")"
-REPO_ROOT="${DEVICES_ROOT}/../.."
+REPO_ROOT="$(readlink -f ${DEVICES_ROOT}/../..)"
 
 if [ -z $DEVICE ]; then
     echo "Please specify a device codename"
@@ -49,11 +49,11 @@ else
 
     echo "*******************************************"
     if [ -f $DEVICE_TREE/setup-makefiles.sh ]; then
-        echo "I: Refreshing device vendor repository: device/"$VENDOR/$DEVICE
+        echo "I: Refreshing device vendor repository: device/$VENDOR/$DEVICE"
         (
             cd $DEVICE_TREE
             for i in $(find . -name "*proprietary-*.txt"); do
-                echo "I: Processing proprietary blob file: "$i
+                echo "I: Processing proprietary blob file: device/$VENDOR/$DEVICE/$i"
                 grep -r -v -E '(^.*\.{1}(jar|apk)[|]?.*)' $i >$i".tmp" && mv $i".tmp" $i
             done
             ./setup-makefiles.sh
@@ -64,14 +64,14 @@ else
     # ",context=u....:s0" from the fstab file(s) in the $DEVICE folder so we can
     # mount the partitions without issues
     cd $DEVICE_TREE && for j in $(find . -name "fstab.*"); do
-        echo "I: Processing fstab file: "$j
+        echo "I: Processing fstab file: device/$VENDOR/$DEVICE/$j"
         sed -r 's/([,][c][o][n][t][e][x][t][=].*[:][s][0])//' $j >$j".tmp" && mv $j".tmp" $j
     done
 
     # Loop through values in $DEVICE_COMMON_TEMP
     if [ -n "$DEVICE_COMMON_TEMP" ]; then
         for k in $DEVICE_COMMON_TEMP; do
-            echo "I: Procession device vendor common folder: /device/"$VENDOR/$k
+            echo "I: Procession device vendor common folder: device/$VENDOR/$k"
             DEVICE_COMMON_TREE=$REPO_ROOT/device/$VENDOR/$k
 
             # We need to have $VENDOR, $DEVICE and $DEVICE_COMMON or
@@ -88,7 +88,7 @@ else
                 (
                     cd $DEVICE_COMMON_TREE
                     for l in $(find . -name "*proprietary-*.txt"); do
-                        echo "I: Processing proprietary blob file: "$l
+                        echo "I: Processing proprietary blob file: device/$VENDOR/$k/$l"
                         grep -r -v -E '(^.*\.{1}(jar|apk)[|]?.*)' $l >$l".tmp" && mv $l".tmp" $l
                     done
                     ./setup-makefiles.sh
@@ -99,7 +99,7 @@ else
             # ",context=u....:s0" from the fstab file(s) in the $DEVICE_COMMON
             # folder so we can mount the partitions without issues
             cd $DEVICE_COMMON_TREE && for m in $(find . -name "fstab.*"); do
-                echo "I: Processing fstab file: "$m
+                echo "I: Processing fstab file: device/$VENDOR/$m"
                 sed -r 's/([,][c][o][n][t][e][x][t][=].*[:][s][0])//' $m >$m".tmp" && mv $m".tmp" $m
             done
             # Since we can have multiple common repos we need to make sure to set
@@ -120,7 +120,7 @@ else
     # Loop through values in $VENDOR_COMMON_TEMP
     if [ -n "$VENDOR_COMMON_TEMP" ]; then
         for k in $VENDOR_COMMON_TEMP; do
-            echo "I: Procession vendor vendor common folder: /vendor/"$VENDOR/$k
+            echo "I: Processing vendor vendor common folder: /vendor/$VENDOR/$k"
             VENDOR_COMMON_TREE=$REPO_ROOT/vendor/$VENDOR/$k
 
             # We need to have $VENDOR, $DEVICE and $DEVICE_COMMON or
@@ -137,7 +137,7 @@ else
                 (
                     cd $VENDOR_COMMON_TREE
                     for l in $(find . -name "*proprietary-*.txt"); do
-                        echo "I: Processing proprietary blob file: "$l
+                        echo "I: Processing proprietary blob file: $VENDOR_COMMON_TREE/$l"
                         grep -r -v -E '(^.*\.{1}(jar|apk)[|]?.*)' $l >$l".tmp" && mv $l".tmp" $l
                     done
                     ./setup-makefiles.sh
@@ -148,7 +148,7 @@ else
             # ",context=u....:s0" from the fstab file(s) in the $VENDOR_COMMON
             # folder so we can mount the partitions without issues
             cd $VENDOR_COMMON_TREE && for m in $(find . -name "fstab.*"); do
-                echo "I: Processing fstab file: "$m
+                echo "I: Processing fstab file: device/$VENDOR/$k/$m"
                 sed -r 's/([,][c][o][n][t][e][x][t][=].*[:][s][0])//' $m >$m".tmp" && mv $m".tmp" $m
             done
             # Since we can have multiple common repos we need to make sure to set
