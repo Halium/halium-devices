@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+
+<project path="device/lenovo/a2109" name="android_device_lenovo_a2109" remote="cm14" />
+<project path="hardware/nvidia/tegra3" name="android_hardware_nvidia_tegra3" remote="unlegacy" revision="stable" />
+<project path="kernel/nvidia/tegra3" name="android_kernel_nvidia_tegra3" remote="unlegacy" revision="stable"/>
+
+<project path="vendor/lenovo" name="proprietary_vendor_lenovo" remote="unlegacy" />
+<project path="vendor/broadcom" name="proprietary_vendor_broadcom" remote="unlegacy" />
+<project path="vendor/nvidia" name="proprietary_vendor_nvidia" remote="unlegacy" />
+<project path="vendor/widevine" name="proprietary_vendor_widevine" remote="unlegacy" />
+
+<remote name="cm14"
+    fetch="https://github.com/JakeStanger"
+    revision="cm-14.1" />
+
+<remote name="unlegacy"
+    fetch="https://github.com/Unlegacy-Android"
+    revision="aosp-7.1" />
+</manifest>
