@@ -1,8 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
-<remote name="github" fetch="http://github.com" revision="refs/heads/cm-14.1" />
-<project path="device/amazon/thor" name="android_device_amazon_thor" remote="los" revision="cm-14.1" />
-<project path="device/amazon/hdx-common" name="android_device_amazon_hdx-common" remote="los" revision="cm-14.1" />
-<project path="kernel/amazon/hdx-common" name="ggow/kernel_phoenix_hdx-common" remote="github" revision="or-8.1" />
-<project path="vendor/amazon" name="KFire-Android/proprietary_vendor_amazon" remote="github" revision="cm-14.1" />
+    <remote name="kfire"
+            fetch="https://github.com/KFire-Android"
+            revision="refs/heads/cm-14.1" />
+
+    <remote name="ggow"
+            fetch="https://github.com/ggow"
+            revision="refs/heads/or-8.1" />
+
+  <project path="device/amazon/thor" name="android_device_amazon_thor" remote="los" />
+  <project path="device/amazon/hdx-common" name="android_device_amazon_hdx-common" remote="los" />
+
+  <project path="kernel/amazon/hdx-common" name="kernel_phoenix_hdx-common" remote="ggow" />
+
+  <project path="vendor/amazon" name="proprietary_vendor_amazon" remote="kfire" />
 </manifest>
