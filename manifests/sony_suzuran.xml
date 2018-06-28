@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+
+<remote  name="olefb"
+     fetch="https://github.com/olefb"
+     revision="cm-14.1" />
+
+<project path="device/sony/suzuran" name="android_device_sony_suzuran" remote="los" revision="cm-14.1" />
+<project path="device/sony/kitakami-common" name="android_device_sony_kitakami-common" remote="los" revision="cm-14.1" />
+<project path="device/sony/common" name="android_device_sony_common" revision="cm-14.1" remote="los" />
+
+
+<project path="kernel/sony/msm8994" name="android_kernel_sony_msm8994" revision="cm-14.1" remote="los" />
+
+<project path="hardware/sony/timekeep" name="android_hardware_sony_timekeep" revision="cm-14.1" remote="los" />
+
+<project path="vendor/sony/suzuran" name="android_vendor_sony_suzuran" remote="olefb" revision="cm-14.1" />
+
+
+</manifest>
