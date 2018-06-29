@@ -66,7 +66,7 @@ else
     # mount the partitions without issues
     cd $DEVICE_TREE && for j in $(find . -name "fstab.*"); do
         echo "I: Processing fstab file: device/$VENDOR/$DEVICE/$j"
-        sed -r 's/([,][c][o][n][t][e][x][t][=].*[:][s][0])//' $j >$j".tmp" && mv $j".tmp" $j
+        sed -r 's/(,context=.*:s0)//' $j >$j".tmp" && mv $j".tmp" $j
     done
 
     # We want to kill the LiveWallPaper feature since we don't need it and it
@@ -77,14 +77,14 @@ else
     # newlines, we use a quick perl line instead.
     cd $DEVICE_TREE && for j in $(find . -name "*.mk"); do
         echo "I: Processing .mk file: "$j" in device tree: "$DEVICE_TREE
-        perl -0 -i -pe 's/([#].*[w][a][l][l][p][a][p][e][r].*[\S\s][P][R][O][D][U][C][T][_][P][A][C][K][A][G][E][S]\s[:+][=]\s[\\]{1,2}[\S\s])(.*[\\]{1,2}[\S\s])*(.*[\S\s]){1}//gim' $j &&
-        perl -0 -i -pe 's/([#].*[w][a][l][l][p][a][p][e][r].*[\S\s][P][R][O][D][U][C][T][_][C][O][P][Y][_][F][I][L][E][S]\s[:+][=]\s[\\]{1,2}[\S\s].*[w][a][l][l][p][a][p][e][r][.][x][m][l].*[\S\s])//gim' $j
+        perl -0 -i -pe 's/(#.*wallpaper.*[\S\s]PRODUCT_PACKAGES\s[:+]=\s[\\]{1,2}[\S\s])(.*[\\]{1,2}[\S\s])*(.*[\S\s]){1}//gim' $j &&
+        perl -0 -i -pe 's/(#.*wallpaper.*[\S\s]PRODUCT_COPY_FILES\s[:+]=\s[\\]{1,2}[\S\s].*wallpaper.xml.*[\S\s])//gim' $j
     done
 
     cd $DEVICE_TREE && for j in $(find . -name "setup-makefiles.sh"); do
         echo "I: Processing setup-makefiles.sh file: "$j" in device tree: "$DEVICE_TREE
-        perl -0 -i -pe 's/([#].*[w][a][l][l][p][a][p][e][r].*[\S\s][P][R][O][D][U][C][T][_][P][A][C][K][A][G][E][S]\s[:+][=]\s[\\]{1,2}[\S\s])(.*[\\]{1,2}[\S\s])*(.*[\S\s]){1}//gim' $j &&
-        perl -0 -i -pe 's/([#].*[w][a][l][l][p][a][p][e][r].*[\S\s][P][R][O][D][U][C][T][_][C][O][P][Y][_][F][I][L][E][S]\s[:+][=]\s[\\]{1,2}[\S\s].*[w][a][l][l][p][a][p][e][r][.][x][m][l].*[\S\s])//gim' $j
+        perl -0 -i -pe 's/(#.*wallpaper.*[\S\s]PRODUCT_PACKAGES\s[:+]=\s[\\]{1,2}[\S\s])(.*[\\]{1,2}[\S\s])*(.*[\S\s]){1}//gim' $j &&
+        perl -0 -i -pe 's/(#.*wallpaper.*[\S\s]PRODUCT_COPY_FILES\s[:+]=\s[\\]{1,2}[\S\s].*wallpaper.xml.*[\S\s])//gim' $j
     done
 
     # Loop through values in $DEVICE_COMMON_TEMP
@@ -119,7 +119,7 @@ else
             # folder so we can mount the partitions without issues
             cd $DEVICE_COMMON_TREE && for m in $(find . -name "fstab.*"); do
                 echo "I: Processing fstab file: device/$VENDOR/$m"
-                sed -r 's/([,][c][o][n][t][e][x][t][=].*[:][s][0])//' $m >$m".tmp" && mv $m".tmp" $m
+                sed -r 's/(,context=.*:s0)//' $m >$m".tmp" && mv $m".tmp" $m
             done
             # Since we can have multiple common repos we need to make sure to 
             # set back the original values in case they exist. Otherwise unset the value.
@@ -139,14 +139,14 @@ else
     # We want to kill the LiveWallPaper feature in the vendor tree too, just to be sure.
     cd $VENDOR_TREE/$DEVICE && for j in $(find . -name "*.mk"); do
         echo "I: Processing .mk file: "$j" in vendor tree: "$VENDOR_TREE/$DEVICE
-        perl -0 -i -pe 's/([#].*[w][a][l][l][p][a][p][e][r].*[\S\s][P][R][O][D][U][C][T][_][P][A][C][K][A][G][E][S]\s[:+][=]\s[\\]{1,2}[\S\s])(.*[\\]{1,2}[\S\s])*(.*[\S\s]){1}//gim' $j &&
-        perl -0 -i -pe 's/([#].*[w][a][l][l][p][a][p][e][r].*[\S\s][P][R][O][D][U][C][T][_][C][O][P][Y][_][F][I][L][E][S]\s[:+][=]\s[\\]{1,2}[\S\s].*[w][a][l][l][p][a][p][e][r][.][x][m][l].*[\S\s])//gim' $j
+        perl -0 -i -pe 's/(#.*wallpaper.*[\S\s]PRODUCT_PACKAGES\s[:+]=\s[\\]{1,2}[\S\s])(.*[\\]{1,2}[\S\s])*(.*[\S\s]){1}//gim' $j &&
+        perl -0 -i -pe 's/(#.*wallpaper.*[\S\s]PRODUCT_COPY_FILES\s[:+]=\s[\\]{1,2}[\S\s].*wallpaper.xml.*[\S\s])//gim' $j
     done
 
     cd $VENDOR_TREE/$DEVICE && for j in $(find . -name "setup-makefiles.sh"); do
         echo "I: Processing setup-makefiles.sh file: "$j" in vendor tree: "$VENDOR_TREE/$DEVICE
-        perl -0 -i -pe 's/([#].*[w][a][l][l][p][a][p][e][r].*[\S\s][P][R][O][D][U][C][T][_][P][A][C][K][A][G][E][S]\s[:+][=]\s[\\]{1,2}[\S\s])(.*[\\]{1,2}[\S\s])*(.*[\S\s]){1}//gim' $j &&
-        perl -0 -i -pe 's/([#].*[w][a][l][l][p][a][p][e][r].*[\S\s][P][R][O][D][U][C][T][_][C][O][P][Y][_][F][I][L][E][S]\s[:+][=]\s[\\]{1,2}[\S\s].*[w][a][l][l][p][a][p][e][r][.][x][m][l].*[\S\s])//gim' $j
+        perl -0 -i -pe 's/(#.*wallpaper.*[\S\s]PRODUCT_PACKAGES\s[:+]=\s[\\]{1,2}[\S\s])(.*[\\]{1,2}[\S\s])*(.*[\S\s]){1}//gim' $j &&
+        perl -0 -i -pe 's/(#.*wallpaper.*[\S\s]PRODUCT_COPY_FILES\s[:+]=\s[\\]{1,2}[\S\s].*wallpaper.xml.*[\S\s])//gim' $j
     done
 
     # Loop through values in $VENDOR_COMMON_TEMP
@@ -174,13 +174,13 @@ else
                     done
                     for j in $(find . -name "*.mk"); do
                         echo "I: Processing .mk file: "$j" in vendor common tree: "$VENDOR_COMMON_TREE
-                        perl -0 -i -pe 's/([#].*[w][a][l][l][p][a][p][e][r].*[\S\s][P][R][O][D][U][C][T][_][P][A][C][K][A][G][E][S]\s[:+][=]\s[\\]{1,2}[\S\s])(.*[\\]{1,2}[\S\s])*(.*[\S\s]){1}//gim' $j &&
-                        perl -0 -i -pe 's/([#].*[w][a][l][l][p][a][p][e][r].*[\S\s][P][R][O][D][U][C][T][_][C][O][P][Y][_][F][I][L][E][S]\s[:+][=]\s[\\]{1,2}[\S\s].*[w][a][l][l][p][a][p][e][r][.][x][m][l].*[\S\s])//gim' $j
+                        perl -0 -i -pe 's/(#.*wallpaper.*[\S\s]PRODUCT_PACKAGES\s[:+]=\s[\\]{1,2}[\S\s])(.*[\\]{1,2}[\S\s])*(.*[\S\s]){1}//gim' $j &&
+                        perl -0 -i -pe 's/(#.*wallpaper.*[\S\s]PRODUCT_COPY_FILES\s[:+]=\s[\\]{1,2}[\S\s].*wallpaper.xml.*[\S\s])//gim' $j
                     done
                     for j in $(find . -name "setup-makefiles.sh"); do
                         echo "I: Processing setup-makefiles.sh file: "$j" in vendor common tree: "$VENDOR_COMMON_TREE
-                        perl -0 -i -pe 's/([#].*[w][a][l][l][p][a][p][e][r].*[\S\s][P][R][O][D][U][C][T][_][P][A][C][K][A][G][E][S]\s[:+][=]\s[\\]{1,2}[\S\s])(.*[\\]{1,2}[\S\s])*(.*[\S\s]){1}//gim' $j &&
-                        perl -0 -i -pe 's/([#].*[w][a][l][l][p][a][p][e][r].*[\S\s][P][R][O][D][U][C][T][_][C][O][P][Y][_][F][I][L][E][S]\s[:+][=]\s[\\]{1,2}[\S\s].*[w][a][l][l][p][a][p][e][r][.][x][m][l].*[\S\s])//gim' $j
+                        perl -0 -i -pe 's/(#.*wallpaper.*[\S\s]PRODUCT_PACKAGES\s[:+]=\s[\\]{1,2}[\S\s])(.*[\\]{1,2}[\S\s])*(.*[\S\s]){1}//gim' $j &&
+                        perl -0 -i -pe 's/(#.*wallpaper.*[\S\s]PRODUCT_COPY_FILES\s[:+]=\s[\\]{1,2}[\S\s].*wallpaper.xml.*[\S\s])//gim' $j
                     done
                     ./setup-makefiles.sh
                 )
@@ -192,7 +192,7 @@ else
 
             cd $VENDOR_COMMON_TREE && for m in $(find . -name "fstab.*"); do
                 echo "I: Processing fstab file: device/$VENDOR/$k/$m"
-                sed -r 's/([,][c][o][n][t][e][x][t][=].*[:][s][0])//' $m >$m".tmp" && mv $m".tmp" $m
+                sed -r 's/(,context=.*:s0)//' $m >$m".tmp" && mv $m".tmp" $m
             done
             # Since we can have multiple common repos we need to make sure to set
             # back the original values in case they exist. Otherwise unset the value.
