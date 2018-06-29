@@ -65,7 +65,7 @@ else
     # mount the partitions without issues
     cd $DEVICE_TREE && for j in $(find . -name "fstab.*"); do
         echo "I: Processing fstab file: device/$VENDOR/$DEVICE/$j"
-        sed -r 's/([,][c][o][n][t][e][x][t][=].*[:][s][0])//' $j >$j".tmp" && mv $j".tmp" $j
+        sed -r 's/(,context=.*:s0)//' $j >$j".tmp" && mv $j".tmp" $j
     done
 
     # Loop through values in $DEVICE_COMMON_TEMP
@@ -100,7 +100,7 @@ else
             # folder so we can mount the partitions without issues
             cd $DEVICE_COMMON_TREE && for m in $(find . -name "fstab.*"); do
                 echo "I: Processing fstab file: device/$VENDOR/$m"
-                sed -r 's/([,][c][o][n][t][e][x][t][=].*[:][s][0])//' $m >$m".tmp" && mv $m".tmp" $m
+                sed -r 's/(,context=.*:s0)//' $m >$m".tmp" && mv $m".tmp" $m
             done
             # Since we can have multiple common repos we need to make sure to set
             # back the original values in case they exist. Otherwise unset the value.
@@ -149,7 +149,7 @@ else
             # folder so we can mount the partitions without issues
             cd $VENDOR_COMMON_TREE && for m in $(find . -name "fstab.*"); do
                 echo "I: Processing fstab file: device/$VENDOR/$k/$m"
-                sed -r 's/([,][c][o][n][t][e][x][t][=].*[:][s][0])//' $m >$m".tmp" && mv $m".tmp" $m
+                sed -r 's/(,context=.*:s0)//' $m >$m".tmp" && mv $m".tmp" $m
             done
             # Since we can have multiple common repos we need to make sure to set
             # back the original values in case they exist. Otherwise unset the value.
