@@ -1,10 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
-    <project path="kernel/sony/msm8994" name="android_kernel_sony_msm8994" remote="ubp" revision="halium-7.1"/>
-    <project path="device/sony/sumire" name="android_device_sony_sumire" remote="los" revision="cm-14.1"/>
-    <project path="device/sony/kitakami-common" name="android_device_sony_kitakami-common" remote="ubp" revision="halium-7.1"/>
-    <project path="device/sony/common" name="android_device_sony_common" revision="cm-14.1" remote="los" />
-    <project path="hadware/sony/timekeep" name="android_hardware_sony_timekeep" revision="cm-14.1" remote="los" />
-    <project path="hadware/broadcom/fm" name="android_hardware_broadcom_fm" revision="cm-14.1" remote="los" />
-    <project path="vendor/sony" name="proprietary_vendor_sony" revision="cm-14.1" remote="them" />
+    <project path="device/sony/sumire" name="android_device_sony_sumire" remote="los"/>
+    <project path="device/sony/kitakami-common" name="ubports/android_device_sony_kitakami-common" remote="hal" />
+    <project path="device/sony/common" name="android_device_sony_common" remote="los" />
+
+    <project path="hadware/sony/timekeep" name="android_hardware_sony_timekeep" remote="los" />
+    <project path="hadware/broadcom/fm" name="android_hardware_broadcom_fm" remote="los" />
+
+    <project path="kernel/sony/msm8994" name="ubports/android_kernel_sony_msm8994" remote="hal" />
+
+    <project path="vendor/sony" name="proprietary_vendor_sony" remote="them" />
 </manifest>
