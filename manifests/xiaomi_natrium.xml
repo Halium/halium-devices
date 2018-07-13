@@ -1,8 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
-  <project name="android_device_xiaomi_natrium" path="device/xiaomi/natrium" remote="los" revision="cm-14.1" />
-  <project name="android_device_xiaomi_msm8996-common" path="device/xiaomi/msm8996-common" remote="los" revision="cm-14.1" />
-  <project name="android_packages_resources_devicesettings" path="packages/resources/devicesettings" remote="los" revision="cm-14.1" />
-  <project name="android_kernel_xiaomi_msm8996" path="kernel/xiaomi/msm8996" remote="los" revision="cm-14.1" />
-  <project name="proprietary_vendor_xiaomi" path="vendor/xiaomi" remote="them" revision="cm-14.1" />
+  <project path="device/xiaomi/natrium" name="android_device_xiaomi_natrium" remote="los" />
+  <project path="device/xiaomi/msm8996-common" name="android_device_xiaomi_msm8996-common" remote="los" />
+
+  <project path="kernel/xiaomi/msm8996" name="android_kernel_xiaomi_msm8996" remote="los" />
+
+  <project path="packages/resources/devicesettings" name="android_packages_resources_devicesettings" remote="los" />
+
+  <project path="vendor/xiaomi" name="proprietary_vendor_xiaomi" remote="them" />
 </manifest>
