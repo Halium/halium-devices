@@ -68,6 +68,18 @@ else
         sed -r 's/(,context=.*:s0)//' $j >$j".tmp" && mv $j".tmp" $j
     done
 
+    # Since we don't have SettingsLib, remove components that rely on it (which we therefore also don't use)
+    # such as CMActions/LineageActions, KeyHandler and Doze. Simply removing the folder will disable them.
+    cd $DEVICE_TREE
+    echo "I: Removing components relying on SettingsLib from: device/$VENDOR/$DEVICE"
+    rm -rf cmactions
+    rm -rf CMActions
+    rm -rf LineageActions
+    rm -rf doze
+    rm -rf Doze
+    rm -rf keyhandler
+    rm -rf KeyHandler
+
     # Loop through values in $DEVICE_COMMON_TEMP
     if [ -n "$DEVICE_COMMON_TEMP" ]; then
         for k in $DEVICE_COMMON_TEMP; do
@@ -102,6 +114,19 @@ else
                 echo "I: Processing fstab file: device/$VENDOR/$m"
                 sed -r 's/(,context=.*:s0)//' $m >$m".tmp" && mv $m".tmp" $m
             done
+
+            # Since we don't have SettingsLib, remove components that rely on it (which we therefore also don't use)
+            # such as CMActions/LineageActions, KeyHandler and Doze. Simply removing the folder will disable them.
+            cd $DEVICE_COMMON_TREE
+            echo "I: Removing components relying on SettingsLib from: device/$VENDOR/$k"
+            rm -rf cmactions
+            rm -rf CMActions
+            rm -rf LineageActions
+            rm -rf doze
+            rm -rf Doze
+            rm -rf keyhandler
+            rm -rf KeyHandler
+
             # Since we can have multiple common repos we need to make sure to set
             # back the original values in case they exist. Otherwise unset the value.
             if [ -n "$DEVICE_COMMON_HOLDER" ]; then
@@ -151,6 +176,19 @@ else
                 echo "I: Processing fstab file: device/$VENDOR/$k/$m"
                 sed -r 's/(,context=.*:s0)//' $m >$m".tmp" && mv $m".tmp" $m
             done
+
+            # Since we don't have SettingsLib, remove components that rely on it (which we therefore also don't use)
+            # such as CMActions/LineageActions, KeyHandler and Doze. Simply removing the folder will disable them.
+            cd $VENDOR_COMMON_TREE
+            echo "I: Removing components relying on SettingsLib from: device/$VENDOR/$k"
+            rm -rf cmactions
+            rm -rf CMActions
+            rm -rf LineageActions
+            rm -rf doze
+            rm -rf Doze
+            rm -rf keyhandler
+            rm -rf KeyHandler
+
             # Since we can have multiple common repos we need to make sure to set
             # back the original values in case they exist. Otherwise unset the value.
             if [ -n "$DEVICE_COMMON_HOLDER" ]; then
