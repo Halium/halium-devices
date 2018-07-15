@@ -5,5 +5,5 @@
 
     <project path="kernel/bq/msm8937" name="Halium/android_kernel_bq_msm8937" remote="hal" />
 
-    <project path="vendor/bq" name="proprietary_vendor_bq" revision="cm-14.1" remote="them" />
+    <project path="vendor/bq" name="proprietary_vendor_bq" remote="them" />
 </manifest> 
