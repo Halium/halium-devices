@@ -4,7 +4,7 @@
 
     <project path="device/oppo/common" name="android_device_oppo_common" remote="los" />
 
-    <project path="kernel/oneplus/msm8996" name="Herrie82/android_kernel_oneplus_onyx" remote="hal" />
+    <project path="kernel/oneplus/onyx" name="corpuscle/android_kernel_oneplus_onyx" remote="hal" revision="luneos/cm-14.1-wip" />
 
     <project path="vendor/oneplus" name="proprietary_vendor_oneplus" remote="them" />
 </manifest>
