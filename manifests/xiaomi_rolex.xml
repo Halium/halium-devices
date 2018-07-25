@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
-    <remote 
-            name="lr4a" 
+    <remote name="lr4a" 
             fetch="https://github.com/LineageOS-R4A/" 
             revision="cm-14.1" />
     
