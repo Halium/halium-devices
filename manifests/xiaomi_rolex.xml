@@ -4,7 +4,10 @@
             name="lr4a" 
             fetch="https://github.com/LineageOS-R4A/" 
             revision="cm-14.1" />
+    
     <project path="device/xiaomi/rolex" name="android_device_xiaomi_rolex" remote="lr4a" />
+    
     <project path="kernel/xiaomi/msm8917" name="android_kernel_xiaomi_msm8917" remote="lr4a" />
+    
     <project path="vendor/xiaomi" name="proprietary_vendor_xiaomi" remote="lr4a" />
 </manifest>
