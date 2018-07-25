@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+    <remote name="echosalik" 
+            fetch="https://github.com/echosalik/" 
+            revision="halium-7.1" />
+    <remote name="l4ra" 
+            fetch="https://github.com/LineageOS-R4A/" 
+            revision="cm-14.1" />
+    
+    <project path="device/xiaomi/rolex" name="android_device_xiaomi_rolex" remote="echosalik" />
+    
+    <project path="kernel/xiaomi/msm8917" name="android_kernel_xiaomi_msm8917" remote="echosalik" />
+    
+    <project path="vendor/xiaomi" name="proprietary_vendor_xiaomi" remote="l4ra" />
+</manifest>
