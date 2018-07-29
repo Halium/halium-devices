@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+<remote name="pepitortue"
+        fetch="https://github.com/Pepitortue"
+        revision="lineage-15.1" />
+<project path="device/lge/d855" name="android_device_lge_d855" remote="pepitortue" revision="lineage-15.1" /> 
+<project path="device/lge/g3-common" name="android_device_lge_g3-common" remote="pepitortue" revision="lineage-15.1" />
+<project path="vendor/lge/" name="proprietary_vendor_lge" remote="pepitortue" revision="lineage-15.1" />
+<project path="kernel/lge/g3" name="android_kernel_lge_g3" remote="pepitortue" revision="lineage-15.1" />
+</manifest>
