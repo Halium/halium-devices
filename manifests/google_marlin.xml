@@ -6,6 +6,6 @@
 
     <project path="device/google/marlin" name="android_device_google_marlin" remote="sb" />
     <project path="kernel/google/marlin" name="android_kernel_google_marlin" remote="sb" />
-    <project path="vendor/google" name="proprietary_vendor_google" remote="them" revision="cm-14.1" />
-    <project path="system/bt" name="android_system_bt" remote="los" revision="cm-14.1" />
+    <project path="vendor/google" name="proprietary_vendor_google" remote="them" />
+    <project path="system/bt" name="android_system_bt" remote="los" />
 </manifest>
