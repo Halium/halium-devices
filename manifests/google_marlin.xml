@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+    <remote name="sb"
+        fetch="https://github.com/Sergobot"
+        revision="halium-7.1" />
+
+    <project path="device/google/marlin" name="android_device_google_marlin" remote="sb" />
+    <project path="kernel/google/marlin" name="android_kernel_google_marlin" remote="sb" />
+    <project path="vendor/google" name="proprietary_vendor_google" remote="them" />
+    <project path="system/bt" name="android_system_bt" remote="los" />
+</manifest>
