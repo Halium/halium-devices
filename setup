@@ -1,10 +1,10 @@
 #!/bin/bash
 
 function removeUnneededFolders {
-rm -rf [Cc][Mm]actions
-rm -rf [Ll]inage[Aa]ctions
-rm -rf [Dd]oze
-rm -rf [Kk]ey[Hh]andler
+    rm -rf [Cc][Mm]actions
+    rm -rf [Ll]inage[Aa]ctions
+    rm -rf [Dd]oze
+    rm -rf [Kk]ey[Hh]andler
 }
 
 DEVICE=${1:=${DEVICE}}
