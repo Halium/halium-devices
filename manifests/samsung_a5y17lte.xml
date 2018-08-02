@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+    <project path="device/samsung/a5y17lte" name="android_device_samsung_a5y17lte" remote="los"/>
+    <project path="device/samsung/universal7880-common" name="android_device_samsung_universal7880-common" remote="los"/>
+    
+    <project path="kernel/samsung/universal7880" name="dsankouski/android_kernel_samsung_universal7880" remote="hal"/>
+    
+    <project path="hardware/samsung" name="Halium/android_hardware_samsung" remote="hal" />
+    
+    <project path="vendor/samsung" name="proprietary_vendor_samsung" remote="them" />
+</manifest>
