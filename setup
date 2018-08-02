@@ -1,5 +1,12 @@
 #!/bin/bash
 
+function removeUnneededFolders {
+rm -rf [Cc][Mm]actions
+rm -rf [Ll]inage[Aa]ctions
+rm -rf [Dd]oze
+rm -rf [Kk]ey[Hh]andler
+}
+
 DEVICE=${1:=${DEVICE}}
 JOBS=${JOBS:=12}
 ARGS=($@)
@@ -80,13 +87,7 @@ else
     # such as CMActions/LineageActions, KeyHandler and Doze. Simply removing the folder will disable them.
     cd $DEVICE_TREE
     echo "I: Removing components relying on SettingsLib from: device/$VENDOR/$DEVICE"
-    rm -rf cmactions
-    rm -rf CMActions
-    rm -rf LineageActions
-    rm -rf doze
-    rm -rf Doze
-    rm -rf keyhandler
-    rm -rf KeyHandler
+    removeUnneededFolders
 
     # Loop through values in $DEVICE_COMMON_TEMP
     if [ -n "$DEVICE_COMMON_TEMP" ]; then
@@ -127,13 +128,7 @@ else
             # such as CMActions/LineageActions, KeyHandler and Doze. Simply removing the folder will disable them.
             cd $DEVICE_COMMON_TREE
             echo "I: Removing components relying on SettingsLib from: device/$VENDOR/$k"
-            rm -rf cmactions
-            rm -rf CMActions
-            rm -rf LineageActions
-            rm -rf doze
-            rm -rf Doze
-            rm -rf keyhandler
-            rm -rf KeyHandler
+            removeUnneededFolders
 
             # Since we can have multiple common repos we need to make sure to set
             # back the original values in case they exist. Otherwise unset the value.
@@ -160,13 +155,7 @@ else
             # such as CMActions/LineageActions, KeyHandler and Doze. Simply removing the folder will disable them.
             cd $DEVICE_COMMON_TREE2
             echo "I: Removing components relying on SettingsLib from: device/$VENDOR2/$k"
-            rm -rf cmactions
-            rm -rf CMActions
-            rm -rf LineageActions
-            rm -rf doze
-            rm -rf Doze
-            rm -rf keyhandler
-            rm -rf KeyHandler
+            removeUnneededFolders
         done
     fi
 
@@ -209,13 +198,7 @@ else
             # such as CMActions/LineageActions, KeyHandler and Doze. Simply removing the folder will disable them.
             cd $VENDOR_COMMON_TREE
             echo "I: Removing components relying on SettingsLib from: device/$VENDOR/$k"
-            rm -rf cmactions
-            rm -rf CMActions
-            rm -rf LineageActions
-            rm -rf doze
-            rm -rf Doze
-            rm -rf keyhandler
-            rm -rf KeyHandler
+            removeUnneededFolders
 
             # Since we can have multiple common repos we need to make sure to set
             # back the original values in case they exist. Otherwise unset the value.
