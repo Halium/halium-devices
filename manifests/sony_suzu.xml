@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+  <remote name="beidl" fetch="https://github.com/beidl" />
+  <remote name="sony" fetch="https://github.com/sonyxperiadev" />
+  <remote name="NXP" fetch="https://github.com/NXPNFCProject/" />
+
+  <!-- remove-project path="system/sepolicy" name="android_system_sepolicy" / -->
+  <remove-project path="device/qcom/sepolicy" name="android_device_qcom_sepolicy" />
+
+  <!-- project path="device/sample" name="device/sample" revision="nougat-mr1-release" remote="aosp" / -->
+  <project path="device/sony/suzu" name="device-sony-suzu" revision="n-mr1" remote="beidl" />
+  <project path="device/sony/loire" name="device-sony-loire" revision="n-mr1" remote="beidl" />
+  <project path="device/sony/common" name="device-sony-common" revision="n-mr1" remote="beidl" />
+  <!-- project path="device/sony/sepolicy" name="device-sony-sepolicy" revision="n-mr1" remote="beidl" / -->
+  <project path="kernel/sony/suzu" name="device-kernel-suzu" revision="ubports/LA.UM.6.4.r1" remote="beidl" />
+  <project path="vendor/broadcom/wlan" name="vendor-broadcom-wlan" revision="master" remote="sony" />
+  <project path="vendor/sony" name="proprietary_vendor_sony" revision="cm-14.1" remote="them" />
+  <project path="vendor/nxp/" name="vendor-nxp" groups="device" remote="sony" revision="master" />
+  <project path="vendor/nxp/NXPNFCC_FW" name="NXPNFCC_FW" groups="device" remote="NXP" revision="master" />
+  <project path="hardware/qcom/display/sde" name="hardware-qcom-display" groups="device" remote="sony" revision="aosp/LA.UM.6.3.r1" />
+
+</manifest>
