@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
-  <project path="device/xiaomi/cancro" name="android_device_xiaomi_cancro" remote="los" />
-  <project path="kernel/xiaomi/cancro" name="android_kernel_xiaomi_cancro" remote="los"/>
-  <project path="device/qcom/common" name="android_device_qcom_common" remote="los"/>
-  <project path="device/qcom/sepolicy" name="android_device_qcom_sepolicy" remote="los"/>
+  <project name="halium-cancro/android_device_xiaomi_cancro" path="device/xiaomi/cancro" remote="hal" />
+  <project name="halium-cancro/android_kernel_xiaomi_cancro" path="kernel/xiaomi/cancro" remote="hal" />
+  <project name="halium-cancro/proprietary_vendor_xiaomi_cancro" path="vendor/xiaomi/cancro" remote="hal" />
+  <!-- halium install -->
+  <project name="JBBgameich/halium-install" path="halium/halium-install" remote="hal" revision="master"/>
+  <!-- ubuntu touch -->
+  <project name="halium-cancro/ubports-boot" path="halium/ubports-boot" remote="hal" revision="master" />
 </manifest>
