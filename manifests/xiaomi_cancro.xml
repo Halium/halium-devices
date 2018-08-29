@@ -3,8 +3,4 @@
   <project name="halium-cancro/android_device_xiaomi_cancro" path="device/xiaomi/cancro" remote="hal" />
   <project name="halium-cancro/android_kernel_xiaomi_cancro" path="kernel/xiaomi/cancro" remote="hal" />
   <project name="halium-cancro/proprietary_vendor_xiaomi_cancro" path="vendor/xiaomi/cancro" remote="hal" />
-  <!-- halium install -->
-  <project name="JBBgameich/halium-install" path="halium/halium-install" remote="hal" revision="master"/>
-  <!-- ubuntu touch -->
-  <project name="halium-cancro/ubports-boot" path="halium/ubports-boot" remote="hal" revision="master" />
 </manifest>
