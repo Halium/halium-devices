@@ -3,9 +3,10 @@
     <remote name="wt88047"
         fetch="https://github.com/halium-for-wt88047"
         revision="Halium-7.1" />
-    
+
     <project path="device/cyanogen/msm8916-common" name="Halium/android_device_cyanogen_msm8916-common" remote="hal" />
     <project path="device/wingtech/wt88047" name="Halium/android_device_wingtech_wt88047" remote="hal" />
+
     <project path="kernel/wingtech/msm8916" name="Halium/android_kernel_wingtech_msm8916" remote="hal" />
 
     <project path="vendor/wingtech" name="proprietary_vendor_wingtech" remote="wt88047" />
