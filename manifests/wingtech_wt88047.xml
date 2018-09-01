@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
-    
     <remote name="wt88047"
         fetch="https://github.com/halium-for-wt88047"
         revision="Halium-7.1" />
@@ -10,5 +9,4 @@
     <project path="kernel/wingtech/msm8916" name="Halium/android_kernel_wingtech_msm8916" remote="hal" />
 
     <project path="vendor/wingtech" name="proprietary_vendor_wingtech" remote="wt88047" />
-    
 </manifest>
