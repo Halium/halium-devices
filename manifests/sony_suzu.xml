@@ -9,7 +9,7 @@
   <remove-project path="vendor/qcom/opensource/dataservices" name="android_vendor_qcom_opensource_dataservices" />
   <remove-project path="hardware/qcom/display" name="android_hardware_qcom_display" />
 
-  <project path="device/sony/suzu" name="device-sony-suzu" revision="n-mr1" remote="beidl" />
+  <project path="device/sony/suzu" name="device-sony-suzu" revision="n-mr1-ubports" remote="beidl" />
   <project path="device/sony/loire" name="device-sony-loire" revision="n-mr1-ubports" remote="beidl" />
   <project path="device/sony/common" name="device-sony-common" revision="n-mr1-ubports" remote="beidl" />
   <project path="kernel/sony/suzu" name="device-kernel-suzu" revision="ubports/LA.UM.6.4.r1" remote="beidl" />
