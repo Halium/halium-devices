@@ -5,7 +5,6 @@
   <remote name="NXP" fetch="https://github.com/NXPNFCProject/" />
 
   <remove-project path="device/qcom/sepolicy" name="android_device_qcom_sepolicy" />
-  <remove-project path="vendor/qcom/opensource/dataservices" name="android_vendor_qcom_opensource_dataservices" />
   <remove-project path="hardware/qcom/display" name="android_hardware_qcom_display" />
 
   <project path="device/sony/suzu" name="device-sony-suzu" revision="n-mr1-ubports" remote="beidl" />
@@ -21,7 +20,6 @@
   <project path="hardware/qcom/display" name="android_hardware_qcom_display" remote="beidl" revision="cm-14.1" />
   <project path="vendor/broadcom/bt-fm" name="vendor-broadcom-bt-fm" groups="device" remote="sony" revision="master" />
   <project path="vendor/broadcom/wlan" name="vendor-broadcom-wlan" groups="device" remote="sony" revision="master" />
-  <project path="vendor/qcom/opensource/dataservices" name="vendor-qcom-opensource-dataservices" groups="device" remote="sony" revision="master" />
   <project path="vendor/qcom/opensource/fm" name="vendor-qcom-opensource-fm" groups="device" remote="sony" revision="master" />
   <project path="vendor/qcom/opensource/location" name="vendor-qcom-opensource-location" groups="device" remote="sony" revision="n-mr1" />
   <project path="vendor/qcom/opensource/time-services" name="vendor-qcom-opensource-time-services" groups="device" remote="sony" revision="master" />
