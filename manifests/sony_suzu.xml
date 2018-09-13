@@ -5,7 +5,6 @@
   <remote name="NXP" fetch="https://github.com/NXPNFCProject/" />
 
   <remove-project path="device/qcom/sepolicy" name="android_device_qcom_sepolicy" />
-  <remove-project path="bionic" name="Halium/android_bionic" />
   <remove-project path="vendor/qcom/opensource/dataservices" name="android_vendor_qcom_opensource_dataservices" />
   <remove-project path="hardware/qcom/display" name="android_hardware_qcom_display" />
 
@@ -16,8 +15,7 @@
   <project path="kernel/sony/suzu/drivers/staging/wlan-qc/fw-api" name="vendor-qcom-opensource-wlan-fw-api" groups="device" remote="sony" revision="aosp/LA.UM.6.4.r1" />
   <project path="kernel/sony/suzu/drivers/staging/wlan-qc/qca-wifi-host-cmn" name="vendor-qcom-opensource-wlan-qca-wifi-host-cmn" groups="device" remote="sony" revision="aosp/LA.UM.6.4.r1" />
   <project path="kernel/sony/suzu/drivers/staging/wlan-qc/qcacld-3.0" name="vendor-qcom-opensource-wlan-qcacld-3.0" groups="device" remote="sony" revision="aosp/LA.UM.6.4.r1" />
-  <project path="bionic" name="android_bionic" revision="halium-7.1" remote="beidl" />
-  
+
   <project path="vendor/nxp/" name="vendor-nxp" groups="device" remote="sony" revision="master" />
   <project path="vendor/nxp/NXPNFCC_FW" name="NXPNFCC_FW" groups="device" remote="NXP" revision="master" />
   <project path="hardware/qcom/display" name="android_hardware_qcom_display" remote="beidl" revision="cm-14.1" />
