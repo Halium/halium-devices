@@ -1,13 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
+    <remote name="minlexx" 
+            fetch="https://github.com/minlexx"
+            revision="halium-7.1" />
+    
     <project path="device/samsung/klte" name="android_device_samsung_klte" remote="los" />
-    <project path="device/samsung/klte-common" name="android_device_samsung_klte-common" remote="los" />
+    <project path="device/samsung/klte-common" name="android_device_samsung_klte-common" remote="minlexx" />
     <project path="device/samsung/msm8974-common" name="android_device_samsung_msm8974-common" remote="los" />
     <project path="device/samsung/qcom-common" name="Halium/android_device_samsung_qcom-common" remote="hal" />
 
     <project path="hardware/samsung" name="Halium/android_hardware_samsung" remote="hal" />
 
-    <project path="kernel/samsung/msm8974" name="LNJ2/android_kernel_samsung_msm8974" remote="hal" />
+    <project path="kernel/samsung/msm8974" name="android_kernel_samsung_msm8974" remote="minlexx" />
 
     <project path="vendor/samsung" name="proprietary_vendor_samsung" remote="them" />
 </manifest>
