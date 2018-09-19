@@ -3,19 +3,18 @@
     <remote name="beidl" fetch="git://github.com/beidl" />
     <remote name="sony" fetch="git://github.com/sonyxperiadev" />
     <remote name="nxp" fetch="git://github.com/NXPNFCProject/" />
-    <remote name="jbb" fetch="https://gitlab.com/JBBgameich/" />
 
     <remove-project path="device/qcom/sepolicy" name="android_device_qcom_sepolicy" />
     <remove-project path="hardware/qcom/display" name="android_hardware_qcom_display" />
-
-    <project path="halium/halium-install" name="halium-install" revision="master" remote="jbb" />
-
+    <remove-project path="system/sepolicy" name="android_system_sepolicy" />
+    
+    <project path="hardware/qcom/display" name="android_hardware_qcom_display" remote="beidl" revision="halium-7.1" />
+    <project path="system/sepolicy" name="android_system_sepolicy" remote="beidl" revision="halium-7.1" />
+    
     <project path="device/sony/suzu" name="device-sony-suzu" revision="n-mr1-ubports" remote="beidl" />
     <project path="device/sony/loire" name="device-sony-loire" revision="n-mr1-ubports" remote="beidl" />
     <project path="device/sony/common" name="device-sony-common" revision="n-mr1-ubports" remote="beidl" />
-    <project path="kernel/sony/suzu" name="device-kernel-loire" revision="ubports/LA.UM.6.4.r1" remote="beidl" />
-    <project path="hardware/qcom/display" name="android_hardware_qcom_display" remote="beidl" revision="cm-14.1" />
-  
+    
     <project path="kernel/sony/suzu/drivers/staging/wlan-qc/fw-api" name="vendor-qcom-opensource-wlan-fw-api" groups="device" remote="sony" revision="aosp/LA.UM.6.4.r1" />
     <project path="kernel/sony/suzu/drivers/staging/wlan-qc/qca-wifi-host-cmn" name="vendor-qcom-opensource-wlan-qca-wifi-host-cmn" groups="device" remote="sony" revision="aosp/LA.UM.6.4.r1" />
     <project path="kernel/sony/suzu/drivers/staging/wlan-qc/qcacld-3.0" name="vendor-qcom-opensource-wlan-qcacld-3.0" groups="device" remote="sony" revision="aosp/LA.UM.6.4.r1" />
