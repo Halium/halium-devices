@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+    <project path="device/sony/karin_windy" name="ubports/android_device_sony_karin_windy" remote="hal" />
+    <project path="device/sony/karin" name="android_device_sony_karin" remote="los" />
+    <project path="device/sony/kitakami-common" name="ubports/android_device_sony_kitakami-common" remote="hal" />
+    <project path="device/sony/common" name="android_device_sony_common" remote="los" />
+
+    <project path="hardware/sony/timekeep" name="android_hardware_sony_timekeep" remote="los" />
+    <project path="hardware/broadcom/fm" name="android_hardware_broadcom_fm" remote="los" />
+
+    <project path="kernel/sony/msm8994" name="ubports/android_kernel_sony_msm8994" remote="hal" />
+
+    <project path="vendor/sony" name="proprietary_vendor_sony" remote="them" />
+</manifest>
