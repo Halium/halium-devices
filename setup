@@ -71,6 +71,9 @@ else
                 echo "I: Processing proprietary blob file: device/$VENDOR/$DEVICE/$i"
                 grep -r -v -E '(^.*\.{1}(jar|apk)[|]?.*)' $i >$i".tmp" && mv $i".tmp" $i
             done
+            # Set executable bit, needed for some device trees
+            chmod +x ./setup-makefiles.sh
+            # Actually run the script
             ./setup-makefiles.sh
         )
     fi
@@ -112,6 +115,9 @@ else
                         echo "I: Processing proprietary blob file: device/$VENDOR/$k/$l"
                         grep -r -v -E '(^.*\.{1}(jar|apk)[|]?.*)' $l >$l".tmp" && mv $l".tmp" $l
                     done
+                    # Set executable bit, needed for some device trees
+                    chmod +x ./setup-makefiles.sh
+                    # Actually run the script
                     ./setup-makefiles.sh
                 )
             fi
@@ -182,6 +188,9 @@ else
                         echo "I: Processing proprietary blob file: $VENDOR_COMMON_TREE/$l"
                         grep -r -v -E '(^.*\.{1}(jar|apk)[|]?.*)' $l >$l".tmp" && mv $l".tmp" $l
                     done
+                    # Set executable bit, needed for some device trees
+                    chmod +x ./setup-makefiles.sh
+                    # Actually run the script
                     ./setup-makefiles.sh
                 )
             fi
