@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+	<remote name="rei"
+		fetch="https://github.com/reivilibre"
+		revision="halium-7.1" />
+	
+	<project path="device/motorola/cedric" name="android_device_motorola_cedric" remote="rei" />
+	
+	<project path="kernel/motorola/msm8937" name="android_kernel_motorola_msm8937" remote="rei" />
+	
+	<project path="vendor/motorola/cedric" name="android_vendor_motorola_cedric" remote="rei" />
+	
+	<project path="packages/resources/devicesettings" name="android_packages_resources_devicesettings" remote="los" />
+</manifest>
