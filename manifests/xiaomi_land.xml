@@ -8,5 +8,5 @@
     
     <project path="kernel/xiaomi/msm8937" name="android_kernel_xiaomi_msm8937" remote="dvs_repo" />
     
-    <project path="vendor/xiaomi" name="proprietary_vendor_xiaomi" revision="cm-14.1" remote="them" />
+    <project path="vendor/xiaomi" name="proprietary_vendor_xiaomi" remote="them" />
 </manifest>
