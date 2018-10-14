@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
-    <project path="device/sony/sumire" name="ubports/android_device_sony_sumire" remote="hal" />
+    <project path="device/sony/karin_windy" name="ubports/android_device_sony_karin_windy" remote="hal" />
     <project path="device/sony/kitakami-common" name="ubports/android_device_sony_kitakami-common" remote="hal" />
     <project path="device/sony/common" name="android_device_sony_common" remote="los" />
 

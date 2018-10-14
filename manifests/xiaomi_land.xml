@@ -1,16 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
-    <remote name="kek"
-            fetch="https://github.com/rupansh"
+    <remote name="dvs_repo"
+            fetch="https://github.com/SRIDHARDV"
             revision="halium-7.1" />
-    <remote name="HyperTeam" 
-            fetch="https://github.com/HyperTeam" 
-            revision="cm-14.1" />
 
-    <project path="device/xiaomi/land" name="android_device_xiaomi_land-1" remote="kek" />
-    <project path="device/xiaomi/msm8937-common" name="android_device_xiaomi_msm8937-common" remote="kek" />
-
-    <project path="kernel/xiaomi/msm8937" name="android_kernel_xiaomi_msm8937-1" remote="kek" />
-
-    <project path="vendor/xiaomi" name="proprietary_vendor_xiaomi" remote="HyperTeam" />
+    <project path="device/xiaomi/land" name="android_device_xiaomi_land" remote="dvs_repo" />
+    
+    <project path="kernel/xiaomi/msm8937" name="android_kernel_xiaomi_msm8937" remote="dvs_repo" />
+    
+    <project path="vendor/xiaomi" name="proprietary_vendor_xiaomi" remote="them" />
 </manifest>

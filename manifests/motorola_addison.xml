@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+    <remote name="NotKit"
+        fetch="https://github.com/NotKit"
+        revision="halium-7.1" />
+
+    <project path="device/motorola/addison" name="android_device_motorola_addison" remote="NotKit" />
+
+    <project path="kernel/motorola/msm8953" name="android_kernel_motorola_msm8953" remote="NotKit" />
+
+    <project path="vendor/motorola" name="proprietary_vendor_motorola" remote="them" />
+</manifest>
