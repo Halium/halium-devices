@@ -1,43 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
-<project path="vendor/broadcom/bt-fm" name="vendor-broadcom-bt-fm" groups="device" remote="sony" revision="master" />
-<project path="vendor/broadcom/wlan" name="vendor-broadcom-wlan" groups="device" remote="sony" revision="master" />
-<remote name="sony" fetch="https://github.com/sonyxperiadev/" />
-<project path="device/sony/sepolicy" name="device-sony-sepolicy" groups="device" remote="sony" revision="n-mr1" />
-<project path="device/sony/common" name="device-sony-common" groups="device" remote="sony" revision="n-mr1" />
+    <remote name="kelmes" fetch="git://github.com/kelmes" />
+    <remote name="sony" fetch="git://github.com/sonyxperiadev" />
+    <remote name="nxp" fetch="git://github.com/NXPNFCProject/" />
 
-<!--msm8956-->
-<project path="device/sony/loire" name="device-sony-loire" groups="device" remote="sony" revision="n-mr1" />
-<project path="device/sony/kugo" name="device-sony-kugo" groups="device" remote="sony" revision="n-mr1" />
-<project path="device/sony/suzu" name="device-sony-suzu" groups="device" remote="sony" revision="n-mr1" />
+    <remove-project path="device/qcom/sepolicy" name="android_device_qcom_sepolicy" />
+    <remove-project path="hardware/qcom/display" name="android_hardware_qcom_display" />
+    <remove-project path="system/sepolicy" name="android_system_sepolicy" />
+    
+    <project path="hardware/qcom/display" name="android_hardware_qcom_display" remote="kelmes" revision="halium-7.1" />
+    <project path="system/sepolicy" name="android_system_sepolicy" remote="kelmes" revision="halium-7.1" />
+    
+    <project path="device/sony/kugo" name="device-sony-kugo" revision="n-mr1-ubports" remote="kelmes" />
+    <project path="device/sony/loire" name="device-sony-loire" revision="n-mr1-ubports" remote="kelmes" />
+    <project path="device/sony/common" name="device-sony-common" revision="n-mr1-ubports" remote="kelmes" />
+    
+    <project path="kernel/sony/kugo" name="device-kernel-loire" revision="ubports/LA.UM.6.4.r1" remote="kelmes" />
+    <project path="kernel/sony/kugo/drivers/staging/wlan-qc/fw-api" name="vendor-qcom-opensource-wlan-fw-api" groups="device" remote="sony" revision="aosp/LA.UM.6.4.r1" />
+    <project path="kernel/sony/kugo/drivers/staging/wlan-qc/qca-wifi-host-cmn" name="vendor-qcom-opensource-wlan-qca-wifi-host-cmn" groups="device" remote="sony" revision="aosp/LA.UM.6.4.r1" />
+    <project path="kernel/sony/kugo/drivers/staging/wlan-qc/qcacld-3.0" name="vendor-qcom-opensource-wlan-qcacld-3.0" groups="device" remote="sony" revision="aosp/LA.UM.6.4.r1" />
 
-
-<project path="device/sony/common-headers" name="device-sony-common-headers" groups="device" remote="sony" revision="aosp/LA.UM.5.7.r1" />
-<project path="device/sony/common-kernel" name="vendor-sony-kernel" groups="device" remote="sony" revision="aosp/LA.UM.5.7.r1" clone-depth="1" />
-<project path="hardware/qcom/camera" name="camera" groups="device" remote="sony" revision="aosp/LA.UM.5.7.r1" />
-<project path="kernel/sony/msm" name="kernel" groups="device" remote="sony" revision="aosp/LA.UM.5.7.r1" />
-<project path="kernel/sony/msm/drivers/staging/wlan-qc/fw-api" name="vendor-qcom-opensource-wlan-fw-api" groups="device" remote="sony" revision="aosp/LA.UM.5.7.r1" />
-<project path="kernel/sony/msm/drivers/staging/wlan-qc/qca-wifi-host-cmn" name="vendor-qcom-opensource-wlan-qca-wifi-host-cmn" groups="device" remote="sony" revision="aosp/LA.UM.5.7.r1" />
-<project path="kernel/sony/msm/drivers/staging/wlan-qc/qcacld-3.0" name="vendor-qcom-opensource-wlan-qcacld-3.0" groups="device" remote="sony" revision="aosp/LA.UM.5.7.r1" />
-<remote name="NXP" fetch="https://github.com/NXPNFCProject/" />
-<project path="vendor/nxp/" name="vendor-nxp" groups="device" remote="sony" revision="master" />
-<project path="vendor/nxp/NXPNFCC_FW" name="NXPNFCC_FW" groups="device" remote="NXP" revision="master" />
-<project path="vendor/qcom/opensource/dataservices" name="vendor-qcom-opensource-dataservices" groups="device" remote="sony" revision="master" />
-<project path="vendor/qcom/opensource/fm" name="vendor-qcom-opensource-fm" groups="device" remote="sony" revision="master" />
-<project path="vendor/qcom/opensource/location" name="vendor-qcom-opensource-location" groups="device" remote="sony" revision="n-mr1" />
-<project path="vendor/qcom/opensource/time-services" name="vendor-qcom-opensource-time-services" groups="device" remote="sony" revision="master" />
-<project path="vendor/qcom/opensource/wlan" name="hardware-qcom-wlan" groups="device" remote="sony" revision="master" />
-<project path="vendor/oss/fingerprint"  name="vendor-sony-oss-fingerprint" groups="device" remote="sony" revision="android-7.1.1_r55" />
-<project path="vendor/oss/macaddrsetup" name="macaddrsetup" groups="device" remote="sony" revision="master" />
-<project path="vendor/oss/thermanager" name="thermanager" groups="device" remote="sony" revision="master" />
-<project path="vendor/oss/timekeep" name="timekeep" groups="device" remote="sony" revision="master" />
-<project path="vendor/oss/transpower" name="transpower" groups="device" remote="sony" revision="android-7.1.1_r55" />
-<project path="packages/apps/ExtendedSettings" name="packages_apps_ExtendedSettings" groups="device" remote="sony" revision="n-mr1" />
-<project path="packages/apps/FMRadio" name="packages-apps-FMRadio" groups="device" remote="sony" revision="master" />
-<project path="vendor/oss/json-c" name="json-c" groups="device" remote="sony" revision="master" />
-<project path="vendor/oss/repo_update" name="repo_update" groups="device" remote="sony" revision="android-7.1.2_r36">
-    <linkfile src="repo_update.sh" dest="repo_update.sh" />
-</project>
-<project path="device/sample" name="device/sample" groups="pdk" />
-<project path="system/bt" name="platform/system/bt" groups="pdk" />
+    <project path="vendor/nxp/" name="vendor-nxp" groups="device" remote="sony" revision="master" />
+    <project path="vendor/nxp/NXPNFCC_FW" name="NXPNFCC_FW" groups="device" remote="nxp" revision="master" />
+    <project path="vendor/broadcom/bt-fm" name="vendor-broadcom-bt-fm" groups="device" remote="sony" revision="master" />
+    <project path="vendor/broadcom/wlan" name="vendor-broadcom-wlan" groups="device" remote="sony" revision="master" />
+    <project path="vendor/qcom/opensource/fm" name="vendor-qcom-opensource-fm" groups="device" remote="sony" revision="master" />
+    <project path="vendor/qcom/opensource/location" name="vendor-qcom-opensource-location" groups="device" remote="sony" revision="n-mr1" />
+    <project path="vendor/qcom/opensource/time-services" name="vendor-qcom-opensource-time-services" groups="device" remote="sony" revision="master" />
+    <project path="vendor/qcom/opensource/wlan" name="hardware-qcom-wlan" groups="device" remote="sony" revision="master" />
+    <project path="vendor/oss/fingerprint"  name="vendor-sony-oss-fingerprint" groups="device" remote="sony" revision="android-7.1.1_r55" />
+    <project path="vendor/oss/macaddrsetup" name="macaddrsetup" groups="device" remote="sony" revision="master" />
+    <project path="vendor/oss/thermanager" name="thermanager" groups="device" remote="sony" revision="master" />
+    <project path="vendor/oss/timekeep" name="timekeep" groups="device" remote="sony" revision="master" />
+    <project path="vendor/oss/transpower" name="transpower" groups="device" remote="sony" revision="android-7.1.1_r55" />
+    <project path="vendor/oss/json-c" name="json-c" groups="device" remote="sony" revision="master" />
 </manifest>
