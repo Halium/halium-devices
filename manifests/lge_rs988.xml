@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+    <remote name="cad"
+            fetch="https://github.com/charlesDelaware"
+            revision="refs/heads/cm-14.1" />
+
+    <project path="device/lge/rs988" name="android_device_lge_rs988" remote="cad" revision="cm-14.1" />
+    <project path="device/lge/msm8996-common" name="android_device_lge_msm8996-common" remote="cad" revision="cm-14.1" />
+    <project path="device/lge/g5-common" name="android_device_lge_g5-common" remote="cad" revision="cm-14.1" />
+
+    <project path="kernel/lge/msm8996" name="android_kernel_lge_msm8996" remote="cad" revision="cm-14.1" />
+
+    <project path="vendor/lge" name="proprietary_vendor_lge" remote="them" revision="cm-14.1" />
+</manifest>
