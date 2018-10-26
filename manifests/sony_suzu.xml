@@ -3,22 +3,33 @@
     <remote name="beidl" fetch="git://github.com/beidl" />
     <remote name="sony" fetch="git://github.com/sonyxperiadev" />
     <remote name="nxp" fetch="git://github.com/NXPNFCProject/" />
+    <remote name="ubp" fetch="git://github.com/ubports" />
+    <remote name="mer-hybris" fetch="git://github.com/mer-hybris" />
 
     <remove-project path="device/qcom/sepolicy" name="android_device_qcom_sepolicy" />
     <remove-project path="hardware/qcom/display" name="android_hardware_qcom_display" />
     <remove-project path="system/sepolicy" name="android_system_sepolicy" />
+    <remove-project path="vendor/qcom/opensource/dataservices" name="android_vendor_qcom_opensource_dataservices" />
+    <remove-project path="halium/libhybris" name="Halium/libhybris" />
+    <remove-project path="halium/audioflingerglue" name="Halium/audioflingerglue" />
     
     <project path="hardware/qcom/display" name="android_hardware_qcom_display" remote="beidl" revision="halium-7.1" />
     <project path="system/sepolicy" name="android_system_sepolicy" remote="beidl" revision="halium-7.1" />
     
+    <project path="halium/libhybris" name="libhybris" remote="ubp" revision="refs/heads/hybris-compat-layer-fixes" />
+    <project path="halium/audioflingerglue" name="audioflingerglue" remote="mer-hybris" revision="master" />
+
     <project path="device/sony/suzu" name="device-sony-suzu" revision="n-mr1-ubports" remote="beidl" />
     <project path="device/sony/loire" name="device-sony-loire" revision="n-mr1-ubports" remote="beidl" />
     <project path="device/sony/common" name="device-sony-common" revision="n-mr1-ubports" remote="beidl" />
-    
+
     <project path="kernel/sony/suzu" name="device-kernel-loire" revision="ubports/LA.UM.6.4.r1" remote="beidl" />
     <project path="kernel/sony/suzu/drivers/staging/wlan-qc/fw-api" name="vendor-qcom-opensource-wlan-fw-api" groups="device" remote="sony" revision="aosp/LA.UM.6.4.r1" />
     <project path="kernel/sony/suzu/drivers/staging/wlan-qc/qca-wifi-host-cmn" name="vendor-qcom-opensource-wlan-qca-wifi-host-cmn" groups="device" remote="sony" revision="aosp/LA.UM.6.4.r1" />
     <project path="kernel/sony/suzu/drivers/staging/wlan-qc/qcacld-3.0" name="vendor-qcom-opensource-wlan-qcacld-3.0" groups="device" remote="sony" revision="aosp/LA.UM.6.4.r1" />
+
+    <project path="external/libnfc-nci" name="platform/external/libnfc-nci" groups="pdk" remote="aosp" />
+    <project path="external/libnfc-nxp" name="platform/external/libnfc-nxp" groups="pdk" remote="aosp" />
 
     <project path="vendor/nxp/" name="vendor-nxp" groups="device" remote="sony" revision="master" />
     <project path="vendor/nxp/NXPNFCC_FW" name="NXPNFCC_FW" groups="device" remote="nxp" revision="master" />
@@ -28,10 +39,13 @@
     <project path="vendor/qcom/opensource/location" name="vendor-qcom-opensource-location" groups="device" remote="sony" revision="n-mr1" />
     <project path="vendor/qcom/opensource/time-services" name="vendor-qcom-opensource-time-services" groups="device" remote="sony" revision="master" />
     <project path="vendor/qcom/opensource/wlan" name="hardware-qcom-wlan" groups="device" remote="sony" revision="master" />
+    <project path="vendor/qcom/opensource/dataservices" name="vendor-qcom-opensource-dataservices" groups="device" remote="sony" revision="master" />
     <project path="vendor/oss/fingerprint"  name="vendor-sony-oss-fingerprint" groups="device" remote="sony" revision="android-7.1.1_r55" />
     <project path="vendor/oss/macaddrsetup" name="macaddrsetup" groups="device" remote="sony" revision="master" />
     <project path="vendor/oss/thermanager" name="thermanager" groups="device" remote="sony" revision="master" />
     <project path="vendor/oss/timekeep" name="timekeep" groups="device" remote="sony" revision="master" />
     <project path="vendor/oss/transpower" name="transpower" groups="device" remote="sony" revision="android-7.1.1_r55" />
     <project path="vendor/oss/json-c" name="json-c" groups="device" remote="sony" revision="master" />
+
+    <project path="halium/platform-api" name="platform-api" remote="ubp" revision="xenial" />
 </manifest>
