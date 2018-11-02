@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+    <remote name="rogier" fetch="https://github.com/rogieroudshoorn" revision="cm-14.1" />
+
+    <project path="device/samsung/serranodsdd" name="android_device_samsung_serranodsdd" remote="los" />
+    <project path="device/samsung/serrano-common" name="android_device_samsung_serrano-common" remote="los" />
+    <project path="device/samsung/msm8930-common" name="android_device_samsung_msm8930-common" remote="los" />
+    <project path="device/samsung/qcom-common" name="Halium/android_device_samsung_qcom-common" remote="hal" />
+
+    <project path="hardware/samsung" name="Halium/android_hardware_samsung" remote="hal" />
+
+    <project path="kernel/samsung/msm8930-common" name="android_kernel_samsung_msm8930-common" remote="rogier" />
+
+    <project path="vendor/samsung" name="proprietary_vendor_samsung" remote="them" />
+</manifest>
