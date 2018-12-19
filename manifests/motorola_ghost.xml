@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+
+  <project path="device/motorola/ghost" name="android_device_motorola_ghost" remote="los" revision="cm-13.0"/>
+
+  <project path="device/motorola/msm8960dt-common" name="android_device_motorola_msm8960dt-common" remote="los" revision="cm-13.0"/>
+
+  <project path="vendor/motorola" name="proprietary_vendor_motorola" remote="them"/>
+
+</manifest>
