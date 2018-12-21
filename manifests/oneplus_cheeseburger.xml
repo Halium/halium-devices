@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
-    <project path="device/oneplus/cheeseburger" name="Halium/android_device_oneplus_cheeseburger" remote="hal" />
+    <remote name="dk43"
+        fetch="https://github.com/danielk43"
+        revision="cm-14.1" />
+ 
+    <project path="device/oneplus/cheeseburger" name="android_device_oneplus_cheeseburger" remote="dk43" />
+    <project path="device/oppo/common" name="android_device_oppo_common" remote="dk43" />
 
-    <project path="kernel/oneplus/msm8998" name="Halium/android_kernel_oneplus_msm8998" remote="hal" />
-
-    <project path="vendor/oneplus" name="proprietary_vendor_oneplus" remote="them" />
+    <project path="kernel/oneplus/msm8998" name="android_kernel_oneplus_msm8998" remote="dk43" />
     
-    <project path="device/oppo/common" name="android_device_oppo_common" remote="los" />
-    
-    <project path="vendor/nxp-nfc/opensource/frameworks" name="android_vendor_nxp-nfc_opensource_frameworks" remote="los" />
-    
-    <project path="vendor/nxp-nfc/opensource/libnfc-nci" name="android_vendor_nxp-nfc_opensource_libnfc-nci" remote="los" />
-    
-    <project path="vendor/nxp-nfc/opensource/Nfc" name="android_vendor_nxp-nfc_opensource_Nfc" remote="los" />
+    <project path="vendor/oneplus" name="proprietary_vendor_oneplus" remote="dk43" />
+    <project path="vendor/nxp-nfc/opensource/frameworks" name="android_vendor_nxp-nfc_opensource_frameworks" remote="dk43" />
+    <project path="vendor/nxp-nfc/opensource/libnfc-nci" name="android_vendor_nxp-nfc_opensource_libnfc-nci" remote="dk43" />
+    <project path="vendor/nxp-nfc/opensource/Nfc" name="android_vendor_nxp-nfc_opensource_Nfc" remote="dk43" />
 </manifest> 
