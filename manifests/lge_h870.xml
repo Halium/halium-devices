@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+
+<remote name="rymdllama"
+    fetch="https://github.com/rymdllama/"/>
+
+
+<project path="device/lge/h870" name="android_device_lge_h870" remote="rymdllama" revision="cm-14.1"/>
+
+<project path="device/lge/g6-common" name="android_device_lge_g6-common" remote="rymdllama" revision="cm-14.1"/>
+
+<project path="device/lge/msm8996-common" name="android_device_lge_msm8996-common" remote="rymdllama" revision="cm-14.1"/>
+
+<project path="kernel/lge/msm8996" name="android_kernel_lge_msm8996" remote="rymdllama" revision="cm-14.1"/>
+
+<project path="vendor/" name="proprietary_vendor_lge" remote="rymdllama" revision="cm-14.1"/>
+
+</manifest>
