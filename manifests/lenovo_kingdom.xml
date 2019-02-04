@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+  <project name="halium-kingdom/android_device_lenovo_kingdom" path="device/lenovo/kingdom" revision="halium-7.1" remote="hal" />
+  <project name="halium-kingdom/android_kernel_cyanogen_msm8974" path="kernel/cyanogen/msm8974" revision="halium-7.1" remote="hal" />
+  <project name="halium-kingdom/proprietary_vendor_lenovo" path="vendor/lenovo" revision="halium-7.1" remote="hal" />
+</manifest>
