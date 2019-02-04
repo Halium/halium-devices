@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+  <project path="vendor/samsung" name="proprietary_vendor_samsung" remote="them" />
+
+  <project name="android_hardware_samsung" path="hardware/samsung" remote="cm" />
+  <project name="android_device_samsung_qcom-common" path="device/samsung/qcom-common" remote="cm" />
+  <project name="android_device_qcom_common" path="device/qcom/common" remote="cm" />
+
+  <remote name="gh" fetch="https://github.com/" />
+  <project name="android_device_samsung_msm8226-common" path="device/samsung/msm8226-common" remote="cm" />
+  <project name="Flohack74/android_device_samsung_s3ve3g" path="device/samsung/s3ve3g" remote="gh" revision="halium-5.1" />
+  <project name="Flohack74/android_kernel_samsung_s3ve3g" path="kernel/samsung/s3ve3g" remote="gh" revision="halium-5.1" />
+</manifest>
