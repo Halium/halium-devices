@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+    <remote name="enesutku07" 
+            fetch="https://github.com/enesutku07"/>
+<project path="device/lge/d802" name="android_device_lge_d802" remote="enesutku07" revision="cm-14.1" />
+ <project path="device/lge/g2-common" name="android_device_lge_g2-common" remote="enesutku07" revision="cm-14.1" />
+<!--project path="device/qcom/common" name="android_device_qcom_common" remote="enesutku07"/-->
+    <project path="kernel/lge/msm8974" name="android_kernel_lge_msm8974" remote="enesutku07" revision="cm-14.1" />
+<project path="external/sony/boringssl-compat" name="android_external_sony_boringssl-compat" remote="enesutku07" revision="cm-14.1" />
+    <project path="vendor/lge" name="proprietary_vendor_lge" remote="enesutku07" revision="cm-14.1" />
+<project path="packages/apps/FlipFlap" name="android_packages_apps_FlipFlap" remote="enesutku07" revision="mko-mr1" />
+<project path="packages/resources/devicesettings" name="android_packages_resources_devicesettings" remote="enesutku07" revision="cm-14.1" />
+</manifest>
