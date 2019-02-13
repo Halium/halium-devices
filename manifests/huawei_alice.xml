@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+<remote name="huawei-p8-lite"
+    fetch="https://github.com/Huawei-P8-Lite"
+    revision="cm-14.1" />
+<remote name="huawei-p8-lite2"
+    fetch="https://github.com/Huawei-P8-Lite"
+    revision="7.x" />
+    
+  <project name="android_device_huawei_alice" path="device/huawei/alice" remote="huawei-p8-lite" revision="cm-14.1" />
+  <project name="android_kernel_huawei_hi6210sft" path="kernel/huawei/alice" remote="huawei-p8-lite2" revision="7.x" />
+  <project name="android_vendor_huawei_alice" path="vendor/huawei/alice" remote="huawei-p8-lite2" revision="7.x" />
+  <project name="android_vendor_nxp-nfc_opensource_Nfc" path="vendor/nxp-nfc/opensource/Nfc" remote="huawei-p8-lite" revision="cm-14.1" />
+  <project name="android_vendor_nxp-nfc_opensource_libnfc-nci" path="vendor/nxp-nfc/opensource/libnfc-nci" remote="huawei-p8-lite" revision="cm-14.1" />
+</manifest>
