@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+    <remote name="github"
+            fetch="http://github.com"
+            revision="master" />
+
+    <project path="device/dell/bb" name="fcipaq/android_device_dell_bb" remote="github" />
+    <project path="device/dell/mofd-common" name="fcipaq/android_device_dell_mofd-common" remote="github" />
+
+    <project path="kernel/dell/bb" name="fcipaq/android_kernel_dell_bb" remote="github"/>
+
+<!--
+    vendor blobs repo missing due to legal concerns
+-->
+
+<!--
+    <project path="vendor/dell/bb" name="fcipaq/proprietary_vendor_dell/bb" remote="fcipaq" />
+    <project path="vendor/dell/mofd-common" name="fcipaq/proprietary_vendor_dell/mofd-common" remote="fcipaq" />
+-->
+
+</manifest>
+
+
