@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+    <remote name="kd" fetch="git://github.com/konradybcio" />
+    <remote name="sony" fetch="git://github.com/sonyxperiadev" />
+    <remote name="nxp" fetch="git://github.com/NXPNFCProject/" />
+    <remote name="ubp" fetch="git://github.com/ubports" />
+
+    <remove-project path="device/qcom/sepolicy" name="android_device_qcom_sepolicy" />
+    <remove-project path="vendor/qcom/opensource/dataservices" name="android_vendor_qcom_opensource_dataservices" />
+    <remove-project path="halium/libhybris" name="Halium/libhybris" />
+    
+
+    
+    <project path="halium/libhybris" name="libhybris" remote="ubp" revision="refs/heads/hybris-compat-layer-fixes" />
+
+    <project path="device/sony/honami" name="device-sony-honami" revision="ubports" remote="kd" />
+    <project path="device/sony/rhine" name="device-sony-rhine" revision="ubports" remote="kd" />
+    <project path="device/sony/common" name="device-sony-common" revision="ubports" remote="kd" />
+    <project path="device/sony/common-headers" name="device-sony-common-headers" revision="aosp/LA.BR.1.3.3_rb2.14" remote="sony" />
+    <project path="device/sony/common-init" name="device-sony-common-init" revision="n-mr1" remote="sony" />
+    
+    <project path="device/qcom/common" name="android_device_qcom_common" revision="cm-14.1" remote="los" />
+    
+    <project path="kernel/sony/msm" name="kernel" revision="aosp/LA.BR.1.3.3_rb2.14" remote="kd" />
+    <project path="device/sony/sepolicy" name="device-sony-sepolicy" revision="n-mr1" remote="sony" />
+    
+    <project path="external/elfutils" name="android_external_elfutils" groups="pdk" revision="cm-14.1" remote="los" />
+
+    <!-- ADD common-headers and common-init -->
+    
+    <project path="external/libnfc-nci" name="platform/external/libnfc-nci" groups="pdk" remote="aosp" />
+    <project path="external/libnfc-nxp" name="platform/external/libnfc-nxp" groups="pdk" remote="aosp" />
+
+    <project path="vendor/nxp/" name="vendor-nxp" groups="device" remote="sony" revision="master" />
+    <project path="vendor/nxp/NXPNFCC_FW" name="NXPNFCC_FW" groups="device" remote="nxp" revision="master" />
+    
+    <project path="vendor/qcom/opensource/fm" name="vendor-qcom-opensource-fm" groups="device" remote="sony" revision="master" />
+    <project path="vendor/qcom/opensource/location" name="vendor-qcom-opensource-location" groups="device" remote="sony" revision="n-mr1" />
+    <project path="vendor/qcom/opensource/time-services" name="vendor-qcom-opensource-time-services" groups="device" remote="sony" revision="master" />
+    <project path="vendor/qcom/opensource/wlan" name="hardware-qcom-wlan" groups="device" remote="sony" revision="master" />
+    <project path="vendor/qcom/opensource/dataservices" name="vendor-qcom-opensource-dataservices" groups="device" remote="sony" revision="master" />
+
+    <project path="vendor/oss/macaddrsetup" name="macaddrsetup" groups="device" remote="sony" revision="master" />
+    <project path="vendor/oss/thermanager" name="thermanager" groups="device" remote="sony" revision="master" />
+    <project path="vendor/oss/timekeep" name="timekeep" groups="device" remote="sony" revision="master" />
+    <project path="vendor/oss/json-c" name="json-c" groups="device" remote="sony" revision="master" />
+
+    <project path="halium/platform-api" name="platform-api" remote="ubp" revision="xenial" />
+</manifest>
