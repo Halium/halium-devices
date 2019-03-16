@@ -1,8 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
-    <project path="device/huawei/angler" name="android_device_huawei_angler" remote="los" />
+    <remote name="angler-halium" 
+            fetch="https://github.com/angler-halium/"
+            revision="halium-7.1" />
 
-    <project path="kernel/huawei/angler" name="win8linux/android_kernel_huawei_angler" remote="hal" />
-
+    <project path="device/huawei/angler" name="device_huawei_angler" remote="angler-halium" />
+    
+    <project path="kernel/huawei/angler" name="kernel_huawei_angler" remote="angler-halium" />
+    
     <project path="vendor/huawei" name="proprietary_vendor_huawei" remote="them" />
 </manifest>
