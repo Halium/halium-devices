@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+    <remote name="F171pp0"
+            fetch="https://github.com/F171pp0"
+            revision="mkn-mr1" />
+
+    <project path="device/xiaomi/markw" name="android_device_xiaomi_markw" remote="F171pp0" />
+
+    <project path="vendor/xiaomi/markw" name="android_vendor_xiaomi_markw" remote="F171pp0" />
+
+    <project path="kernel/xiaomi/markw_new/android_kernel_xiaomi_msm8953" name="android_kernel_xiaomi_markw" remote="F171pp0" />
+</manifest>

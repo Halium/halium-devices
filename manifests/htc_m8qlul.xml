@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+    <remote name="temp_n00by"
+        fetch="https://github.com/N00byKing"
+        revision="halium-7.1" />
+
+    <project path="device/htc/m8qlul" name="android_device_htc_m8qlul" remote="temp_n00by" />
+    <project path="kernel/htc/msm8939" name="android_kernel_htc_msm8939" remote="temp_n00by" />
+    <project path="vendor/htc/m8qlul" name="android_vendor_htc_m8qlul" remote="temp_n00by" />
+    <project path="device/common" name="device/common" remote="aosp" />
+</manifest>

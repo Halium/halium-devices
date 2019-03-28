@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+    <remote name="pbteja100" 
+            fetch="https://github.com/pbteja100/"
+            revision="halium-7.1" />
+
+    <project path="device/yu/garlic" name="android_device_yu_garlic" remote="pbteja100" />
+    
+    <project path="kernel/yu/msm8937" name="android_kernel_yu_msm8937" remote="pbteja100" />
+    
+    <project path="vendor/yu" name="proprietary_vendor_yu" remote="pbteja100" />
+</manifest>

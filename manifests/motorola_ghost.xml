@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+    <remote name="los13"
+            fetch="https://github.com/LineageOS"
+            revision="cm-13.0" />
+
+    <project path="device/motorola/ghost" name="android_device_motorola_ghost" remote="los13"/>
+    <project path="device/motorola/msm8960dt-common" name="android_device_motorola_msm8960dt-common" remote="los13"/>
+
+    <project path="kernel/motorola/ghost" name="android_kernel_motorola_ghost" remote="los13"/>
+
+    <project path="vendor/motorola" name="proprietary_vendor_motorola" remote="them"/>
+</manifest>
