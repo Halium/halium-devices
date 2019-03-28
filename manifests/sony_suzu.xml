@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
-    <remote name="beidl" fetch="git://github.com/beidl" />
+    <remote name="beidl" fetch="git://github.com/fredldotme" />
     <remote name="sony" fetch="git://github.com/sonyxperiadev" />
     <remote name="nxp" fetch="git://github.com/NXPNFCProject/" />
     <remote name="ubp" fetch="git://github.com/ubports" />
