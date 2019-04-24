@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+    <project path="device/essential/mata" name="android_device_essential_mata" remote="los" />
+    <project path="kernel/essential/msm8998" name="android_kernel_essential_msm8998" remote="los" />
+    <project path="vendor/essential" name="proprietary_vendor_essential" remote="them" />
+</manifest>
