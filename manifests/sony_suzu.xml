@@ -5,6 +5,7 @@
     <remote name="nxp" fetch="git://github.com/NXPNFCProject/" />
     <remote name="ubp" fetch="git://github.com/ubports" />
     <remote name="mer-hybris" fetch="git://github.com/mer-hybris" />
+    <remote name="sfos" fetch="git://github.com/sailfishos" />
 
     <remove-project path="device/qcom/sepolicy" name="android_device_qcom_sepolicy" />
     <remove-project path="hardware/qcom/display" name="android_hardware_qcom_display" />
@@ -12,10 +13,13 @@
     <remove-project path="vendor/qcom/opensource/dataservices" name="android_vendor_qcom_opensource_dataservices" />
     <remove-project path="halium/libhybris" name="Halium/libhybris" />
     <remove-project path="halium/audioflingerglue" name="Halium/audioflingerglue" />
-    
+    <remove-project path="build" name="Halium/android_build" />
+
+    <project path="build" name="Halium/android_build" remote="hal" revision="halium-7.1-ubpsensorsmedia" />
     <project path="hardware/qcom/display" name="android_hardware_qcom_display" remote="beidl" revision="halium-7.1" />
     <project path="system/sepolicy" name="android_system_sepolicy" remote="beidl" revision="halium-7.1" />
-    
+    <project path="external/droidmedia" name="droidmedia" remote="sfos" revision="refs/tags/0.20190307.0" />
+
     <project path="halium/libhybris" name="libhybris" remote="ubp" revision="refs/heads/hybris-compat-layer-fixes" />
     <project path="halium/audioflingerglue" name="audioflingerglue" remote="mer-hybris" revision="master" />
 
