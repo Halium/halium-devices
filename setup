@@ -1,7 +1,7 @@
 #!/bin/bash
 
 function removeUnneededFolders {
-    rm -rf [Cc][Mm]actions
+    rm -rf [Cc][Mm][Aa]ctions
     rm -rf [Ll]inage[Aa]ctions
     rm -rf [Dd]oze
     rm -rf [Kk]ey[Hh]andler
