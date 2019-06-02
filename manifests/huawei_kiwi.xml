@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
     <project path="device/huawei/kiwi" name="android_device_huawei_kiwi" remote="los" />
+    
+    <project path="device/qcom/commom" name="android_device_qcom_common" remote="los" />
             
     <project path="kernel/huawei/kiwi" name="android_kernel_huawei_kiwi" remote="los" />
             
