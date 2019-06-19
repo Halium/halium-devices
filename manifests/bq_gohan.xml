@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+    <project path="device/bq/gohan" name="android_device_bq_gohan" revision="cm-14.1" remote="wieke" />
+    <project path="vendor/bq" name="proprietary_vendor_bq" remote="them" />
+    <project path="kernel/bq/msm8976" name="aquaris-X5-plus" revision="halium-7.1" remote="wieke" />
+    <remote name="wieke" fetch="https://github.com/Wieke" />
+</manifest>
