@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+  <remote name="github" fetch="https://github.com/" />
+
+  <project path="device/samsung/j3xlte" name="mardy/android_device_samsung_j3xlte" remote="github" revision="cm-14.1" />
+  <project path="device/samsung/sharkls-common" name="mardy/android_device_samsung_sharkls-common" remote="github" revision="cm-14.1" />
+
+  <project path="vendor/samsung/common" name="mardy/android_vendor_samsung_common" remote="github" revision="cm-14.1" />
+  <project path="vendor/sprd" name="mardy/android_vendor_sprd" remote="github" revision="cm-14.1" />
+
+  <project path="device/common" name="lineageos/android_device_common" revision="refs/heads/staging/cm-14.0" remote="github" />
+  <project path="kernel/samsung/sharkls" name="mardy/android_kernel_samsung_sharkls" remote="github" revision="cm-14.1" />
+
+  <project path="system/bt" name="android_system_bt" remote="los" revision="cm-14.1" />
+</manifest>
