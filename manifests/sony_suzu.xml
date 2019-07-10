@@ -9,7 +9,7 @@
 
     <remove-project path="device/qcom/sepolicy" name="android_device_qcom_sepolicy" />
     <remove-project path="hardware/qcom/display" name="android_hardware_qcom_display" />
-    <remove-project path="system/sepolicy" name="android_system_sepolicy" />
+    <remove-project path="system/sepolicy" name="Halium/android_system_sepolicy" />
     <remove-project path="vendor/qcom/opensource/dataservices" name="android_vendor_qcom_opensource_dataservices" />
     <remove-project path="halium/libhybris" name="Halium/libhybris" />
     <remove-project path="halium/audioflingerglue" name="Halium/audioflingerglue" />
