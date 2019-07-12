@@ -5,5 +5,5 @@
         <project path="device/samsung/qcom-common" name="android_device_samsung_qcom-common" remote="tux" />
         <project path="device/samsung/msm8930-common" name="android_device_samsung_msm8930-common" remote="tux" />
         <project path="kernel/samsung/msm8930" name="android_kernel_samsung_msm8930-common" remote="tux" />
-        <project path="vendor/loganreltexx" name="proprietary_vendor_samsung_loganreltexx" remote="tux" />
+        <project path="vendor/samsung" name="proprietary_vendor_samsung" remote="tux" />
 </manifest>
