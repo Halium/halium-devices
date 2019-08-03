@@ -3,7 +3,6 @@
     <remote name="sony" fetch="git://github.com/sonyxperiadev" />
     <remote name="NXP" fetch="git://github.com/NXPNFCProject" />
     <remote name="flup" fetch="https://gitlab.com/thefluppets/" />
-    <remote name="beidl" fetch="git://github.com/beidl" />
     <remote name="lnj" fetch="https://gitlab.com/lnj" revision="halium-7.1" />
 
     <remove-project path="device/qcom/sepolicy" name="android_device_qcom_sepolicy" />
@@ -18,9 +17,6 @@
     <project path="hardware/qcom/camera" name="camera" groups="device" remote="sony" revision="aosp/LA.BR.1.3.3_rb2.14" />
 
     <project path="kernel/sony/scorpion" name="kernel-sony-msm" groups="device" remote="lnj" revision="halium/LA.BR.1.3.3_rb2.14" />
-
-    <remove-project path="system/sepolicy" name="android_system_sepolicy" />
-    <project path="system/sepolicy" name="android_system_sepolicy" remote="beidl" revision="halium-7.1" />
 
     <project path="vendor/sony" name="vendor-sony" groups="device" remote="flup" revision="aosp-6.0.1-3.10" />
     <project path="vendor/qcom/prebuilt" name="vendor-qcom-prebuilt" groups="device" remote="flup" revision="aosp-6.0.1-3.10" />
