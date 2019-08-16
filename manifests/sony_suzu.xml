@@ -7,17 +7,21 @@
     <remote name="mer-hybris" fetch="git://github.com/mer-hybris" />
 
     <remove-project path="device/qcom/sepolicy" name="android_device_qcom_sepolicy" />
+    <remove-project path="hardware/qcom/audio-caf/msm8998" name="android_hardware_qcom_audio" />
     <remove-project path="hardware/qcom/display" name="android_hardware_qcom_display" />
+    <remove-project path="hardware/qcom/camera" name="android_hardware_qcom_camera" />
     <remove-project path="vendor/qcom/opensource/dataservices" name="android_vendor_qcom_opensource_dataservices" />
     <remove-project path="halium/libhybris" name="Halium/libhybris" />
-
-    <project path="hardware/qcom/display" name="android_hardware_qcom_display" remote="beidl" revision="halium-7.1" />
 
     <project path="halium/libhybris" name="libhybris" remote="ubp" revision="refs/heads/hybris-compat-layer-fixes" />
 
     <project path="device/sony/suzu" name="device-sony-suzu" revision="n-mr1-ubports" remote="beidl" />
     <project path="device/sony/loire" name="device-sony-loire" revision="n-mr1-ubports" remote="beidl" />
     <project path="device/sony/common" name="device-sony-common" revision="n-mr1-ubports" remote="beidl" />
+
+    <project path="hardware/qcom/audio-caf/msm8998" name="android_hardware_qcom_audio" groups="qcom,qcom_audio" revision="cm-14.1-caf-8998" remote="beidl" />
+    <project path="hardware/qcom/camera" name="camera" groups="device" remote="sony" revision="aosp/LA.UM.5.7.r1" />
+    <project path="hardware/qcom/display" name="android_hardware_qcom_display" remote="beidl" revision="halium-7.1" />
 
     <project path="kernel/sony/suzu" name="device-kernel-loire" revision="ubports/LA.UM.6.4.r1" remote="beidl" />
     <project path="kernel/sony/suzu/drivers/staging/wlan-qc/fw-api" name="vendor-qcom-opensource-wlan-fw-api" groups="device" remote="sony" revision="aosp/LA.UM.6.4.r1" />
