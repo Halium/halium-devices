@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+    <project path="device/lge/hammerhead" name="android_device_lge_hammerhead" remote="los" />
+
+    <project path="kernel/lge/hammerhead" name="herrie82/android_kernel_lge_hammerhead" remote="hal" revision="halium-7.1" />
+
+    <project path="vendor/lge" name="proprietary_vendor_lge" remote="them" />
+</manifest> 
