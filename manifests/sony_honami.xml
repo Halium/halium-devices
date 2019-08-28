@@ -19,8 +19,6 @@
     <project path="device/sony/common-headers" name="device-sony-common-headers" revision="aosp/LA.BR.1.3.3_rb2.14" remote="sony" />
     <project path="device/sony/common-init" name="device-sony-common-init" revision="n-mr1" remote="sony" />
     
-    <project path="device/qcom/common" name="android_device_qcom_common" revision="cm-14.1" remote="los" />
-    
     <project path="kernel/sony/honami" name="kernel" revision="ubp-7.1" remote="kd" />
     <project path="device/sony/sepolicy" name="device-sony-sepolicy" revision="n-mr1" remote="sony" />
     
