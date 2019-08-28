@@ -21,7 +21,7 @@
     
     <project path="device/qcom/common" name="android_device_qcom_common" revision="cm-14.1" remote="los" />
     
-    <project path="kernel/sony/msm" name="kernel" revision="aosp/LA.BR.1.3.3_rb2.14" remote="kd" />
+    <project path="kernel/sony/honami" name="kernel" revision="ubp-7.1" remote="kd" />
     <project path="device/sony/sepolicy" name="device-sony-sepolicy" revision="n-mr1" remote="sony" />
     
     <project path="external/elfutils" name="android_external_elfutils" groups="pdk" revision="cm-14.1" remote="los" />
@@ -44,6 +44,4 @@
     <project path="vendor/oss/thermanager" name="thermanager" groups="device" remote="sony" revision="master" />
     <project path="vendor/oss/timekeep" name="timekeep" groups="device" remote="sony" revision="master" />
     <project path="vendor/oss/json-c" name="json-c" groups="device" remote="sony" revision="master" />
-
-    <project path="halium/platform-api" name="platform-api" remote="ubp" revision="xenial" />
 </manifest>
