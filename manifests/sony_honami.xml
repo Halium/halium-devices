@@ -9,7 +9,7 @@
     <remove-project path="device/qcom/sepolicy" name="android_device_qcom_sepolicy" />
     <remove-project path="vendor/qcom/opensource/dataservices" name="android_vendor_qcom_opensource_dataservices" />
     <remove-project path="hardware/qcom/camera" name="android_hardware_qcom_camera" />
-     <remove-project path="hardware/qcom/audio" name="android_hardware_qcom_audio" />
+    <remove-project path="hardware/qcom/audio" name="android_hardware_qcom_audio" />
     <remove-project path="halium/libhybris" name="Halium/libhybris" />
 
     <project path="halium/libhybris" name="libhybris" remote="ubp" revision="hybris-compat-layer-fixes" />
