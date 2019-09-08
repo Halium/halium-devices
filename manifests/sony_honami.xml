@@ -1,18 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
     <remote name="kd" fetch="git://github.com/konradybcio" />
+    <remote name="beidl" fetch="git://github.com/fredldotme" />
     <remote name="sony" fetch="git://github.com/sonyxperiadev" />
     <remote name="nxp" fetch="git://github.com/NXPNFCProject/" />
     <remote name="ubp" fetch="git://github.com/ubports" />
 
     <remove-project path="device/qcom/sepolicy" name="android_device_qcom_sepolicy" />
     <remove-project path="vendor/qcom/opensource/dataservices" name="android_vendor_qcom_opensource_dataservices" />
+    <remove-project path="hardware/qcom/camera" name="android_hardware_qcom_camera" />
+     <remove-project path="hardware/qcom/audio" name="android_hardware_qcom_audio" />
     <remove-project path="halium/libhybris" name="Halium/libhybris" />
-    
 
+    <project path="halium/libhybris" name="libhybris" remote="ubp" revision="hybris-compat-layer-fixes" />
     
-    <project path="halium/libhybris" name="libhybris" remote="ubp" revision="refs/heads/hybris-compat-layer-fixes" />
-
     <project path="device/sony/honami" name="device-sony-honami" revision="ubports" remote="kd" />
     <project path="device/sony/rhine" name="device-sony-rhine" revision="ubports" remote="kd" />
     <project path="device/sony/common" name="device-sony-common" revision="ubports" remote="kd" />
@@ -24,7 +25,8 @@
     
     <project path="external/elfutils" name="android_external_elfutils" groups="pdk" revision="cm-14.1" remote="los" />
 
-    <!-- ADD common-headers and common-init -->
+    <project path="hardware/qcom/camera" name="camera" groups="device" remote="sony" revision="aosp/LA.BR.1.3.3_rb2.14" />
+    <project path="hardware/qcom/audio" name="android_hardware_qcom_audio_aosp" groups="qcom,qcom_audio" revision="halium-7.1" remote="beidl" />
     
     <project path="external/libnfc-nci" name="platform/external/libnfc-nci" groups="pdk" remote="aosp" />
     <project path="external/libnfc-nxp" name="platform/external/libnfc-nxp" groups="pdk" remote="aosp" />
