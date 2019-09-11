@@ -2,9 +2,7 @@
 <manifest>
     <project path="device/samsung/a5xelte" name="android_device_samsung_a5xelte" remote="los" />
     <project path="device/samsung/universal7580-common" name="android_device_samsung_universal7580-common" remote="los"/>
-
-        <project path="hardware/samsung" name="Halium/android_hardware_samsung" remote="hal" />
-
+    <project path="hardware/samsung" name="Halium/android_hardware_samsung" remote="hal" />
     <project path="vendor/samsung" name="proprietary_vendor_samsung" remote="them" />
 
 </manifest>
