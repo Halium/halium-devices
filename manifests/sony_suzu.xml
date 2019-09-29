@@ -8,6 +8,7 @@
 
     <remove-project path="bootable/recovery" name="android_bootable_recovery" />
     <remove-project path="device/qcom/sepolicy" name="android_device_qcom_sepolicy" />
+    <remove-project path="external/toybox" name="android_external_toybox" />
     <remove-project path="halium/libhybris" name="Halium/libhybris" />
     <remove-project path="hardware/qcom/audio" name="android_hardware_qcom_audio" />
     <remove-project path="hardware/qcom/camera" name="android_hardware_qcom_camera" />
@@ -20,6 +21,9 @@
     <project path="device/sony/suzu" name="device-sony-suzu" revision="n-mr1-ubports" remote="beidl" />
     <project path="device/sony/loire" name="device-sony-loire" revision="n-mr1-ubports" remote="beidl" />
     <project path="device/sony/common" name="device-sony-common" revision="n-mr1-ubports" remote="beidl" />
+
+    <project path="external/gpg" name="android_external_gpg" revision="halium-7.1" remote="beidl" />
+    <project path="external/toybox" name="android_external_toybox" revision="halium-7.1" remote="beidl" />
 
     <project path="halium/libhybris" name="Halium/libhybris" remote="hal" revision="halium-7.1-camfixes" />
 
