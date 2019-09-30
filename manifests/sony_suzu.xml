@@ -3,13 +3,11 @@
     <remote name="beidl" fetch="git://github.com/fredldotme" />
     <remote name="sony" fetch="git://github.com/sonyxperiadev" />
     <remote name="nxp" fetch="git://github.com/NXPNFCProject/" />
-    <remote name="ubp" fetch="git://github.com/ubports" />
     <remote name="mer-hybris" fetch="git://github.com/mer-hybris" />
 
     <remove-project path="bootable/recovery" name="android_bootable_recovery" />
     <remove-project path="device/qcom/sepolicy" name="android_device_qcom_sepolicy" />
     <remove-project path="external/toybox" name="android_external_toybox" />
-    <remove-project path="halium/libhybris" name="Halium/libhybris" />
     <remove-project path="hardware/qcom/audio" name="android_hardware_qcom_audio" />
     <remove-project path="hardware/qcom/camera" name="android_hardware_qcom_camera" />
     <remove-project path="hardware/qcom/display" name="android_hardware_qcom_display" />
@@ -24,8 +22,6 @@
 
     <project path="external/gpg" name="android_external_gpg" revision="halium-7.1" remote="beidl" />
     <project path="external/toybox" name="android_external_toybox" revision="halium-7.1" remote="beidl" />
-
-    <project path="halium/libhybris" name="Halium/libhybris" remote="hal" revision="halium-7.1-camfixes" />
 
     <project path="hardware/qcom/audio" name="android_hardware_qcom_audio_aosp" groups="qcom,qcom_audio" revision="halium-7.1" remote="beidl" />
     <project path="hardware/qcom/camera" name="camera" groups="device" remote="sony" revision="aosp/LA.UM.5.7.r1" />
