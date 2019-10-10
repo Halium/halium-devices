@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+	<remote name="bq" fetch="https://github.com/bq" revision="aquaris-X5_5.x" />
+	
+	<project path="device/bq/paella" name="android_device_bq_paella" remote="los" />
+	<project path="device/bq/msm8916-common" name="android_device_bq_msm8916-common" remote="los" />
+
+	<project path="vendor/bq" name="proprietary_vendor_bq" remote="them" />
+	<project path="kernel/bq/paella" name="aquaris-X5" remote="bq" />
+</manifest>
