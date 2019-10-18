@@ -5,5 +5,5 @@
   <project name="halium-gemini/android_kernel_xiaomi_msm8996" path="kernel/xiaomi/msm8996" remote="hal" />
   <project name="halium-gemini/proprietary_vendor_xiaomi" path="vendor/xiaomi" remote="hal" />
   
-  <project name="halium-gemini/Ubuntu-touch" path="device/xiaomi/gemini/Ubuntu" remote="hal" />
+  <project name="halium-gemini/Ubuntu-touch" path="device/xiaomi/gemini/ubuntu" remote="hal" />
 </manifest>
