@@ -31,7 +31,7 @@
     <project path="hardware/qcom/display" name="android_hardware_qcom_display" remote="beidl" revision="halium-7.1" />
     <project path="hardware/qcom/media" name="android_hardware_qcom_media" remote="beidl" revision="halium-7.1" />
 
-    <project path="kernel/sony/suzu" name="device-kernel-loire" revision="ubports/LA.UM.6.4.r1" remote="beidl" />
+    <project path="kernel/sony/suzu" name="device-kernel-loire" revision="halium-7.1" remote="beidl" />
     <project path="kernel/sony/suzu/drivers/staging/wlan-qc/fw-api" name="vendor-qcom-opensource-wlan-fw-api" groups="device" remote="sony" revision="aosp/LA.UM.6.4.r1" />
     <project path="kernel/sony/suzu/drivers/staging/wlan-qc/qca-wifi-host-cmn" name="vendor-qcom-opensource-wlan-qca-wifi-host-cmn" groups="device" remote="sony" revision="aosp/LA.UM.6.4.r1" />
     <project path="kernel/sony/suzu/drivers/staging/wlan-qc/qcacld-3.0" name="vendor-qcom-opensource-wlan-qcacld-3.0" groups="device" remote="sony" revision="aosp/LA.UM.6.4.r1" />
