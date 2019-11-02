@@ -39,8 +39,8 @@ else
     ln $DEVICES_ROOT/manifests/$VENDOR"_"$DEVICE.xml $REPO_ROOT/.repo/local_manifests/device.xml
 
     # Synchronize new new sources
-    repo sync --network-only -c -j$JOBS -q $REPO_ARGS
-    repo sync --local-only -c -j$JOBS -q $REPO_ARGS
+    repo sync --network-only -c -j$JOBS -q ${REPO_ARGS[@]}
+    repo sync --local-only -c -j$JOBS -q ${REPO_ARGS[@]}
 
     # Refresh the device & common repositories so apks and jars are not copied
     # For this to work, all apks and jars need to be removed from
