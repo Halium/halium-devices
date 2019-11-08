@@ -1,13 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
     <remote name="vince"
-	fetch="https://github.com/Vince1171"
-	revision="cm-14.1" />
+      fetch="https://github.com/Vince1171"
+      revision="cm-14.1" />
+	<remote name="beidl"
+      fetch="https://github.com/fredldotme" />
+    
+    
+    <remove-project path="bootable/recovery" name="android_bootable_recovery" />
+    <remove-project path="external/toybox" name="android_external_toybox" />
+    <remove-project path="system/core" name="Halium/android_system_core" />
 
-    <project path="device/oneplus/oneplus2" name="android_device_oneplus_oneplus2" remote="vince" />
+    <project path="bootable/recovery" name="android_bootable_recovery" remote="beidl" revision="ubp-7.1" />
+
+    <project path="device/oneplus/oneplus2" name="Halium/android_device_oneplus_oneplus2" remote="hal" />
     <project path="device/oppo/common" name="android_device_oppo_common" remote="los" />
+    
+    <project path="external/toybox" name="android_external_toybox" revision="halium-7.1" remote="beidl" />
+    <project path="external/gpg" name="android_external_gpg" revision="halium-7.1" remote="beidl" />
 
-    <project path="kernel/oneplus/msm8994" name="android_kernel_oneplus_msm8994" remote="vince" />
+    <project path="kernel/oneplus/msm8994" name="Halium/android_kernel_oneplus_msm8994" remote="hal" />
+    
+    <project path="system/core" name="Halium/android_system_core" groups="pdk" remote="hal" revision="halium-7.1-adbroot" />
 
     <project path="vendor/oneplus" name="proprietary_vendor_oneplus" remote="vince" />
+    
 </manifest>
