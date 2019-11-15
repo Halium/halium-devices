@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+    <remote name="walidham"
+            fetch="https://github.com/walidham/"
+            revision="halium-7.1" />
+
+    <remote name="tm"
+            fetch="https://github.com/TheMuppets/"
+            revision="cm-14.1" />
+
+    <project path="device/lge/h918" name="android_device_lge_h918" remote="walidham" revision="halium-7.1"/>
+    <project path="device/lge/v20-common" name="android_device_lge_v20-common" remote="walidham" revision="halium-7.1"/>
+    <project path="device/lge/msm8996-common" name="android_device_lge_msm8996-common" remote="walidham" revision="halium-7.1"/>
+    <project path="device/lge/common" name="android_device_lge_common" remote="los" revision="cm-14.1"/>
+
+    <project path="kernel/lge/msm8996" name="android_kernel_lge_msm8996" remote="walidham" revision="halium-7.1"/>
+
+    <project path="vendor/nxp-nfc/opensource/frameworks" name="android_vendor_nxp-nfc_opensource_frameworks" remote="los" revision="cm-14.1"/>
+    <project path="vendor/nxp-nfc/opensource/libnfc-nci" name="android_vendor_nxp-nfc_opensource_libnfc-nci" remote="los" revision="cm-14.1"/>
+    <project path="vendor/nxp-nfc/opensource/Nfc" name="android_vendor_nxp-nfc_opensource_Nfc" remote="los" revision="cm-14.1"/>
+
+    <project path="vendor/lge" name="proprietary_vendor_lge" remote="walidham" revision="halium-7.1"/>
+
+
+</manifest>
