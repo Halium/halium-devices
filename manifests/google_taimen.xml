@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+     <project path="device/google/taimen" 
+         name="joelghill/android_device_google_taimen" revision="lineage-15.1" />
+      <project path="device/qcom/common" 
+          name="joelghill/android_device_qcom_common" revision="lineage-15.1" />
+      <project path="kernel/google/wahoo" 
+          name="joelghill/android_kernel_google_wahoo" revision="lineage-15.1" />
+      <project path="vendor/google" name="themuppets/proprietary_vendor_google" />
+</manifest>
