@@ -19,5 +19,5 @@
   <project name="android_kernel_samsung_exynos5420" path="kernel/samsung/exynos5420" remote="los" />
 
   <!-- Vendor repository -->
-  <project name="proprietary_vendor_samsung" path="vendor/samsung" remote="them" />
+  <project depth="1" name="proprietary_vendor_samsung" path="vendor/samsung" remote="them" />
 </manifest>
