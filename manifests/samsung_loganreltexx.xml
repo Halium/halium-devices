@@ -5,7 +5,7 @@
             revision="halium-7" />
 
     <project path="device/samsung/loganreltexx" name="android_device_samsung_loganreltexx" remote="tux" />
-    <project path="device/samsung/qcom-common" name="android_device_samsung_qcom-common" remote="tux" />
+    <project path="device/samsung/qcom-common" name="android_device_samsung_msm8930_qcom-common" remote="tux" />
     <project path="device/samsung/msm8930-common" name="android_device_samsung_msm8930-common" remote="tux" />
 
     <project path="kernel/samsung/msm8930" name="android_kernel_samsung_msm8930-common" remote="tux" />
