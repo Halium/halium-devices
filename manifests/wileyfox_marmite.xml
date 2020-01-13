@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+  <project path="device/wileyfox/marmite" name="DevelopedInside/android_device_wileyfox_marmite" remote="hal" revision="cm-14.1" />
+  <project path="kernel/wileyfox/msm8937" name="DevelopedInside/android_kernel_wileyfox_msm8937" remote="hal" revision="cm-14.1" />
+  <project path="vendor/marmite" name="DevelopedInside/proprietary_vendor_wileyfox" remote="hal" revision="cm-14.1" />
+  <!--<project path="vendor/nxp-nfc/opensource/frameworks" name="android_vendor_nxp-nfc_opensource_frameworks" remote="los" />-->
+  <!--<project path="vendor/nxp-nfc/opensource/libnfc-nci" name="android_vendor_nxp-nfc_opensource_libnfc-nci" remote="los" />-->
+  <!--<project path="vendor/nxp-nfc/opensource/Nfc" name="android_vendor_nxp-nfc_opensource_Nfc" remote="los" />-->
+</manifest>
