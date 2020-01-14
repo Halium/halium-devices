@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+    <remote name="tux"
+            fetch="https://github.com/TuxThePenguin0"
+            revision="halium-7" />
+    <remote name="cm13"
+            fetch="https://github.com/Grouper-CM13"
+            revision="cm-13.0" />
+
+    <project path="device/asus/grouper" name="android_device_asus_grouper" remote="tux" />
+
+    <project path="kernel/nvidia/tegra3" name="android_kernel_asus_grouper" remote="tux" />
+
+    <project path="hardware/nvidia/tegra3" name="android_hardware_nvidia_tegra3" remote="tux" />
+
+    <project path="vendor/asus" name="proprietary_vendor_asus" remote="cm13" />
+    <project path="vendor/invensense" name="proprietary_vendor_invensense" remote="cm13" />
+    <project path="vendor/nxp" name="proprietary_vendor_nxp" remote="cm13" />
+    <project path="vendor/nvidia" name="proprietary_vendor_nvidia" remote="cm13" />
+    <project path="vendor/widevine" name="proprietary_vendor_widevine" remote="cm13" />
+    <project path="vendor/broadcom" name="proprietary_vendor_broadcom" remote="cm13" />
+    <project path="vendor/elan" name="proprietary_vendor_elan" remote="cm13" />
+</manifest>
