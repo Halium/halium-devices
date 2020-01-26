@@ -20,7 +20,9 @@
     <project path="device/sony/suzu" name="device-sony-suzu" revision="n-mr1-ubports" remote="beidl" />
     <project path="device/sony/loire" name="device-sony-loire" revision="n-mr1-ubports" remote="beidl" />
     <project path="device/sony/common" name="device-sony-common" revision="n-mr1-ubports" remote="beidl" />
+    <project path="device/sony/common-init" name="device-sony-common-init" revision="n-mr1-ubports" remote="beidl" />
 
+    <project path="external/elfutils" name="platform/external/elfutils" groups="pdk" remote="aosp" />
     <project path="external/gpg" name="android_external_gpg" revision="halium-7.1" remote="beidl" />
     <project path="external/libnfc-nci" name="platform/external/libnfc-nci" groups="pdk" remote="aosp" />
     <project path="external/libnfc-nxp" name="platform/external/libnfc-nxp" groups="pdk" remote="aosp" />
