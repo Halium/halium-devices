@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<manifest>
+
+	<!-- Remotes -->
+	<remote name="zeroltexx"
+            	fetch="https://github.com/ubports-zeroltexx"
+            	revision="cm-14.1" />
+
+	<!-- DTs -->
+	<project path="device/samsung/zero-common" name="android_device_samsung_zero-common" remote="zeroltexx" />
+	<project path="device/samsung/zeroltexx" name="android_device_samsung_zeroltexx" remote="zeroltexx" />
+
+	
+	<!-- Kernel -->
+	<project path="kernel/samsung/exynos7420" name="android_kernel_samsung_exynos7420" remote="zeroltexx" />
+
+	<!-- Vendor files -->
+	<project path="vendor/samsung" name="proprietary_vendor_samsung" remote="zeroltexx" />
+
+	<!-- Hardware -->
+	<project path="hardware/samsung" name="android_hardware_samsung" remote="zeroltexx" />
+    	<project path="hardware/samsung_slsi-cm/exynos" name="android_hardware_samsung_slsi-cm_exynos" remote="zeroltexx" />
+    	<project path="hardware/samsung_slsi-cm/exynos5" name="android_hardware_samsung_slsi-cm_exynos5" remote="zeroltexx" />
+    	<project path="hardware/samsung_slsi-cm/exynos7420" name="android_hardware_samsung_slsi-cm_exynos7420" remote="zeroltexx" />
+    	<project path="hardware/samsung_slsi-cm/openmax" name="android_hardware_samsung_slsi-cm_openmax" remote="zeroltexx" />
+	
+</manifest>
