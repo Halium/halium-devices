@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest> 
+    <remote name="them2"
+            fetch="https://gitlab.com/the-muppets"
+            revision="refs/heads/lineage-15.1" />
+
+    <project path="device/xiaomi/mido" name="herrie82/android_device_xiaomi_mido" revision="patch-1" />
+    <project path="device/xiaomi/msm8953-common" name="LineageOS/android_device_xiaomi_msm8953-common" />
+
+    <project path="kernel/xiaomi/msm8953" name="herrie82/android_kernel_xiaomi_msm8953-1" revision="halium-8.1" />
+
+    <project path="vendor/xiaomi" name="proprietary_vendor_xiaomi" remote="them2" revision="lineage-15.1" />
+</manifest> 
