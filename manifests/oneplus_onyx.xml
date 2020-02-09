@@ -1,18 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
-    <remote name="TheMuppets" fetch="https://github.com/TheMuppets/" />
-    <project path="device/oneplus/onyx" name="android_device_oneplus_onyx" remote="cm" />
+    <remote name="onyx" fetch="https://github.com/ubports-onyx/" />
+    <project path="device/oneplus/onyx" name="device_oneplus_onyx" remote="onyx" revision="ut-5.1" />
 
-    <project path="device/oppo/common" name="android_device_oppo_common" remote="cm" />
+    <project path="device/oppo/common" name="android_device_oppo_common" remote="onyx" revision="ut-5.1" />
 
-    <project path="kernel/oneplus/onyx" name="android_kernel_oneplus_onyx" remote="cm" />
+    <project path="kernel/oneplus/onyx" name="kernel_oneplus_onyx" remote="onyx"  revision="ut-5.1"/>
 
-    <project path="vendor/oneplus" name="proprietary_vendor_oneplus" remote="TheMuppets" revision="cm-12.1"/>
+    <project path="vendor/oneplus" name="vendor_oneplus" remote="onyx" revision="ut-5.1"/>
  
- 	  <project path="external/ant-wireless/antradio-library" name="android_external_ant-wireless_antradio-library" remote="cm" />
+    <project path="external/ant-wireless/antradio-library" name="android_external_ant-wireless_antradio-library" remote="cm" />
 
-	  <!-- We want to have an unpatched libhardware in order for both CAF and non-CAF devices to work -->
-  	<remove-project name="ubports/android_hardware_libhardware" />
-	  <project path="hardware/libhardware" name="android_hardware_libhardware" groups="pdk" remote="cm" />
+    <!-- We want to have an unpatched libhardware in order for both CAF and non-CAF devices to work -->
+    <remove-project name="ubports/android_hardware_libhardware" />
+    <project path="hardware/libhardware" name="android_hardware_libhardware" groups="pdk" remote="cm" />
+    <project path="device/qcom/common" name="android_device_qcom_common" remote="cm"/>
+    <project path="device/qcom/sepolicy" name="android_device_qcom_sepolicy" remote="cm"/>
  
 </manifest>
