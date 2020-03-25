@@ -4,34 +4,38 @@
     <remote name="sony" fetch="git://github.com/sonyxperiadev" />
     <remote name="nxp" fetch="git://github.com/NXPNFCProject/" />
     <remote name="ubp" fetch="git://github.com/ubports" />
-    <remote name="mer-hybris" fetch="git://github.com/mer-hybris" />
 
+    <remove-project path="bootable/recovery" name="android_bootable_recovery" />
     <remove-project path="device/qcom/sepolicy" name="android_device_qcom_sepolicy" />
-    <remove-project path="hardware/qcom/audio-caf/msm8998" name="android_hardware_qcom_audio" />
-    <remove-project path="hardware/qcom/display" name="android_hardware_qcom_display" />
+    <remove-project path="external/toybox" name="android_external_toybox" />
+    <remove-project path="hardware/qcom/audio" name="android_hardware_qcom_audio" />
     <remove-project path="hardware/qcom/camera" name="android_hardware_qcom_camera" />
-    <remove-project path="vendor/qcom/opensource/dataservices" name="android_vendor_qcom_opensource_dataservices" />
-    <remove-project path="halium/libhybris" name="Halium/libhybris" />
+    <remove-project path="hardware/qcom/display" name="android_hardware_qcom_display" />
     <remove-project path="hardware/qcom/media" name="android_hardware_qcom_media" />
+    <remove-project path="system/core" name="Halium/android_system_core" />
+    <remove-project path="vendor/qcom/opensource/dataservices" name="android_vendor_qcom_opensource_dataservices" />
 
-    <project path="halium/libhybris" name="libhybris" remote="ubp" revision="refs/heads/hybris-compat-layer-fixes" />
+    <project path="bootable/recovery" name="android_bootable_recovery" remote="sjllls" revision="ubp-7.1" />
 
     <project path="device/sony/dora" name="device-sony-dora" revision="n-mr1-ubports" remote="sjllls" />
     <project path="device/sony/tone" name="device-sony-tone" revision="n-mr1-ubports" remote="sjllls" />
     <project path="device/sony/common" name="device-sony-common" revision="n-mr1-ubports" remote="sjllls" />
+    <project path="device/sony/common-init" name="device-sony-common-init" revision="n-mr1-ubports" remote="sjllls" />
 
-    <project path="hardware/qcom/media" name="android_hardware_qcom_media" groups="qcom" remote="sjllls" />
-    <project path="hardware/qcom/audio-caf/msm8998" name="android_hardware_qcom_audio" groups="qcom,qcom_audio" revision="cm-14.1-caf-8998" remote="sjllls" />
-    <project path="hardware/qcom/camera" name="camera" groups="device" remote="sony" revision="aosp/LA.UM.5.7.r1" />
-    <project path="hardware/qcom/display" name="android_hardware_qcom_display" remote="sjllls" revision="halium-7.1" />
-
-    <project path="kernel/sony/dora" name="kernel" revision="ubports/LA.UM.6.4.r1" remote="sjllls" />
-    <project path="kernel/sony/suzu/drivers/staging/wlan-qc/fw-api" name="vendor-qcom-opensource-wlan-fw-api" groups="device" remote="sony" revision="aosp/LA.UM.6.4.r1" />
-    <project path="kernel/sony/suzu/drivers/staging/wlan-qc/qca-wifi-host-cmn" name="vendor-qcom-opensource-wlan-qca-wifi-host-cmn" groups="device" remote="sony" revision="aosp/LA.UM.6.4.r1" />
-    <project path="kernel/sony/suzu/drivers/staging/wlan-qc/qcacld-3.0" name="vendor-qcom-opensource-wlan-qcacld-3.0" groups="device" remote="sony" revision="aosp/LA.UM.6.4.r1" />
-
+    <project path="external/elfutils" name="platform/external/elfutils" groups="pdk" remote="aosp" />
+    <project path="external/gpg" name="android_external_gpg" revision="halium-7.1" remote="sjllls" />
     <project path="external/libnfc-nci" name="platform/external/libnfc-nci" groups="pdk" remote="aosp" />
     <project path="external/libnfc-nxp" name="platform/external/libnfc-nxp" groups="pdk" remote="aosp" />
+    <project path="external/toybox" name="android_external_toybox" revision="halium-7.1" remote="sjllls" />
+
+    <project path="hardware/qcom/audio" name="android_hardware_qcom_audio_aosp" groups="qcom,qcom_audio" revision="halium-7.1" remote="sjllls" />
+    <project path="hardware/qcom/camera" name="camera" groups="device" remote="sony" revision="aosp/LA.UM.5.7.r1" />
+    <project path="hardware/qcom/display" name="android_hardware_qcom_display" remote="sjllls" revision="halium-7.1" />
+    <project path="hardware/qcom/media" name="android_hardware_qcom_media" remote="sjllls" revision="halium-7.1" />
+
+    <project path="kernel/sony/dora" name="kernel" revision="ubports/LA.UM.5.7.r1" remote="sjllls" />
+
+    <project path="system/core" name="Halium/android_system_core" groups="pdk" remote="hal" revision="halium-7.1-adbroot" />
 
     <project path="vendor/nxp/" name="vendor-nxp" groups="device" remote="sony" revision="master" />
     <project path="vendor/nxp/NXPNFCC_FW" name="NXPNFCC_FW" groups="device" remote="nxp" revision="master" />
