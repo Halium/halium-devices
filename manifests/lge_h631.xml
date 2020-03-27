@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+
+<remote name="mun"
+	fetch="https://github.com/WolfLink115-Porting"
+	revision="cm-14.1" />
+
+<project path="vendor/lge/h631" name="android_vendor_lge" remote="mun" revision="cm-14.1" />
+
+<project path="device/lge/h631" name="android_device_lge_h631" remote="mun" revision="cm-14.1" />
+
+<project path="kernel/lge" name="android_kernel_lge_msm8916" remote="mun" revision="cm-14.1" />
+
+<project path="device/lge/msm8916-common" name="android_device_lge_msm8916-common" remote="mun" revision="cm-14.1" />
+
+</manifest>
