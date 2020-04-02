@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+    <project path="device/xiaomi/oxygen" name="bneo99/android_device_xiaomi_oxygen" remote="hal" revision="cm-14.1" />
+
+    <project path="kernel/xiaomi/oxygen" name="bneo99/android_kernel_xiaomi_oxygen" remote="hal" revision="cm-14.1-caf" />
+
+    <project path="vendor/xiaomi/oxygen" name="bneo99/android_vendor_xiaomi_oxygen" remote="hal" revision="cm-14.1" />
+</manifest>
