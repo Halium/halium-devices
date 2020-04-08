@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<manifest>
-    <project path="device/lge/hammerhead" name="LineageOS/android_device_lge_hammerhead" />
-
-    <project path="kernel/lge/hammerhead" name="LineageOS/android_kernel_lge_hammerhead" />
-
-    <project path="vendor/lge" name="themuppets/proprietary_vendor_lge" />
-</manifest> 
