@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+	<remote name="praseodeveloper" fetch="https://github.com/praseodeveloper"/>
+
+	<project path="device/asus/tilapia" name="halium-tilapia" remote="praseodeveloper" revision="refs/heads/cm-14.1" />
+    <project path="device/asus/grouper" name="android_device_asus_grouper" remote="los" revision="refs/heads/cm-14.1" />
+</manifest>
