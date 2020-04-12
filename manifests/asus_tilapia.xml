@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
+    <project path="kernel/asus/grouper" name="android_kernel_asus_grouper" remote="los" revision="refs/heads/cm-14.1" />
 	<project path="device/asus/tilapia" name="android_device_asus_tilapia" remote="los" revision="refs/heads/cm-14.1" />
     <project path="device/asus/grouper" name="android_device_asus_grouper" remote="los" revision="refs/heads/cm-14.1" />
 </manifest>
