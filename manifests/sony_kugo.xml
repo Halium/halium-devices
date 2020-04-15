@@ -18,7 +18,7 @@
 
     <project path="bootable/recovery" name="android_bootable_recovery" remote="beidl" revision="ubp-7.1" />
 
-    <project path="device/sony/kugo" name="device-sony-suzu" revision="n-mr1-ubports" remote="kelmes" />
+    <project path="device/sony/kugo" name="device-sony-kugo" revision="n-mr1-ubports" remote="kelmes" />
     <project path="device/sony/loire" name="device-sony-loire" revision="n-mr1-ubports" remote="beidl" />
     <project path="device/sony/common" name="device-sony-common" revision="n-mr1-ubports" remote="beidl" />
     <project path="device/sony/common-init" name="device-sony-common-init" revision="n-mr1-ubports" remote="beidl" />
