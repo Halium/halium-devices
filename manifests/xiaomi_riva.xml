@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+
+    <remote name="areyoudeveloper1" 
+            fetch="https://github.com/areyoudeveloper1/" 
+            revision="lineage-17.1" />
+    <remote name="beidl" 
+            fetch="https://github.com/fredldotme" />
+
+    <project path="device/xiaomi/riva" name="android_device_xiaomi_riva" remote="areyoudeveloper1" />
+    <project path="kernel/xiaomi/msm8917" name="android_kernel_xiaomi_msm8917-1" remote="areyoudeveloper1" />
+    <project path="vendor/xiaomi/" name="android_vendor_xiaomi" remote="areyoudeveloper1" />
+
+</manifest>
