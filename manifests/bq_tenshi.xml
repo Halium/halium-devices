@@ -15,7 +15,7 @@
     <!-- Specific for tenshi's porting -->
     <project path="device/bq/tenshi" name="android_device_bq_tenshi" remote="hal" revision="halium-7.1"/>
 
-    <project path="kernel/bq/msm8937" name="android_kernel_bq_msm8937" remote="hal" revision="guf-tenshi" />
+    <project path="kernel/bq/msm8937" name="android_kernel_bq_msm8937" remote="hal" revision="guf-tenshi-branch" />
     <project path="kernel/bq/msm8937-common" name="android_device_bq_msm8937-common" remote="los" revision="cm-14.1" />
     <!-- Sources from Mer
     <project path="vendor/bq" name="proprietary_vendor_bq" remote="them" />
