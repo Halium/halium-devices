@@ -19,6 +19,6 @@
     <!-- Sources from Mer 
     <project path="vendor/bq" name="proprietary_vendor_bq" remote="them" />
     -->
-    <project path="vendor/bq" name="android_vendor_bq_tenshi" remote="guf" revision="master" />
+    <project path="vendor/bq/tenshi" name="android_vendor_bq_tenshi" remote="guf" revision="master" />
 
 </manifest>
