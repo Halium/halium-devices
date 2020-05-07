@@ -1,38 +1,38 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
 <!-- Main Remote -->
-<remote name="tyg"
+    <remote name="tyg"
         fetch="https://github.com/tyg3rpro"
         revision="refs/heads/cm-14.1" />
-<!-- Device Repos -->
-    <project path="device/samsung/trltespr" name="android_device_samsung_trltespr" remote="tyg" revision="halium-7.1" />
-    <project path="device/samsung/trltetmo" name="android_device_samsung_trltetmo" remote="tyg" revision="cm-14.1" />
-    <project path="device/samsung/trltevzw" name="android_device_samsung_trltevzw" remote="tyg" revision="cm-14.1" />
-    <project path="device/samsung/trltexx" name="android_device_samsung_trltexx" remote="tyg" revision="cm-14.1" />
-    <project path="device/samsung/trlte" name="android_device_samsung_trlte" remote="tyg" revision="cm-14.1" />
-    <project path="device/samsung/trlte-common" name="android_device_samsung_trlte-common" remote="tyg" revision="halium-7.1" />
-    <project path="device/samsung/apq8084-common" name="android_device_samsung_apq8084-common" remote="tyg" revision="cm-14.1" />
-    <project path="device/samsung/qcom-common" name="android_device_samsung_qcom-common" remote="tyg" revision="halium-7.1" />
-    <project path="hardware/samsung" name="android_hardware_samsung" remote="tyg" revision="halium-7.1" />
-    <project path="kernel/samsung/trlte" name="android_kernel_samsung_trlte" remote="tyg" revision="halium-7.1" />
-    <project path="vendor/samsung" name="proprietary_vendor_samsung" remote="tyg" revision="halium-7.1" />
-<!-- GStreamer Camera Fix Remote-->
-<remote name="peat" fetch="https://github.com/peat-psuwit" />
-<!-- GStreamer Camera Repo -->
-    <remove-project path="halium/droidmedia" name="droidmedia" />
-    <project path="halium/droidmedia" name="droidmedia" remote="peat" revision="fix-raw-data" />
-<!-- Remotes for Recovery to Work -->
-<remote name="beidl" fetch="https://github.com/fredldotme" />
-<remote name="omni" fetch="https://github.com/omnirom" />
-<remote name="ubp" fetch="https://github.com/ubports" />
-<!-- Recovery Repos -->
-    <remove-project path="bootable/recovery" name="android_bootable_recovery" />
-    <remove-project path="external/toybox" name="android_external_toybox" />
-    <remove-project path="system/core" name="Halium/android_system_core" />
-    <remove-project path="vendor/cm" name="Halium/android_vendor_cm" />
-    <project path="bootable/recovery" name="android_bootable_recovery" remote="tyg" revision="halium-7.1" />
-    <project path="external/gpg" name="android_external_gpg" revision="halium-7.1" remote="beidl" />
-    <project path="external/toybox" name="android_external_toybox" revision="halium-7.1" remote="beidl" />
-    <project path="system/core" name="Halium/android_system_core" groups="pdk" remote="hal" revision="halium-7.1-adbroot" />
-    <project path="vendor/cm" name="android_vendor_cm" remote="tyg" revision="halium-7.1" />
+  <!-- Device Repos -->
+      <project path="device/samsung/trltespr" name="android_device_samsung_trltespr" remote="tyg" revision="halium-7.1" />
+      <project path="device/samsung/trltetmo" name="android_device_samsung_trltetmo" remote="tyg" revision="cm-14.1" />
+      <project path="device/samsung/trltevzw" name="android_device_samsung_trltevzw" remote="tyg" revision="cm-14.1" />
+      <project path="device/samsung/trltexx" name="android_device_samsung_trltexx" remote="tyg" revision="cm-14.1" />
+      <project path="device/samsung/trlte" name="android_device_samsung_trlte" remote="tyg" revision="cm-14.1" />
+      <project path="device/samsung/trlte-common" name="android_device_samsung_trlte-common" remote="tyg" revision="halium-7.1" />
+      <project path="device/samsung/apq8084-common" name="android_device_samsung_apq8084-common" remote="tyg" revision="cm-14.1" />
+      <project path="device/samsung/qcom-common" name="android_device_samsung_qcom-common" remote="tyg" revision="halium-7.1" />
+      <project path="hardware/samsung" name="android_hardware_samsung" remote="tyg" revision="halium-7.1" />
+      <project path="kernel/samsung/trlte" name="android_kernel_samsung_trlte" remote="tyg" revision="halium-7.1" />
+      <project path="vendor/samsung" name="proprietary_vendor_samsung" remote="tyg" revision="halium-7.1" />
+  <!-- GStreamer Camera Fix Remote-->
+    <remote name="peat" fetch="https://github.com/peat-psuwit" />
+  <!-- GStreamer Camera Repo -->
+      <remove-project path="halium/droidmedia" name="droidmedia" />
+      <project path="halium/droidmedia" name="droidmedia" remote="peat" revision="fix-raw-data" />
+  <!-- Remotes for Recovery to Work -->
+    <remote name="beidl" fetch="https://github.com/fredldotme" />
+    <remote name="omni" fetch="https://github.com/omnirom" />
+    <remote name="ubp" fetch="https://github.com/ubports" />
+  <!-- Recovery Repos -->
+      <remove-project path="bootable/recovery" name="android_bootable_recovery" />
+      <remove-project path="external/toybox" name="android_external_toybox" />
+      <remove-project path="system/core" name="Halium/android_system_core" />
+      <remove-project path="vendor/cm" name="Halium/android_vendor_cm" />
+      <project path="bootable/recovery" name="android_bootable_recovery" remote="tyg" revision="halium-7.1" />
+      <project path="external/gpg" name="android_external_gpg" revision="halium-7.1" remote="beidl" />
+      <project path="external/toybox" name="android_external_toybox" revision="halium-7.1" remote="beidl" />
+      <project path="system/core" name="Halium/android_system_core" groups="pdk" remote="hal" revision="halium-7.1-adbroot" />
+      <project path="vendor/cm" name="android_vendor_cm" remote="tyg" revision="halium-7.1" />
 </manifest>
