@@ -2,5 +2,5 @@
 <manifest>
     <project path="device/xiaomi/beryllium" name="android_device_xiaomi_beryllium" remote="aosp" />
     <project path="device/xiaomi/sdm845-common" name="android_device_xiaomi_sdm845-common" remote="hal" />
-    <project path="vendor/xiaomi" name="proprietary_vendor_xiaomi" remote="them" />
+    <project path="vendor/xiaomi" name="proprietary_vendor_xiaomi" remote="them2" />
 </manifest>

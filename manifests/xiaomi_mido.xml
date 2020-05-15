@@ -4,5 +4,5 @@
 
     <project path="kernel/xiaomi/msm8953" name="herrie82/android_kernel_xiaomi_msm8953" remote="hal" revision="pgz-14.1-eb8" />
 
-    <project path="vendor/xiaomi" name="proprietary_vendor_xiaomi" remote="them" />
+    <project path="vendor/xiaomi" name="proprietary_vendor_xiaomi" remote="them2" />
 </manifest>
