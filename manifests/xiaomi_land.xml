@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
-    <remote name="dvs_repo"
-            fetch="https://github.com/SRIDHARDV"
+    <remote name="ksk"
+            fetch="https://github.com/kskarthik"
             revision="halium-7.1" />
 
-    <project path="device/xiaomi/land" name="android_device_xiaomi_land" remote="dvs_repo" />
+    <project path="device/xiaomi/land" name="android_device_xiaomi_land" remote="ksk" />
     
-    <project path="kernel/xiaomi/msm8937" name="android_kernel_xiaomi_msm8937" remote="dvs_repo" />
+    <project path="kernel/xiaomi/msm8937" name="android_kernel_xiaomi_msm8937" remote="ksk" />
     
-    <project path="vendor/xiaomi" name="proprietary_vendor_xiaomi" remote="them" />
+    <project path="vendor/xiaomi" name="proprietary_vendor_xiaomi" remote="ksk" />
 </manifest>
