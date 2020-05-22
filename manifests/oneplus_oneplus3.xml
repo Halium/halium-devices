@@ -10,6 +10,7 @@
     <remove-project path="bootable/recovery" name="android_bootable_recovery" />
     <remove-project path="external/toybox" name="android_external_toybox" />
     <remove-project path="system/core" name="Halium/android_system_core" />
+    <remove-project path="hardware/ril-caf" name="android_hardware_ril" />
 
     <project path="bootable/recovery" name="android_bootable_recovery" remote="beidl" revision="ubp-7.1" />
 
@@ -24,5 +25,7 @@
     <project path="system/core" name="Halium/android_system_core" groups="pdk" remote="hal" revision="halium-7.1-adbroot" />
 
     <project path="vendor/oneplus" name="proprietary_vendor_oneplus" remote="vince" />
+
+    <project path="hardware/ril-caf" name="Halium/android_hardware_ril" remote="hal" revision="cm-14.1-caf_H7_OP3" />
 
 </manifest>
