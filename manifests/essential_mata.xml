@@ -4,7 +4,7 @@
     <project path="device/essential/mata" name="android_device_essential_mata" remote="los"/>
     <project path="device/essential/mata/gps" name="android_device_essential_mata_gps" remote="invisiblek" revision="cm-14.1"/>
     <project path="kernel/essential/msm8998" name="android_kernel_essential_msm8998" remote="los"/>
-    <project path="kernel/essential/msm8998/drivers/staging/fw-api" name="android_kernel_essential_msm8998_drivers_staging_fw-api" remote="invisiblek"/>
+    <project path="kernel/essential/msm8998/drivers/staging/fw-api" name="android_kernel_essential_msm8998_drivers_staging_fw-api" remote="invisiblek" revision="cm-14.1"/>
     <project path="kernel/essential/msm8998/drivers/staging/qca-wifi-host-cmn" name="android_kernel_essential_msm8998_drivers_staging_qca-wifi-host-cmn" remote="invisiblek" revision="cm-14.1"/>
     <project path="kernel/essential/msm8998/drivers/staging/qcacld-3.0" name="android_kernel_essential_msm8998_drivers_staging_qcacld-3.0" remote="invisiblek" revision="cm-14.1"/>
     <project path="vendor/qcom/opensource/fst-manager" name="android_vendor_qcom_opensource_fst-manager" remote="invisiblek" revision="cm-14.1"/>
