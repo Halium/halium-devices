@@ -1,6 +1,83 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
-    <project path="device/essential/mata" name="android_device_essential_mata" remote="los" />
-    <project path="kernel/essential/msm8998" name="android_kernel_essential_msm8998" remote="los" />
-    <project path="vendor/essential" name="proprietary_vendor_essential" remote="them" />
+    <remote
+        name="invisiblek"
+        fetch="https://github.com/invisiblek/"
+        revision="cm-14.1"
+    />
+    <project
+        path="device/essential/mata"
+        name="android_device_essential_mata"
+        remote="los"
+        revision="cm-14.1"
+    />
+    <!-- New stuff! -->
+    <project
+        path="device/essential/mata/data-ipa-cfg-mgr"
+        name="android_device_essential_mata"
+        remote="los"
+        revision="cm-14.1"
+    />
+    <project
+        path="device/essential/mata/gps"
+        name="android_device_essential_mata"
+        remote="los"
+        revision="cm-14.1"
+    />
+    <project
+        path="kernel/essential/msm8998"
+        name="android_kernel_essential_msm8998"
+        remote="los"
+        revision="cm-14.1"
+    />
+    <project
+        path="kernel/essential/msm8998/drivers/staging/fw-api"
+        name="android_kernel_essential_msm8998"
+        remote="los"
+        revision="cm-14.1"
+    />
+    <project
+        path="kernel/essential/msm8998/drivers/staging/qca-wifi-host-cmn"
+        name="android_kernel_essential_msm8998"
+        remote="los"
+        revision="cm-14.1"
+    />
+    <project
+        path="kernel/essential/msm8998/drivers/staging/qcacld-3.0"
+        name="android_kernel_essential_msm8998"
+        remote="los"
+        revision="cm-14.1"
+    />
+    <project
+        path="vendor/qcom/opensource/fst-manager"
+        name="android_vendor_qcom_opensource_fst-manager"
+        remote="invisiblek"
+        revision="cm-14.1"
+    />
+    <project
+        path="vendor/qcom/opensource/location"
+        name="android_vendor_qcom_opensource_location"
+        remote="los"
+        revision="cm-14.1"
+    />
+    <project
+        path="vendor/nxp-nfc/opensource/frameworks"
+        name="android_vendor_nxp-nfc_opensource_frameworks"
+        remote="los"
+        revision="cm-14.1"
+    />
+    <project
+        path="vendor/nxp-nfc/opensource/libnfc-nci"
+        name="android_vendor_nxp-nfc_opensource_libnfc-nci"
+        remote="los"
+        revision="cm-14.1"
+    />
+    <project
+        path="vendor/nxp-nfc/opensource/Nfc"
+        name="android_vendor_nxp-nfc_opensource_Nfc"
+        remote="los"
+        revision="cm-14.1"
+    />
+
 </manifest>
+
