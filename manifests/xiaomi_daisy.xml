@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+    <remote name="gb" fetch="https://github.com/"/>
+    
+    <!-- Devices sources -->
+    <project path="device/xiaomi/daisy" name="33bca/android_device_xiaomi_daisy" revision="lineage-16.0" remote="gb" />
+
+    <project path="vendor/xiaomi/daisy" name="33bca/android_vendor_xiaomi_daisy" revision="lineage-16.0" remote="gb" />
+
+    <project path="kernel/xiaomi/msm8953" name="33bca/android_kernel_xiaomi_msm8953" revision="lineage-16.0" remote="gb" />
+
+    <project path="packages/resources/devicesettings" name="LineageOS/android_packages_resources_devicesettings" remote="gb" revision="lineage-16.0" />
+
+    <project path="external/puffin" name="LineageOS/android_external_puffin" revision="lineage-16.0" remote="gb"/>
+</manifest>
