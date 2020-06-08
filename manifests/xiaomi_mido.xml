@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
-    <project path="device/xiaomi/mido" name="android_device_xiaomi_mido" remote="los" />
+    <project path="device/xiaomi/mido" name="herrie82/android_device_xiaomi_mido" remote="hal" revision="pgz-14.1" />
 
     <project path="kernel/xiaomi/msm8953" name="herrie82/android_kernel_xiaomi_msm8953" remote="hal" revision="pgz-14.1-eb8" />
 
