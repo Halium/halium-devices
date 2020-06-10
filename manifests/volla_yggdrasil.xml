@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+    <project path="kernel/volla/mt6763" name="HelloVolla/android_kernel_volla_mt6763" revision="halium-9.0" />
+    <project path="device/volla/yggdrasil" name="HelloVolla/android_device_volla_yggdrasil" revision="halium-9.0" />
+</manifest>
