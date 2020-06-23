@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+	<project path="device/lenovo/kuntao" name="android_device_lenovo_kuntao" remote="los" />
+	<project path="vendor/lenovo" name="proprietary_vendor_lenovo" remote="them" />
+	<project path="kernel/lenovo/msm8953" name="android_kernel_lenovo_msm8953" remote="los" />
+	<!-- <project path="device/qcom/common" name="device/qcom/common" remote="los" /> -->
+</manifest>
