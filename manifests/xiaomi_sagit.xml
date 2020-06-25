@@ -1,0 +1,17 @@
+<!--
+    Copyright (C) 2020 Dreemurrs Embedded Labs <github.com/dreemurrs-embedded>
+-->
+<manifest>
+    <!-- Remotes -->
+    <remote name="ubports-sagit" fetch="https://github.com/ubports-sagit" revision="halium-7.1" />
+
+    <!-- Device Tree -->
+    <project path="device/xiaomi/sagit" name="android_device_xiaomi_sagit" remote="ubports-sagit" />
+    <project path="device/xiaomi/msm8998-common" name="android_device_xiaomi_msm8998-common" remote="ubports-sagit" />
+
+    <!-- Kernel -->
+    <project path="kernel/xiaomi/msm8998" name="android_kernel_xiaomi_msm8998" remote="ubports-sagit" />
+
+    <!-- Proprietary/Vendor blobs -->
+    <project path="vendor/xiaomi" name="android_vendor_xiaomi" remote="ubports-sagit" />
+</manifest>
