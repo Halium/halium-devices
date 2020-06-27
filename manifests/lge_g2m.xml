@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+	<remote name="bart3" fetch="https://github.com/bartbart2003/" revision="refs/heads/halium-7.1" />
+	<project path="device/lge/g2m" name="android_device_lge_g2m" remote="bart3" />
+	<project path="device/lge/msm8226-common" name="android_device_lge_msm8226-common" remote="bart3" />
+<!--	<project path="device/qcom/common" name="android_device_qcom_common" remote="los" revision="cm-14.1" /> -->
+	<project path="kernel/lge/msm8226" name="android_kernel_lge_msm8226" remote="bart3" />
+	<project path="external/sony/boringssl-compat" name="android_external_sony_boringssl-compat" remote="los" />
+	<project path="packages/resources/devicesettings" name="android_packages_resources_devicesettings" remote="los" />
+	<project path="vendor/lge" name="proprietary_vendor_lge" remote="bart3" />
+</manifest>
+
