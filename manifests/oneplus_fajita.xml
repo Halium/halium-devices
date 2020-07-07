@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+    <project path="device/oneplus/fajita"        name="ubports-oneplus6/android_device_oneplus_fajita"        revision="lineage-16.0" />
+    <project path="device/oneplus/common"        name="ubports-oneplus6/android_device_oneplus_common"        revision="lineage-16.0" />
+    <project path="device/oneplus/sdm845-common" name="ubports-oneplus6/android_device_oneplus_sdm845-common" revision="halium-9.0" />
+    <project path="kernel/oneplus/sdm845"        name="ubports-oneplus6/android_kernel_oneplus_sdm845"        revision="halium-9.0" />
+    <project path="vendor/oneplus/sdm845-common" name="ubports-oneplus6/vendor_oneplus_sdm845-common"         revision="pie"          />
+</manifest>
