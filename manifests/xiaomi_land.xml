@@ -12,7 +12,8 @@
     
     <project path="vendor/xiaomi" name="proprietary_vendor_xiaomi" remote="land" />
 
-    
+    <project path="device/xiaomi/msm8937-common" name="android_device_xiaomi_msm8937-common" remote="land" />
+
     <!-- Recovery -->
     <remove-project path="bootable/recovery" name="android_bootable_recovery" />
     <remove-project path="external/toybox" name="android_external_toybox" />
