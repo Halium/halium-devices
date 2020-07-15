@@ -17,7 +17,7 @@
     <project path="hardware/qcom/display-caf/msm8660" name="webos-ports/android_hardware_qcom_display-caf" remote="halium" groups="qcom,qcom_display" revision="tenderloin/halium-5.1" />
     <project path="hardware/qcom/media-caf/msm8660" name="android_hardware_qcom_media-caf" remote="evervolv" groups="qcom,qcom_media" revision="lollipop-5.1-8960" />
 
-    <project path="kernel/htc/msm8960" name="shr-distribution/linux" remote="halium" revision="tenderloin/3.4/cm-12.1" />
+    <project path="kernel/htc/msm8960" name="shr-distribution/linux" remote="halium" revision="8371d6ee507ab3fd8ffcb68fdc814b24e71abd13" />
 
     <project path="vendor/hp" name="android_vendor_hp" remote="evervolv"/>
 </manifest>
