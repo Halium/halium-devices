@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+    <project path="kernel/idealte/msm8998" name="ubports-on-fxtec-pro1/android_kernel_idealte_msm8998" revision="halium-9.0" />
+    <project path="device/fxtec/pro1" name="ubports-on-fxtec-pro1/android_device_fxtec_pro1" revision="halium-9.0" />
+    <project path="device/idealte/msm8998-common" name="ubports-on-fxtec-pro1/android_device_idealte_msm8998-common" revision="halium-9.0" />
+    <project path="vendor/idealte" name="ubports-on-fxtec-pro1/proprietary_vendor_idealte" revision="halium-9.0" />
+</manifest>
