@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+    <remote name="kd" fetch="git://github.com/konradybcio" />
+    <remote name="beidl" fetch="git://github.com/fredldotme" />
+    <remote name="sony" fetch="git://github.com/sonyxperiadev" />
+    <remote name="nxp" fetch="git://github.com/NXPNFCProject/" />
+    <remote name="ubp" fetch="git://github.com/ubports" />
+
+    <remove-project path="bootable/recovery" name="android_bootable_recovery" />
+    <remove-project path="device/qcom/sepolicy" name="android_device_qcom_sepolicy" />
+    <remove-project path="external/toybox" name="android_external_toybox" />
+    <remove-project path="hardware/qcom/audio" name="android_hardware_qcom_audio" />
+    <remove-project path="hardware/qcom/camera" name="android_hardware_qcom_camera" />
+    <remove-project path="hardware/qcom/display" name="android_hardware_qcom_display" />
+    <remove-project path="hardware/qcom/media" name="android_hardware_qcom_media" />
+    <remove-project path="system/core" name="Halium/android_system_core" />
+    <remove-project path="vendor/qcom/opensource/dataservices" name="android_vendor_qcom_opensource_dataservices" />
+
+    <project path="bootable/recovery" name="android_bootable_recovery" remote="beidl" revision="ubp-7.1" />
+
+    <project path="device/sony/kagura" name="device-sony-kagura" revision="n-mr1-ubports" remote="kd" />
+    <project path="device/sony/tone" name="device-sony-tone" revision="n-mr1-ubports" remote="kd" />
+    <project path="device/sony/common" name="device-sony-common" revision="n-mr1-ubports" remote="beidl" />
+    <project path="device/sony/common-init" name="device-sony-common-init" revision="n-mr1-ubports" remote="beidl" />
+
+    <project path="external/elfutils" name="platform/external/elfutils" groups="pdk" remote="aosp" />
+    <project path="external/gpg" name="android_external_gpg" revision="halium-7.1" remote="beidl" />
+    <project path="external/libnfc-nci" name="platform/external/libnfc-nci" groups="pdk" remote="aosp" />
+    <project path="external/libnfc-nxp" name="platform/external/libnfc-nxp" groups="pdk" remote="aosp" />
+    <project path="external/toybox" name="android_external_toybox" revision="halium-7.1" remote="beidl" />
+
+    <project path="hardware/qcom/audio" name="android_hardware_qcom_audio_aosp" groups="qcom,qcom_audio" revision="halium-7.1" remote="beidl" />
+    <project path="hardware/qcom/camera" name="camera" groups="device" remote="sony" revision="aosp/LA.UM.5.7.r1" />
+    <project path="hardware/qcom/display" name="android_hardware_qcom_display" remote="beidl" revision="halium-7.1" />
+    <project path="hardware/qcom/media" name="android_hardware_qcom_media" remote="beidl" revision="halium-7.1" />
+
+    <project path="kernel/sony/kagura" name="device-kernel-loire" revision="ubports/LA.UM.5.7.r1" remote="beidl" />
+
+    <project path="system/core" name="Halium/android_system_core" groups="pdk" remote="hal" revision="halium-7.1-adbroot" />
+
+    <project path="vendor/nxp/" name="vendor-nxp" groups="device" remote="sony" revision="master" />
+    <project path="vendor/nxp/NXPNFCC_FW" name="NXPNFCC_FW" groups="device" remote="nxp" revision="master" />
+    <project path="vendor/broadcom/bt-fm" name="vendor-broadcom-bt-fm" groups="device" remote="sony" revision="master" />
+    <project path="vendor/broadcom/wlan" name="vendor-broadcom-wlan" groups="device" remote="sony" revision="master" />
+    <project path="vendor/qcom/opensource/fm" name="vendor-qcom-opensource-fm" groups="device" remote="sony" revision="master" />
+    <project path="vendor/qcom/opensource/location" name="vendor-qcom-opensource-location" groups="device" remote="sony" revision="n-mr1" />
+    <project path="vendor/qcom/opensource/time-services" name="vendor-qcom-opensource-time-services" groups="device" remote="sony" revision="master" />
+    <project path="vendor/qcom/opensource/wlan" name="hardware-qcom-wlan" groups="device" remote="sony" revision="master" />
+    <project path="vendor/qcom/opensource/dataservices" name="vendor-qcom-opensource-dataservices" groups="device" remote="sony" revision="master" />
+    <project path="vendor/oss/fingerprint"  name="vendor-sony-oss-fingerprint" groups="device" remote="sony" revision="android-7.1.1_r55" />
+    <project path="vendor/oss/macaddrsetup" name="macaddrsetup" groups="device" remote="sony" revision="master" />
+    <project path="vendor/oss/thermanager" name="thermanager" groups="device" remote="sony" revision="master" />
+    <project path="vendor/oss/timekeep" name="timekeep" groups="device" remote="sony" revision="master" />
+    <project path="vendor/oss/transpower" name="transpower" groups="device" remote="sony" revision="android-7.1.1_r55" />
+    <project path="vendor/oss/json-c" name="json-c" groups="device" remote="sony" revision="master" />
+</manifest>
