@@ -3,6 +3,4 @@
     <project path="device/xiaomi/tissot" name="Tofee/android_device_xiaomi_tissot" remote="hal" revision="cm-14.1" />
     <project path="kernel/xiaomi/msm8953" name="herrie82/tissot" remote="hal" revision="tissot-o-oss" />
     <project path="vendor/xiaomi/tissot" name="Tofee/android_vendor_xiaomi_tissot" remote="hal" revision="cm-14.1" />
-
-    <project groups="pdk" name="platform/external/tinyxml" path="external/tinyxml" remote="aosp"/>
 </manifest>
