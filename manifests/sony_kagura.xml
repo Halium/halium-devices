@@ -5,6 +5,7 @@
     <remote name="sony" fetch="git://github.com/sonyxperiadev" />
     <remote name="nxp" fetch="git://github.com/NXPNFCProject/" />
     <remote name="ubp" fetch="git://github.com/ubports" />
+    <remote name="sjll" fetch="git://github.com/sjllls" />
 
     <remove-project path="bootable/recovery" name="android_bootable_recovery" />
     <remove-project path="device/qcom/sepolicy" name="android_device_qcom_sepolicy" />
@@ -34,7 +35,7 @@
     <project path="hardware/qcom/display" name="android_hardware_qcom_display" remote="beidl" revision="halium-7.1" />
     <project path="hardware/qcom/media" name="android_hardware_qcom_media" remote="beidl" revision="halium-7.1" />
 
-    <project path="kernel/sony/kagura" name="device-kernel-loire" revision="ubports/LA.UM.5.7.r1" remote="beidl" />
+    <project path="kernel/sony/kagura" name="kernel" revision="ubports/LA.UM.5.7.r1" remote="sjll" />
 
     <project path="system/core" name="Halium/android_system_core" groups="pdk" remote="hal" revision="halium-7.1-adbroot" />
 
