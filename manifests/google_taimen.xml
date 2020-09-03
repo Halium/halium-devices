@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+  <project name="ubports-wahoo/android_device_google_taimen" path="device/google/taimen" remote="github" revision="halium-9.0" />
+  <project name="ubports-wahoo/android_device_google_wahoo" path="device/google/wahoo" remote="github" revision="halium-9.0" />
+  <project name="ubports-wahoo/android_kernel_google_wahoo" path="kernel/google/wahoo" remote="github" revision="halium-9.0" />
+  <project name="ubports-wahoo/proprietary_vendor_google" path="vendor/google" remote="github" revision="halium-9.0" />
+</manifest>
