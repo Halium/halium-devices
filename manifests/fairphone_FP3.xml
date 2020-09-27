@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+    <project path="device/fairphone/FP3" name="luksus42/android_device_fairphone_FP3" revision="halium-9.0" remote="hal" />
+    <project path="kernel/fairphone/sdm632" name="luksus42/android_kernel_fairphone_sdm632" revision="ubuntutouch" remote="hal" />
+    <project path="vendor/fairphone/FP3" name="luksus42/proprietary_vendor_fairphone" revision="lineage-16.0" remote="hal" />
+</manifest>
