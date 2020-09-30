@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+
+    <remote name="mun"
+        fetch="https://github.com/WolfLink115"
+        revision="cm-14.1" />
+    
+    <project path="kernel/htc/msm8960" name="android_kernel_htc_msm8960" remote="mun" />
+    
+    <project path="device/htc/msm8960-common" name="android_device_htc_msm8960-common" remote="mun" />
+    
+    <project path="device/htc/m7" name="android_device_htc_m7" remote="mun" />
+    
+    <project path="device/htc/m7-common" name="android_device_htc_m7-common" remote="mun" />
+    
+    <project path="vendor/htc" name="proprietary_vendor_htc" remote="mun" />
+    
+</manifest> 
