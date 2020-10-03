@@ -12,6 +12,6 @@
 
     <project path="kernel/oppo/msm8939" name="android_kernel_oppo_msm8939" remote="main" />
 
-    <project path="vendor/oppo" name="proprietary_vendor_oppo" remote="them" />
+    <project path="vendor/oppo" name="halium_vendor_oppo_f1f" remote="main" />
  
 </manifest>
