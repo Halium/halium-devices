@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+<remote name="aob"
+    fetch="https://github.com/Anderson-Oliveira-Baterista"
+    revision="cm-14.1" />
+<remote  name="aosp"
+     fetch="https://android.googlesource.com"
+     review="android-review.googlesource.com"
+     revision="refs/tags/android-7.1.1_r25" />
+<project path="device/vernee/M5" name="Halium/android_device_vernee_M5" remote="aosp" revision="aosp"/>
+<project path="android_vernee_M5" name="Halium/android_device_vernee_M5"" remote="aosp" revision="aosp" />
+ <project path="vendor/vernee" name="proprietary_vendor_vernee" remote="aob" />
+
+</manifest>
