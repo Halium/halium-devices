@@ -9,6 +9,6 @@
 <remote name="xiaomi-sdm660"
         fetch="https://github.com/xiaomi-sdm660" />
 <project path="device/xiaomi/clover" name="android_device_xiaomi_clover" remote="kubntd" revision="lineage-16.0" />
-<project path="kernel/xiaomi/sdm660" name="android_kernel_xiaomi_sdm660" remote="xiaomi-sdm660" revision="master" />
+<project path="kernel/xiaomi/sdm660" name="android_kernel_xiaomi_sdm660" remote="kubntd" revision="master" />
 <project path="vendor/xiaomi/clover" name="android_vendor_xiaomi_clover" remote="mp4d" revision="lineage-16.0" />
 </manifest>
