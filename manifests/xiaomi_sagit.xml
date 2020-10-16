@@ -3,7 +3,7 @@
 -->
 <manifest>
     <!-- Remotes -->
-    <remote name="ubports-sagit" fetch="https://github.com/ubports-sagit" revision="halium-9.0" />
+    <remote name="ubports-sagit" fetch="https://github.com/UbuntuTouch-sagit" revision="halium-9.0" />
 
     <!-- Device Tree -->
     <project path="device/xiaomi/sagit" name="android_device_xiaomi_sagit" remote="ubports-sagit" />
