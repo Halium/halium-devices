@@ -1,19 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
 
+    <remote name="ubp" fetch="https://github.com/ubports/" revision="halium-7.1" />
+    <remote name="beidl" fetch="git://github.com/fredldotme" />
+    <remote name="rargente" fetch="git://github.com/Rargente" />
+
     <project path="vendor/oneplus" name="proprietary_vendor_oneplus" remote="them" />
    
-    <remote name="ubp" fetch="https://github.com/ubports/" revision="halium-7.1" />
     <project path="device/oppo/common" name="android_device_oppo_common" remote="los" />
+
     <project path="device/oneplus/bacon" name="android_device_oneplus_bacon-1" remote="ubp" />
     <project path="kernel/oneplus/msm8974" name="android_kernel_oneplus_msm8974" remote="ubp" />
 
-    <remote name="beidl" fetch="git://github.com/fredldotme" />
     <project path="external/gpg" name="android_external_gpg" revision="halium-7.1" remote="beidl" />
     <remove-project path="external/toybox" name="android_external_toybox" />
     <project path="external/toybox" name="android_external_toybox" revision="halium-7.1" remote="beidl" />
 
-    <remote name="rargente" fetch="git://github.com/Rargente" />
     <remove-project path="bootable/recovery" name="android_bootable_recovery" />
     <project path="bootable/recovery" name="android_bootable_recovery" remote="rargente" revision="ubp-7.1" />
 
