@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+    <remote name="los" fetch="https://github.com/LineageOS" />
+    
+    <project path="device/xiaomi/dipper" name="android_device_xiaomi_dipper" remote="los" revision="lineage-16.0"/>
+    
+    <project path="device/xiaomi/sdm845-common" name="android_device_xiaomi_sdm845-common" remote="los" revision="lineage-16.0" />
+    
+    <project path="kernel/xiaomi/sdm845" name="android_kernel_xiaomi_sdm845" remote="los" revision="lineage-16.0" />
+    
+    <project path="packages/resources/devicesettings" name="android_packages_resources_devicesettings" remote="los" revision="lineage-16.0" />
+</manifest>
