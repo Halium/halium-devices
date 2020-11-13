@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+<remote name="al31cS"
+    fetch="https://github.com/aL31cS"
+    revision="master" />
+<project path="device/lenovo/tab3" name="android_device_lenovo_tab3" remote="al31cS" />
+<project path="kernel/lenovo/tab3" name="android_kernel_lenovo_tab3" remote="al31cS" revision="halium-7.1"  />
+<project path="vendor/lenovo/tab3" name="android_vendor_lenovo_tab3" remote="al31cS" />
+</manifest>
