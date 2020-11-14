@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+    Copyright (C) 2020 Dreemurrs Embedded Labs <github.com/dreemurrs-embedded>
+-->
+<manifest>
+    <!-- Remotes -->
+    <remote name="ubuntu-touch-lavender" fetch="https://github.com/ubuntu-touch-lavender" revision="halium-9.0" />
+
+    <!-- Device Tree -->
+    <project path="device/xiaomi/lavender" name="android_device_xiaomi_lavender" remote="ubuntu-touch-lavender" />
+
+    <!-- Kernel -->
+    <project path="kernel/xiaomi/lavender" name="kernel" remote="ubuntu-touch-lavender" />
+
+    <!-- Proprietary/Vendor blobs -->
+    <project path="vendor/xiaomi/lavender" name="vendor" remote="ubuntu-touch-lavender" />
+</manifest>
