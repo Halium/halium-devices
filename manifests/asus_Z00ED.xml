@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+	<remote name="adz"
+		fetch="https://github.com/adazem009" />
+	<project path="device/asus/Z00ED" name="android_device_asus_Z00ED" remote="adz" revision="UBports-N" />
+	<project path="device/asus/msm8916-common" name="android_device_asus_msm8916-common" remote="adz" revision="halium" />
+	<project path="device/asus/qcom/common" name="android_device_asus_qcom_common" remote="adz" revision="N" />
+	<project path="vendor/asus" name="proprietary_vendor_asus" remote="adz" revision="halium-7.1" />
+	<project path="kernel/asus/msm8916" name="android_kernel_asus_msm8916" remote="adz" revision="UBports-N" />
+</manifest>
