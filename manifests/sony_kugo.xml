@@ -5,6 +5,7 @@
     <remote name="sony" fetch="git://github.com/sonyxperiadev" />
     <remote name="nxp" fetch="git://github.com/NXPNFCProject/" />
     <remote name="mer-hybris" fetch="git://github.com/mer-hybris" />
+    <remote name="peat-psuwit" fetch="git://github.com/peat-psuwit" />
 
     <remove-project path="bootable/recovery" name="android_bootable_recovery" />
     <remove-project path="device/qcom/sepolicy" name="android_device_qcom_sepolicy" />
@@ -48,7 +49,7 @@
     <project path="vendor/qcom/opensource/wlan" name="hardware-qcom-wlan" groups="device" remote="sony" revision="master" />
     <project path="vendor/qcom/opensource/dataservices" name="vendor-qcom-opensource-dataservices" groups="device" remote="sony" revision="master" />
     <project path="vendor/oss/fingerprint"  name="vendor-sony-oss-fingerprint" groups="device" remote="sony" revision="android-7.1.1_r55" />
-    <project path="vendor/oss/macaddrsetup" name="macaddrsetup" groups="device" remote="sony" revision="master" />
+    <project path="vendor/oss/macaddrsetup" name="macaddrsetup" groups="device" remote="peat-psuwit" revision="fix-android-7-build" />
     <project path="vendor/oss/thermanager" name="thermanager" groups="device" remote="sony" revision="master" />
     <project path="vendor/oss/timekeep" name="timekeep" groups="device" remote="sony" revision="master" />
     <project path="vendor/oss/transpower" name="transpower" groups="device" remote="sony" revision="android-7.1.1_r55" />
