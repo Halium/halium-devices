@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+    <project path="device/google/crosshatch" name="android_device_google_crosshatch" remote="los" revision="lineage-17.1" />
+    <project path="kernel/google/msm-4.9" name="android_kernel_google_msm-4.9" remote="los" revision="lineage-17.1" />
+    <project path="vendor/google" name="proprietary_vendor_google" remote="them" revision="lineage-17.1" />
+</manifest>
