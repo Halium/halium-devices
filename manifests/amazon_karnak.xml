@@ -18,4 +18,7 @@
     <!-- Proprietary/Vendor common tree -->
     <project path="vendor/amazon/mt8163" name="android_vendor_amazon_mt8163" remote="halium-on-karnak" />
     
+    <!-- This fixes build on armhf -->
+    <remove-project name="ubports/android_external_gpg" />
+    
 </manifest>
