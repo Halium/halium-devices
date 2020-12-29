@@ -78,6 +78,23 @@ else
         )
     fi
 
+    # Some device trees are lazy and contain more than one device. Check subdirectory with devicename, too
+    # (e.g. Google Pixel)
+    if [ -f $DEVICE_TREE/$DEVICE/setup-makefiles.sh ]; then
+        echo "I: Refreshing device vendor repository: device/$VENDOR/$DEVICE"
+        (
+            cd $DEVICE_TREE/$DEVICE
+            for i in $(find . -name "*proprietary-*.txt"); do
+                echo "I: Processing proprietary blob file: device/$VENDOR/$DEVICE/$i"
+                grep -r -v -E '(^.*\.{1}(jar|apk)[|]?.*)' $i >$i".tmp" && mv $i".tmp" $i
+            done
+            # Set executable bit, needed for some device trees
+            chmod +x ./setup-makefiles.sh
+            # Actually run the script
+            ./setup-makefiles.sh
+        )
+    fi
+
     # Since we don't use SELinux we want to make sure we remove the
     # ",context=u....:s0" from the fstab file(s) in the $DEVICE folder so we can
     # mount the partitions without issues
