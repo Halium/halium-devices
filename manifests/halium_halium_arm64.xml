@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+    <project path="device/halium/halium_arm64" name="Halium/android_device_halium_halium_arm64" revision="halium-10.0" />
+    <project path="vendor/vndk" name="phhusson/vendor_vndk" revision="master" />
+</manifest>
