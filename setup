@@ -60,6 +60,12 @@ else
     fi
 
     DEVICE_TREE=$REPO_ROOT/device/$VENDOR/$DEVICE
+
+    # Hack: Google Pixel has lazy device tree structure, 2 devices in one
+    if [[ ( $VENDOR="google" ) && ( $DEVICE="sailfish" ) ]]; then
+        DEVICE_TREE=$REPO_ROOT/device/$VENDOR/marlin
+    fi
+
     VENDOR_TREE=$REPO_ROOT/vendor/$VENDOR
 
     echo "*******************************************"
