@@ -86,6 +86,25 @@ else
 
     echo "*******************************************"
     if [ -f $DEVICE_TREE/setup-makefiles.sh ]; then
+        if [ -f $DEVICES_ROOT/extract_proprietary_files_from_vendor_repo.sh -a -d "$VENDOR_TREE/$(basename $DEVICE_TREE)/proprietary" ]; then
+            echo "I: Completing device vendor proprietary blob file"
+            (
+                # generate the whole list from the vendor repo
+                cd $DEVICE_TREE
+
+                chmod +x $DEVICES_ROOT/extract_proprietary_files_from_vendor_repo.sh
+                
+                OUTPUT_PROPRIETARY_FILE=$(find $DEVICE_TREE -name "*proprietary-*.txt" -print -quit)
+                echo "I: Adding missing entries in $OUTPUT_PROPRIETARY_FILE"
+                printf "\n# Complementary files added by Halium's setup\n" >> $OUTPUT_PROPRIETARY_FILE
+                
+                # Add missing entries in proprietary-files.txt : device repo
+                for l in $($DEVICES_ROOT/extract_proprietary_files_from_vendor_repo.sh $VENDOR_TREE/$(basename $DEVICE_TREE)); do
+                    grep -q $l "$DEVICE_TREE"/*proprietary-*.txt || echo $l >> $OUTPUT_PROPRIETARY_FILE
+                done
+            )
+        fi
+
         echo "I: Refreshing device vendor repository: device/$VENDOR/$(basename $DEVICE_TREE)"
         (
             cd $DEVICE_TREE
@@ -136,6 +155,24 @@ else
         for k in $DEVICE_COMMON_TEMP; do
             echo "I: Procession device vendor common folder: device/$VENDOR/$k"
             DEVICE_COMMON_TREE=$REPO_ROOT/device/$VENDOR/$k
+            if [ -f $DEVICES_ROOT/extract_proprietary_files_from_vendor_repo.sh -a -d "$VENDOR_TREE/$k/proprietary" ]; then
+                echo "I: Completing device vendor common proprietary blob file"
+                (
+                    # generate the whole list from the vendor repo
+                    cd $DEVICE_COMMON_TREE
+
+                    chmod +x $DEVICES_ROOT/extract_proprietary_files_from_vendor_repo.sh
+                    
+                    OUTPUT_PROPRIETARY_FILE=$(find $DEVICE_COMMON_TREE -name "*proprietary-*.txt" -print -quit)
+                    echo "I: Adding missing entries in $OUTPUT_PROPRIETARY_FILE"
+                    printf "\n# Complementary files added by Halium's setup\n" >> $OUTPUT_PROPRIETARY_FILE
+                    
+                    # Add missing entries in proprietary-files.txt : device common repo
+                    for l in $($DEVICES_ROOT/extract_proprietary_files_from_vendor_repo.sh $VENDOR_TREE/$k); do
+                        grep -q $l "$DEVICE_COMMON_TREE"/*proprietary-*.txt || echo $l >> $OUTPUT_PROPRIETARY_FILE
+                    done
+                )
+            fi
 
             # We need to have $VENDOR, $DEVICE and $DEVICE_COMMON or
             # $PLATFORM_COMMON available for setup-makefiles.sh in the common
