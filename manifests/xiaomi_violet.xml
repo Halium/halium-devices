@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+  <!-- Remotes -->
+  <remote name="ubuntu-touch-xiaomi-violet"
+    fetch="https://gitlab.com/ubuntu-touch-xiaomi-violet"
+    revision="halium-9.0"/>
+
+    <!-- Device Tree -->
+  <project path="device/xiaomi/violet"
+    name="android_device_xiaomi_violet"
+    remote="ubuntu-touch-xiaomi-violet" />
+
+    <!-- Kernel -->
+  <project path="kernel/xiaomi/violet"
+    name="android_kernel_xiaomi_violet"
+    remote="ubuntu-touch-xiaomi-violet" />
+
+    <!-- Proprietary/Vendor blobs -->
+  <project path="vendor/xiaomi/violet"
+    name="android_vendor_xiaomi_violet"
+    remote="ubuntu-touch-xiaomi-violet" />
+</manifest>
