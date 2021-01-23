@@ -15,17 +15,27 @@ REPO_ARGS=(${ARGS[@]:1})
 DEVICES_ROOT="$(dirname "$(readlink -f "${0}")")"
 REPO_ROOT="$(readlink -f ${DEVICES_ROOT}/../..)"
 
+DEVICE_REGEX="([a-zA-Z0-9]+?)_([a-zA-Z0-9_]+)\.xml"
 if [ -z $DEVICE ]; then
     echo "Please specify a device codename"
     exit 0
 fi
 
-if ! [ -f $DEVICES_ROOT/manifests/*_$DEVICE.xml ]; then
+for f in `ls $DEVICES_ROOT/manifests/*.xml`
+do
+    if [[ $f =~ $DEVICE_REGEX ]]; then
+        VENDOR=${BASH_REMATCH[1]}
+        if [[ ${BASH_REMATCH[0]} =~ $DEVICE ]]; then
+            MANIFEST=$f
+            break
+        fi
+    fi
+done
+if [[ -z "$MANIFEST"  || -z "$VENDOR" ]]; then
     echo "The given device is not supported. :("
 else
-    VENDOR=$(basename $DEVICES_ROOT/manifests/*_$DEVICE.xml | cut -d "_" -f1)
     echo "*****************************************"
-    echo "I: Configuring for device $VENDOR"_"$DEVICE"
+    echo "I: Configuring for vendor $VENDOR and device $DEVICE"
     echo "*****************************************"
 
     # Test if there is already a device configured and the folder exists
@@ -36,7 +46,7 @@ else
     fi
 
     # Link the device manifest to the local_manifests folder
-    ln $DEVICES_ROOT/manifests/$VENDOR"_"$DEVICE.xml $REPO_ROOT/.repo/local_manifests/device.xml
+    ln $MANIFEST $REPO_ROOT/.repo/local_manifests/device.xml
 
     # Synchronize new new sources
     repo sync --network-only -c -j$JOBS -q $REPO_ARGS
@@ -81,7 +91,7 @@ else
     # Some device trees are lazy and contain more than one device. Check subdirectory with devicename, too
     # (e.g. Google Pixel)
     if [ -f $DEVICE_TREE/$DEVICE/setup-makefiles.sh ]; then
-        echo "I: Refreshing device vendor repository: device/$VENDOR/$DEVICE"
+        echo "I: Refreshing device vendor repository: device/$VENDOR/$DEVICE/$DEVICE"
         (
             cd $DEVICE_TREE/$DEVICE
             for i in $(find . -name "*proprietary-*.txt"); do
