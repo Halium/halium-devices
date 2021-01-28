@@ -70,6 +70,12 @@ else
     fi
 
     DEVICE_TREE=$REPO_ROOT/device/$VENDOR/$DEVICE
+
+    # Hack: Google Pixel has lazy device tree structure, 2 devices in one
+    if [[ ( $VENDOR = "google" ) && ( $DEVICE = "sailfish" ) ]]; then
+        DEVICE_TREE=$REPO_ROOT/device/$VENDOR/marlin
+    fi
+
     VENDOR_TREE=$REPO_ROOT/vendor/$VENDOR
 
     echo "*******************************************"
@@ -95,7 +101,7 @@ else
         (
             cd $DEVICE_TREE/$DEVICE
             for i in $(find . -name "*proprietary-*.txt"); do
-                echo "I: Processing proprietary blob file: device/$VENDOR/$DEVICE/$i"
+                echo "I: Processing proprietary blob file: device/$VENDOR/$(basename $DEVICE_TREE)/$DEVICE/$i"
                 grep -r -v -E '(^.*\.{1}(jar|apk)[|]?.*)' $i >$i".tmp" && mv $i".tmp" $i
             done
             # Set executable bit, needed for some device trees
