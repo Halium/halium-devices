@@ -91,7 +91,7 @@ else
     # Some device trees are lazy and contain more than one device. Check subdirectory with devicename, too
     # (e.g. Google Pixel)
     if [ -f $DEVICE_TREE/$DEVICE/setup-makefiles.sh ]; then
-        echo "I: Refreshing device vendor repository: device/$VENDOR/$DEVICE/$DEVICE"
+        echo "I: Refreshing device vendor repository: device/$VENDOR/$(basename $DEVICE_TREE)/$DEVICE"
         (
             cd $DEVICE_TREE/$DEVICE
             for i in $(find . -name "*proprietary-*.txt"); do
