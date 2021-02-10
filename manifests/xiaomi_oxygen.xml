@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<manifest>
+    <project path="device/xiaomi/oxygen" name="xzz53/android_device_xiaomi_oxygen" remote="hal" revision="halium-7.1"/>
+    <project path="kernel/xiaomi/oxygen" name="xzz53/android_kernel_xiaomi_oxygen" remote="hal" revision="halium-7.1-caf"/>
+    <project path="vendor/xiaomi/oxygen" name="ashwinr64/android_vendor_xiaomi_oxygen" remote="hal" revision="cm-14.1" />
+</manifest>
