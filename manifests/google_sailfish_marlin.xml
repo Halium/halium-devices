@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+
+<project path="vendor/google" name="TheMuppets/proprietary_vendor_google" />
+
+<remote name="Flohack74" fetch="https://github.com/Flohack74/" revision="halium-9.0" />
+
+<project path="device/google/marlin" name="android_device_google_marlin" remote="Flohack74" />
+<project path="kernel/google/marlin" name="android_kernel_google_marlin" remote="Flohack74" />
+
+<project path="external/puffin" name="LineageOS/android_external_puffin" />
+
+<project path="device/google/contexthub" name="device/google/contexthub" groups="device,marlin,pdk" remote="aosp" />
+<project path="external/tinyxml" name="platform/external/tinyxml" groups="pdk" remote="aosp" />
+
+</manifest>
+
