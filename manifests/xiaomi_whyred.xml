@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+          
+  <remote name="halium-9.0"
+          fetch="https://github.com/Linux-On-Sdm6Series"
+          revision="halium-9.0" />
+ 
+  <!-- Halium device For Whyred -->
+  <project path="device/xiaomi/whyred" name="device_xiaomi_whyred" remote="halium-9.0" />
+
+  <!-- Halium vendor For Whyred -->
+  <project path="vendor/xiaomi/whyred" name="vendor_xiaomi_whyred" remote="halium-9.0" />
+  
+  <!-- Halium kernel For Whyred -->
+  <project path="kernel/xiaomi/whyred" name="kernel_xiaomi_whyred" remote="halium-9.0" />
+  
+</manifest>
