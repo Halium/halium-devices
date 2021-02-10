@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
-    <project path="device/samsung/herolte" name="android_device_samsung_herolte" remote="los" />
-    <project path="device/samsung/hero-common" name="android_device_samsung_hero-common" remote="los" />
+    
+    <remote name="abkro" fetch="https://github.com/abkro/" />
+
+    <project path="device/samsung/herolte" name="android_device_samsung_herolte" remote="abkro" revision="halium-7.1-ut" />
+    <project path="device/samsung/hero-common" name="android_device_samsung_hero-common" remote="abkro" revision="halium-7.1-ut" />
 
     <project path="hardware/samsung" name="Halium/android_hardware_samsung" remote="hal" />
     <project path="hardware/samsung_slsi-cm/exynos" name="android_hardware_samsung_slsi-cm_exynos" remote="los" />
@@ -9,7 +12,7 @@
     <project path="hardware/samsung_slsi-cm/exynos8890" name="android_hardware_samsung_slsi-cm_exynos8890" remote="los" />
     <project path="hardware/samsung_slsi-cm/openmax" name="android_hardware_samsung_slsi-cm_openmax" remote="los" />
 
-    <project path="kernel/samsung/universal8890" name="ZeroPointEnergy/android_kernel_samsung_universal8890" remote="hal" />
+    <project path="kernel/samsung/universal8890" name="android_kernel_samsung_universal8890" remote="abkro" revision="ubports-ut" />
 
     <project path="vendor/samsung" name="proprietary_vendor_samsung" remote="them" />
 </manifest>
