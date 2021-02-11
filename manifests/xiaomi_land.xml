@@ -1,12 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
-    <remote name="ksk"
-            fetch="https://github.com/kskarthik"
+    <remote name="kek"
+            fetch="https://github.com/Ubports-Land"
             revision="halium-7.1" />
+    <remote name="beidl" 
+            fetch="https://github.com/fredldotme" />
 
-    <project path="device/xiaomi/land" name="android_device_xiaomi_land" remote="ksk" />
-    
-    <project path="kernel/xiaomi/msm8937" name="android_kernel_xiaomi_msm8937" remote="ksk" />
-    
-    <project path="vendor/xiaomi" name="proprietary_vendor_xiaomi" remote="them2" />
+    <project path="device/xiaomi/land" name="android_device_xiaomi_land-1" remote="kek" />
+    <project path="device/xiaomi/msm8937-common" name="android_device_xiaomi_msm8937-common" remote="kek" />
+    <project path="kernel/xiaomi/GGmsm8937" name="android_kernel_xiaomi_msm8937-1" remote="kek" />
+    <project path="vendor/xiaomi" name="proprietary_vendor_xiaomi" remote="kek" />
+
+    <!-- Recovery -->
+    <remove-project path="bootable/recovery" name="android_bootable_recovery" />
+    <remove-project path="external/toybox" name="android_external_toybox" />
+    <remove-project path="system/core" name="Halium/android_system_core" />
+    <project path="bootable/recovery" name="android_bootable_recovery" remote="beidl" revision="ubp-7.1" />
+    <project path="external/gpg" name="android_external_gpg" revision="halium-7.1" remote="beidl" />
+    <project path="external/toybox" name="android_external_toybox" revision="halium-7.1" remote="beidl" />
+    <project path="system/core" name="Halium/android_system_core" groups="pdk" remote="hal" revision="halium-7.1-adbroot" />
+
 </manifest>
