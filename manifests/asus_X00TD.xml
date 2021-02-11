@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+
+  <remote name="halium"
+          fetch="https://github.com/Linux-On-Sdm6Series"
+          revision="halium-9.0" />
+
+  <project name="vendor_asus_X00TD" path="vendor/asus/X00TD" remote="halium" depth="1" />
+  <project name="device_asus_X00TD" path="device/asus/X00TD" remote="halium" depth="1" />
+  <project name="kernel_asus_sdm660" path="kernel/asus/sdm660" remote="halium" depth="1" />
+
+</manifest>
