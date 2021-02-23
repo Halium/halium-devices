@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+    <remote name="device_xiaomi_ysl"
+        fetch="https://github.com/jmsgfhr"
+        revision="lineage-16.0" />
+
+    <project path="device/xiaomi/ysl" name="device_xiaomi_ysl" remote="device_xiaomi_ysl" revision="lineage-16.0" />
+    
+    <project path="vendor/xiaomi/ysl" name="vendor_xiaomi_ysl" remote="device_xiaomi_ysl" revision="lineage-16.0" />
+    
+    <project path="kernel/xiaomi/ysl" name="kernel_xiaomi_msm8953-ysl" remote="device_xiaomi_ysl" revision="lineage-16.0" />
+
+</manifest>
