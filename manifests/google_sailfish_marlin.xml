@@ -10,8 +10,5 @@
 
 <project path="external/puffin" name="LineageOS/android_external_puffin" />
 
-<project path="device/google/contexthub" name="device/google/contexthub" groups="device,marlin,pdk" remote="aosp" />
-<project path="external/tinyxml" name="platform/external/tinyxml" groups="pdk" remote="aosp" />
-
 </manifest>
 
