@@ -71,6 +71,12 @@ else
 
     DEVICE_TREE=$REPO_ROOT/device/$VENDOR/$DEVICE
 
+    # Hack: Google Pixel 2 was wrongly announced as muskie, and then changed to walleye codename
+    # we need to check muskie repo here instead of walleye since LineageOS did a crazy hack too
+    if [[ ( $VENDOR = "google" ) && ( $DEVICE = "walleye" ) ]]; then
+        DEVICE_TREE=$REPO_ROOT/device/$VENDOR/muskie
+    fi
+
     # Hack: Google Pixel has lazy device tree structure, 2 devices in one
     if [[ ( $VENDOR = "google" ) && ( $DEVICE = "sailfish" ) ]]; then
         DEVICE_TREE=$REPO_ROOT/device/$VENDOR/marlin
@@ -80,11 +86,11 @@ else
 
     echo "*******************************************"
     if [ -f $DEVICE_TREE/setup-makefiles.sh ]; then
-        echo "I: Refreshing device vendor repository: device/$VENDOR/$DEVICE"
+        echo "I: Refreshing device vendor repository: device/$VENDOR/$(basename $DEVICE_TREE)"
         (
             cd $DEVICE_TREE
             for i in $(find . -name "*proprietary-*.txt"); do
-                echo "I: Processing proprietary blob file: device/$VENDOR/$DEVICE/$i"
+                echo "I: Processing proprietary blob file: device/$VENDOR/$(basename $DEVICE_TREE)/$i"
                 grep -r -v -E '(^.*\.{1}(jar|apk)[|]?.*)' $i >$i".tmp" && mv $i".tmp" $i
             done
             # Set executable bit, needed for some device trees
@@ -115,14 +121,14 @@ else
     # ",context=u....:s0" from the fstab file(s) in the $DEVICE folder so we can
     # mount the partitions without issues
     cd $DEVICE_TREE && for j in $(find . -name "fstab.*"); do
-        echo "I: Processing fstab file: device/$VENDOR/$DEVICE/$j"
+        echo "I: Processing fstab file: device/$VENDOR/$(basename $DEVICE_TREE)/$j"
         sed -r 's/(,context=.*:s0)//' $j >$j".tmp" && mv $j".tmp" $j
     done
 
     # Since we don't have SettingsLib, remove components that rely on it (which we therefore also don't use)
     # such as CMActions/LineageActions, KeyHandler and Doze. Simply removing the folder will disable them.
     cd $DEVICE_TREE
-    echo "I: Removing components relying on SettingsLib from: device/$VENDOR/$DEVICE"
+    echo "I: Removing components relying on SettingsLib from: device/$VENDOR/$(basename $DEVICE_TREE)"
     removeUnneededFolders
 
     # Loop through values in $DEVICE_COMMON_TEMP
