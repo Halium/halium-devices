@@ -2,23 +2,21 @@
 <manifest>
     <remote name="guf" fetch="git://github.com/stefanomelchior" />
     <remote name="beidl" fetch="git://github.com/fredldotme" />
-
+    <remote name="ubp" fetch="git://github.com/ubports" />
     <remove-project path="bootable/recovery" name="android_bootable_recovery" />
     <remove-project path="external/toybox" name="android_external_toybox" />
     <remove-project path="system/core" name="Halium/android_system_core" />
-     <!-- to correct vendor issue -->
-    <remote name="guf" fetch="git://github.com/stefanomelchior" />
-
+     <!-- to enhance recovery -->
     <project path="external/gpg" name="android_external_gpg" revision="halium-7.1" remote="beidl" />
     <project path="bootable/recovery" name="android_bootable_recovery" remote="beidl" revision="ubp-7.1" />
     <project path="external/toybox" name="android_external_toybox" revision="halium-7.1" remote="beidl" />
     <project path="system/core" name="Halium/android_system_core" groups="pdk" remote="hal" revision="halium-7.1-adbroot" />
+    <project path="halium/biometryd" name="ubports/biometryd" revision="xenial_-_fingerprint-halium-7.1" remote="hal" />
     <!-- Specific for tenshi's porting -->
-    <project path="device/bq/tenshi" name="Halium/android_device_bq_tenshi" remote="hal" revision="halium-7.1"/>
+    <project path="device/bq/tenshi" name="Halium/android_device_bq_tenshi" remote="hal" revision="guf-tenshi"/>
     <project path="kernel/bq/msm8937" name="Halium/android_kernel_bq_msm8937" remote="hal" revision="guf-tenshi-branch" />
-    <!-- Sources from Mer 
     <project path="vendor/bq" name="proprietary_vendor_bq" remote="them" />
-    -->
-    <project path="vendor/bq/tenshi" name="android_vendor_bq_tenshi" remote="guf" revision="master" />
+    <!-- Sources from Mer 
+    <project path="vendor/bq/tenshi" name="android_vendor_bq_tenshi" remote="guf" revision="guf-tenshi" /> -->
 
 </manifest>
