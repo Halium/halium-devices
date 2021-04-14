@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+      <!-- Remotes for LineageOS and TheMuppets repositories -->
+      <remote name="los"
+              fetch="https://github.com/LineageOS/"
+              revision="lineage-16.0" />
+      <remote name="them"
+              fetch="https://github.com/TheMuppets"
+              revision="lineage-16.0" />
+        <!-- Linux kernel 4.x (Android) -->
+        <project path="kernel/motorola/sdm632" name="android_kernel_motorola_sdm632" remote="los" revision="lineage-16.0" />
+        <!-- Device configuration -->
+        <project path="device/motorola/river" name="android_device_motorola_river" remote="los" revision="lineage-16.0" />
+        <project path="device/motorola/sdm632-common" name="android_device_motorola_sdm632-common" remote="los" revision="lineage-16.0" />
+        <!-- Vendor blobs -->
+        <project path="vendor/motorola/" name="proprietary_vendor_motorola" remote="them" revision="lineage-16.0" />
+</manifest>
