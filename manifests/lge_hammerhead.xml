@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest> 
+    <project path="device/lge/hammerhead" name="Tofee/android_device_lge_hammerhead" revision="halium-9.0" />
+    <project path="kernel/lge/hammerhead" name="nexus5oof/kernel_lge_hammerhead" revision="lineage-16.0" />
+    <project path="vendor/lge" name="nexus5oof/vendor_lge" revision="lineage-16.0" />
+
+    <!-- Inclusion of GPG that was introduced with https://github.com/Halium/android/commit/8e43a9652d0aecc3a5cb462362aa8a1efd44e647 causes issues on ARMV7 targets,  therefore revert these changes -->
+    <remove-project name="ubports/android_external_gpg" />
+    <remove-project name="ubports/halium_bootable_recovery" />
+    <project path="bootable/recovery" name="LineageOS/android_bootable_recovery" groups="pdk" />
+</manifest>
