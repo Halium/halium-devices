@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+  
+    <project path="device/hp/tenderloin" name="herrie82/android_device_hp_tenderloin" revision="halium-9.0" />
+    <project path="device/hp/tenderloin-common" name="herrie82/android_device_hp_tenderloin-common" revision="halium-9.0" />-->
+
+    <project path="hardware/atheros" name="DirtyUnicorns/android_hardware_atheros" revision="p9x-caf" />
+
+    <!--    <project path="kernel/htc/msm8960" name="herrie82/android_kernel_htc_msm8960-1" revision="halium-9.0-defconfig-test" />-->
+    <project path="kernel/htc/msm8960" name="herrie82/android_kernel_htc_msm8960" revision="halium-9.0" />
+
+    <!--<project path="vendor/hp" name="herrie82/android_vendor_hp" revision="halium-9.0" />-->
+    <project path="vendor/hp" name="herrie82/android_vendor_hp-1" revision="halium-9.0" />
+
+    <!-- replace CAF hardware repos with the patched ones from DirtyUnicorns -->
+    <remove-project name="LineageOS/android_hardware_qcom_audio" />
+    <remove-project name="LineageOS/android_hardware_qcom_display" />
+    <remove-project name="LineageOS/android_hardware_qcom_media" />
+    <project path="hardware/qcom/audio-caf/msm8960" name="DirtyUnicorns/android_hardware_qcom_audio" groups="qcom,qcom_audio,pdk-qcom" revision="p9x-caf-8960" />
+    <project path="hardware/qcom/display-caf/msm8960" name="DirtyUnicorns/android_hardware_qcom_display" groups="pdk-qcom,qcom,qcom_display" revision="p9x-caf-8960" />
+    <project path="hardware/qcom/media-caf/msm8960" name="DirtyUnicorns/android_hardware_qcom_media" groups="qcom,pdk-qcom" revision="p9x-caf-8960" />
+    
+    <remove-project name="ubports/android_external_gpg" />
+    <remove-project name="ubports/halium_bootable_recovery" />
+    <project path="bootable/recovery" name="LineageOS/android_bootable_recovery" groups="pdk" />
+</manifest>
