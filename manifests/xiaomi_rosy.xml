@@ -9,6 +9,6 @@
             revision="refs/heads/lineage-16.0" />
 
     <project path="device/xiaomi/rosy" name="Herrie82/android_device_xiaomi_rosy-2" revision="halium-9.0" />
-    <project path="kernel/xiaomi/rosy" name="Herrie82/android_kernel_xiaomi_rosy" revision="halium-9.0" />
+    <project path="kernel/xiaomi/rosy" name="Herrie82/android_kernel_xiaomi_rosy" revision="halium-9.0" sync-s="true" />
     <project path="vendor/xiaomi/rosy" name="Herrie82/android_vendor_xiaomi_rosy-1" revision="lineage-16.0" />
 </manifest>
