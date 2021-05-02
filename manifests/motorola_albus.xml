@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+	<remote name="jash"
+		fetch="https://github.com/jash-maester"
+		revision="halium-9.0_base" />
+	
+	<project path="device/motorola/albus" name="android_device_motorola_albus" remote="jash" />
+		
+	<!-- Project Dependencies -->
+	<project path="kernel/motorola/msm8953" name="kernel_motorola_msm8953" remote="jash" />
+	<project path="packages/resources/devicesettings" name="android_packages_resources_devicesettings" remote="jash" revision="lineage-16.0"/>
+	<project path="vendor/motorola" name="proprietary_vendor_motorola" remote="jash" />
+	<project path="external/bson" name="android_external_bson" remote="jash" revision="lineage-16.0" />
+
+</manifest>
