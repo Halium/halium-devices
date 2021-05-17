@@ -120,7 +120,7 @@ else
     # Since we don't use SELinux we want to make sure we remove the
     # ",context=u....:s0" from the fstab file(s) in the $DEVICE folder so we can
     # mount the partitions without issues
-    cd $DEVICE_TREE && for j in $(find . -name "fstab.*"); do
+    cd $DEVICE_TREE && for j in $(find . -name "fstab*"); do
         echo "I: Processing fstab file: device/$VENDOR/$(basename $DEVICE_TREE)/$j"
         sed -r 's/(,context=.*:s0)//' $j >$j".tmp" && mv $j".tmp" $j
     done
@@ -164,7 +164,7 @@ else
             # Since we don't use SELinux we want to make sure we remove the
             # ",context=u....:s0" from the fstab file(s) in the $DEVICE_COMMON
             # folder so we can mount the partitions without issues
-            cd $DEVICE_COMMON_TREE && for m in $(find . -name "fstab.*"); do
+            cd $DEVICE_COMMON_TREE && for m in $(find . -name "fstab*"); do
                 echo "I: Processing fstab file: device/$VENDOR/$m"
                 sed -r 's/(,context=.*:s0)//' $m >$m".tmp" && mv $m".tmp" $m
             done
@@ -237,7 +237,7 @@ else
             # Since we don't use SELinux we want to make sure we remove the
             # ",context=u....:s0" from the fstab file(s) in the $VENDOR_COMMON
             # folder so we can mount the partitions without issues
-            cd $VENDOR_COMMON_TREE && for m in $(find . -name "fstab.*"); do
+            cd $VENDOR_COMMON_TREE && for m in $(find . -name "fstab*"); do
                 echo "I: Processing fstab file: device/$VENDOR/$k/$m"
                 sed -r 's/(,context=.*:s0)//' $m >$m".tmp" && mv $m".tmp" $m
             done
