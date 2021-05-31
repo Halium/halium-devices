@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+
+    <remote name="abkro"
+            fetch="https://github.com/abkro/"
+	    revision="refs/tags/cm-14.1" />
+
+
+    <remote name="beidl" fetch="git://github.com/fredldotme" />
+
+    <project path="device/lge/h815" name="android_device_lge_h815" remote="abkro" revision="halium-7.1-ut" />
+    <project path="device/lge/g4-common" name="android_device_lge_g4-common" remote="abkro" revision="halium-7.1-ut" />
+    <project path="kernel/lge/msm8992" name="android_kernel_lge_msm8992" remote="abkro" revision="hal-7.1-bluetooth"/>
+    <project path="vendor/lge" name="proprietary_vendor_lge" remote="abkro" revision="cm-14.1"/>
+
+    <project path="external/gpg" name="android_external_gpg" revision="halium-7.1" remote="beidl" />
+    <remove-project path="external/toybox" name="android_external_toybox" />
+    <project path="external/toybox" name="android_external_toybox" revision="halium-7.1" remote="beidl" />
+
+    <remote name="ubp" fetch="https://github.com/ubports/" revision="halium-7.1" />
+    <remove-project path="bootable/recovery" name="android_bootable_recovery" />
+    <project path="bootable/recovery" name="android_bootable_recovery" remote="ubp" />
+
+    <remove-project path="system/core" name="Halium/android_system_core" />
+    <project path="system/core" name="Halium/android_system_core" groups="pdk" remote="hal" revision="halium-7.1-adbroot" />
+
+</manifest>
