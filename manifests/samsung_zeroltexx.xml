@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+	<remove-project path="external/stlport" name="android_external_stlport" />
+	<project path="device/samsung/zeroltexx" name="android_device_samsung_zeroltexx" remote="los" revision="cm-14.1" />
+	<project path="device/samsung/zero-common" name="android_device_samsung_zero-common" remote="los" revision="cm-14.1" />
+	<project path="external/stlport" name="android_external_stlport" remote="los" revision="cm-14.1" />
+	<project path="packages/apps/SamsungServiceMode" name="android_packages_apps_SamsungServiceMode" remote="los" revision="cm-14.1" />
+	<project path="hardware/samsung" name="android_hardware_samsung" remote="los" revision="cm-14.1" />
+	<project path="hardware/samsung_slsi-cm/exynos" name="android_hardware_samsung_slsi-cm_exynos" remote="los" revision="cm-14.1" />
+	<project path="hardware/samsung_slsi-cm/exynos5" name="android_hardware_samsung_slsi-cm_exynos5" remote="los" revision="cm-14.1" />
+	<project path="hardware/samsung_slsi-cm/exynos7420" name="android_hardware_samsung_slsi-cm_exynos7420" remote="los" revision="cm-14.1" />
+	<project path="hardware/samsung_slsi-cm/openmax" name="android_hardware_samsung_slsi-cm_openmax" remote="los" revision="cm-14.1" />
+	<project path="kernel/samsung/exynos7420" name="android_kernel_samsung_exynos7420" remote="los" revision="cm-14.1" />
+	<project path="vendor/samsung" name="proprietary_vendor_samsung" remote="them" revision="cm-14.1" />
+</manifest>
