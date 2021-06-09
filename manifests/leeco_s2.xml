@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<manifest>
+	<!--Kernel-->
+    <remote name="sin" fetch="https://github.com/TDSSingleton" revision="halium-7">
+	<project path="kernel/leeco/msm8976" name="android_kernel_leeco_s2" remote="sin"/>
+    <!-- Device configuration -->
+    <project path="device/leeco/s2" name="android_device_leeco_s2" revision="cm-14.1" remote="los"/>
+	<!--Burobbus-->
+    <!-- It seems that the Vendor Blobs are not needed, as they are on the device anyway in their own partition. Feel free to try compiling without the following project.-->
+    <project path="vendor/leeco/" name="proprietary_vendor_oneplus" remote="them"/>
+	</manifest>
