@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+
+    <remote name="exynos8895" 
+            fetch="https://github.com/exynos8895" 
+            revision="lineage-16.0" />
+    <remote name="LineageOS" 
+            fetch="https://github.com/LineageOS" 
+            revision="lineage-16.0" />
+            
+            
+    <project path="device/samsung/dreamlte" name="android_device_samsung_dreamlte" remote="exynos8895"/>
+    <project path="device/samsung/universal8895-common" name="android_device_samsung_universal8895-common" remote="exynos8895" />
+    
+    <project path="hardware/samsung" name="android_hardware_samsung" remote="LineageOS" />
+    <project path="kernel/samsung/universal8895" name="android_kernel_samsung_universal8895" remote="exynos8895" />
+    <project path="packages/resources/devicesettings" name="android_packages_resources_devicesettings" remote="LineageOS" />
+    
+    <project path="vendor/samsung/dreamlte" name="android_vendor_samsung_dreamlte" remote="exynos8895" />
+    <project path="vendor/samsung/universal8895-common" name="android_vendor_samsung_universal8895-common" remote="exynos8895" />
+</manifest>
