@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+
+<remote name="mathew"
+    fetch="https://github.com/mathew-dennis"
+    revision="Halium-7.1" />
+    
+    
+<project path="device/xiaomi/kenzo" name="android_device_xiaomi_kenzo" remote="mathew" revision="Halium-7.1" /> 
+  
+<project path="device/xiaomi/msm8956-common" name="android_device_xiaomi_msm8956-common" remote="mathew" revision="Halium-7.1" /> 
+
+<project path="vendor/xiaomi/" name="proprietary_vendor_xiaomi" remote="them2" revision="cm-14.1" /> 
+    
+<project path="kernel/xiaomi/msm8956" name="android_kernel_xiaomi_msm8956" remote="mathew" revision="Halium-7.1" />
+
+  
+</manifest>
