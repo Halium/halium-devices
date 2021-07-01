@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+    <remote
+        name="srt"
+        fetch="https://github.com/hassan556"
+        revision="halium-7.1" />
+
+  <project path="device/smartron/rimo02a" name="android_device_smartron_rimo02a"  remote="srt" />
+  <project path="kernel/smartron/msm8976" name="android_kernel_smartron_msm8976" remote="srt" />
+  <project path="vendor/smartron" name="proprietary_vendor_smartron" remote="srt" />
+</manifest>
