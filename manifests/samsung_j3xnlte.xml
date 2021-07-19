@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+		<remote	name="llm"
+				fetch="https://github.com/LegoLivesMatter"
+				revision="halium-7.1" />
+
+		<remote name="github"
+				fetch="https://github.com" />
+
+		<project path="device/samsung/j3xnlte" name="android_device_samsung_j3xnlte" remote="llm" revision="halium-7.1" />
+		<project path="device/samsung/sharkls-common" name="android_device_samsung_sharkls-common" remote="llm" revision="halium-7.1" />
+		<project path="kernel/samsung/sharkls" name="android_kernel_samsung_sharkls" remote="llm" revision="halium-7.1" />
+		<project path="vendor/sprd" name="android_vendor_sprd" remote="llm" revision="halium-7.1" />
+		<project path="system/bt" name="android_system_bt" remote="los" revision="cm-14.1" />
+		<project path="hardware/samsung" name="android_hardware_samsung" remote="los" revision="cm-14.1" />
+		<project path="vendor/samsung/common" name="djeman/android_vendor_samsung_common" remote="github" revision="cm-14.1" />
+</manifest>
