@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+  
+  <remote name="tree"
+          fetch="https://github.com/danascape" />
+  
+  <project path="device/xiaomi/olive" name="device_xiaomi_olive" remote="tree" revision="lineage-17.1" depth="1" />
+  <project path="vendor/xiaomi/olive" name="vendor_xiaomi_olive" remote="tree" revision="lineage-17.1" depth="1" />
+  <project path="kernel/xiaomi/olive" name="kernel_xiaomi_olive" remote="tree" revision="lineage-17.1-preb" depth="1" />
+</manifest>
