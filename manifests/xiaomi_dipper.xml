@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest> 
+    <remote name="istadem2077"
+            fetch="https://github.com/Ubuntu-Touch-Mi8/"
+            revision="lineage-16.0" />
+            
+    <project path="device/xiaomi/dipper" name="LineageOS/android_device_xiaomi_dipper" remote="github" revision="lineage-16.0" />
+    <project path="device/xiaomi/sdm845-common" name="LineageOS/android_device_xiaomi_sdm845-common" remote="github" revision="lineage-16.0" />
+
+    <project path="kernel/xiaomi/sdm845" name="LineageOS/android_kernel_xiaomi_sdm845" remote="github" revision="lineage-16.0" />
+    
+    <project path="vendor/xiaomi" name="proprietary-vendor-xiaomi" remote="istadem2077" revision="lineage-16.0"/>
+</manifest>
