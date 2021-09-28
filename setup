@@ -1,0 +1,227 @@
+#!/bin/bash
+
+function removeUnneededFolders {
+    rm -rf [Cc][Mm]actions
+    rm -rf [Ll]inage[Aa]ctions
+    rm -rf [Dd]oze
+    rm -rf [Kk]ey[Hh]andler
+}
+
+DEVICE=${1:=${DEVICE}}
+JOBS=${JOBS:=12}
+ARGS=($@)
+REPO_ARGS=(${ARGS[@]:1})
+
+DEVICES_ROOT="$(dirname "$(readlink -f "${0}")")"
+REPO_ROOT="$(readlink -f ${DEVICES_ROOT}/../../..)"
+
+if [ -z $DEVICE ]; then
+    echo "Please specify a device codename"
+    exit 0
+fi
+
+if ! [ -f $DEVICES_ROOT/manifests/*_$DEVICE.xml ]; then
+    echo "The given device is not supported. :("
+else
+    VENDOR=$(basename $DEVICES_ROOT/manifests/*_$DEVICE.xml | cut -d "_" -f1)
+    echo "*****************************************"
+    echo "I: Configuring for device $VENDOR"_"$DEVICE"
+    echo "*****************************************"
+
+    # Test if there is already a device configured and the folder exists
+    if [ -f $REPO_ROOT/.repo/local_manifests/device.xml ]; then
+        rm $REPO_ROOT/.repo/local_manifests/device.xml
+    elif ! [ -d $REPO_ROOT/.repo/local_manifests/ ]; then
+        mkdir $REPO_ROOT/.repo/local_manifests/
+    fi
+
+    # Link the device manifest to the local_manifests folder
+    ln $DEVICES_ROOT/manifests/$VENDOR"_"$DEVICE.xml $REPO_ROOT/.repo/local_manifests/device.xml
+
+    # Synchronize new new sources
+    repo sync --network-only -c -j$JOBS -q $REPO_ARGS
+    repo sync --local-only -c -j$JOBS -q $REPO_ARGS
+
+    # Refresh the device & common repositories so apks and jars are not copied
+    # For this to work, all apks and jars need to be removed from
+    # device/$VENDOR/$DEVICE/*proprietary-files*.txt and
+    # device/$VENDOR/$DEVICE_COMMON/*proprietary-files*.txt
+
+    # A device can have multiple commons as it seems, so we store them in
+    # DEVICE_COMMON_TEMP and loop through them later.
+    DEVICE_COMMON_TEMP=$(ls -d $REPO_ROOT/device/$VENDOR/*common* 2>/dev/null | rev | cut -d "/" -f1 | rev)
+    VENDOR_COMMON_TEMP=$(ls -d $REPO_ROOT/vendor/$VENDOR/*common* 2>/dev/null | rev | cut -d "/" -f1 | rev)
+
+    # OnePlus uses the device/oppo/common instead of expected device/oneplus/common for some targets.
+    # We use a small workaround in order to catch these as well.
+    if [ $VENDOR="oneplus" ]; then
+        DEVICE_COMMON_TEMP2=$(ls -d $REPO_ROOT/device/oppo/*common* 2>/dev/null | rev | cut -d "/" -f1 | rev)
+        VENDOR2="oppo"
+    fi
+
+    DEVICE_TREE=$REPO_ROOT/device/$VENDOR/$DEVICE
+    VENDOR_TREE=$REPO_ROOT/vendor/$VENDOR
+
+    echo "*******************************************"
+    if [ -f $DEVICE_TREE/setup-makefiles.sh ]; then
+        echo "I: Refreshing device vendor repository: device/$VENDOR/$DEVICE"
+        (
+            cd $DEVICE_TREE
+            for i in $(find . -name "*proprietary-*.txt"); do
+                echo "I: Processing proprietary blob file: device/$VENDOR/$DEVICE/$i"
+                grep -r -v -E '(^.*\.{1}(jar|apk)[|]?.*)' $i >$i".tmp" && mv $i".tmp" $i
+            done
+            # Set executable bit, needed for some device trees
+            chmod +x ./setup-makefiles.sh
+            # Actually run the script
+            ./setup-makefiles.sh
+        )
+    fi
+
+    # Since we don't use SELinux we want to make sure we remove the
+    # ",context=u....:s0" from the fstab file(s) in the $DEVICE folder so we can
+    # mount the partitions without issues
+    cd $DEVICE_TREE && for j in $(find . -name "fstab.*"); do
+        echo "I: Processing fstab file: device/$VENDOR/$DEVICE/$j"
+        sed -r 's/(,context=.*:s0)//' $j >$j".tmp" && mv $j".tmp" $j
+    done
+
+    # Since we don't have SettingsLib, remove components that rely on it (which we therefore also don't use)
+    # such as CMActions/LineageActions, KeyHandler and Doze. Simply removing the folder will disable them.
+    cd $DEVICE_TREE
+    echo "I: Removing components relying on SettingsLib from: device/$VENDOR/$DEVICE"
+    removeUnneededFolders
+
+    # Loop through values in $DEVICE_COMMON_TEMP
+    if [ -n "$DEVICE_COMMON_TEMP" ]; then
+        for k in $DEVICE_COMMON_TEMP; do
+            echo "I: Procession device vendor common folder: device/$VENDOR/$k"
+            DEVICE_COMMON_TREE=$REPO_ROOT/device/$VENDOR/$k
+
+            # We need to have $VENDOR, $DEVICE and $DEVICE_COMMON or
+            # $PLATFORM_COMMON available for setup-makefiles.sh in the common
+            # repository, therefore export them.
+            export VENDOR
+            export DEVICE
+            DEVICE_COMMON_HOLDER=$DEVICE_COMMON
+            export DEVICE_COMMON=${DEVICE_COMMON:=$k}
+            PLATFORM_COMMON_HOLDER=$PLATFORM_COMMON
+            export PLATFORM_COMMON=${PLATFORM_COMMON:=$DEVICE_COMMON}
+
+            if [ -f $DEVICE_COMMON_TREE/setup-makefiles.sh ]; then
+                (
+                    cd $DEVICE_COMMON_TREE
+                    for l in $(find . -name "*proprietary-*.txt"); do
+                        echo "I: Processing proprietary blob file: device/$VENDOR/$k/$l"
+                        grep -r -v -E '(^.*\.{1}(jar|apk)[|]?.*)' $l >$l".tmp" && mv $l".tmp" $l
+                    done
+                    # Set executable bit, needed for some device trees
+                    chmod +x ./setup-makefiles.sh
+                    # Actually run the script
+                    ./setup-makefiles.sh
+                )
+            fi
+
+            # Since we don't use SELinux we want to make sure we remove the
+            # ",context=u....:s0" from the fstab file(s) in the $DEVICE_COMMON
+            # folder so we can mount the partitions without issues
+            cd $DEVICE_COMMON_TREE && for m in $(find . -name "fstab.*"); do
+                echo "I: Processing fstab file: device/$VENDOR/$m"
+                sed -r 's/(,context=.*:s0)//' $m >$m".tmp" && mv $m".tmp" $m
+            done
+
+            # Since we don't have SettingsLib, remove components that rely on it (which we therefore also don't use)
+            # such as CMActions/LineageActions, KeyHandler and Doze. Simply removing the folder will disable them.
+            cd $DEVICE_COMMON_TREE
+            echo "I: Removing components relying on SettingsLib from: device/$VENDOR/$k"
+            removeUnneededFolders
+
+            # Since we can have multiple common repos we need to make sure to set
+            # back the original values in case they exist. Otherwise unset the value.
+            if [ -n "$DEVICE_COMMON_HOLDER" ]; then
+                DEVICE_COMMON=$DEVICE_COMMON_HOLDER
+            else
+                unset DEVICE_COMMON
+            fi
+            if [ -n "$PLATFORM_COMMON_HOLDER" ]; then
+                PLATFORM_COMMON=$PLATFORM_COMMON_HOLDER
+            else
+                unset PLATFORM_COMMON
+            fi
+        done
+    fi
+
+    # Loop through values in $DEVICE_COMMON_TEMP2 for certain OnePlus target
+    if [ -n "$DEVICE_COMMON_TEMP2" ]; then
+        for k in $DEVICE_COMMON_TEMP2; do
+            echo "I: Procession device vendor common folder: device/$VENDOR2/$k"
+            DEVICE_COMMON_TREE2=$REPO_ROOT/device/$VENDOR2/$k
+
+            # Since we don't have SettingsLib, remove components that rely on it (which we therefore also don't use)
+            # such as CMActions/LineageActions, KeyHandler and Doze. Simply removing the folder will disable them.
+            cd $DEVICE_COMMON_TREE2
+            echo "I: Removing components relying on SettingsLib from: device/$VENDOR2/$k"
+            removeUnneededFolders
+        done
+    fi
+
+    # Loop through values in $VENDOR_COMMON_TEMP
+    if [ -n "$VENDOR_COMMON_TEMP" ]; then
+        for k in $VENDOR_COMMON_TEMP; do
+            echo "I: Processing vendor vendor common folder: /vendor/$VENDOR/$k"
+            VENDOR_COMMON_TREE=$REPO_ROOT/vendor/$VENDOR/$k
+
+            # We need to have $VENDOR, $DEVICE and $DEVICE_COMMON or
+            # $PLATFORM_COMMON available for setup-makefiles.sh in the common
+            # repository, therefore export them.
+            export VENDOR
+            export DEVICE
+            DEVICE_COMMON_HOLDER=$DEVICE_COMMON
+            export DEVICE_COMMON=${DEVICE_COMMON:=$k}
+            PLATFORM_COMMON_HOLDER=$PLATFORM_COMMON
+            export PLATFORM_COMMON=${PLATFORM_COMMON:=$DEVICE_COMMON}
+
+            if [ -f $VENDOR_COMMON_TREE/setup-makefiles.sh ]; then
+                (
+                    cd $VENDOR_COMMON_TREE
+                    for l in $(find . -name "*proprietary-*.txt"); do
+                        echo "I: Processing proprietary blob file: $VENDOR_COMMON_TREE/$l"
+                        grep -r -v -E '(^.*\.{1}(jar|apk)[|]?.*)' $l >$l".tmp" && mv $l".tmp" $l
+                    done
+                    # Set executable bit, needed for some device trees
+                    chmod +x ./setup-makefiles.sh
+                    # Actually run the script
+                    ./setup-makefiles.sh
+                )
+            fi
+
+            # Since we don't use SELinux we want to make sure we remove the
+            # ",context=u....:s0" from the fstab file(s) in the $VENDOR_COMMON
+            # folder so we can mount the partitions without issues
+            cd $VENDOR_COMMON_TREE && for m in $(find . -name "fstab.*"); do
+                echo "I: Processing fstab file: device/$VENDOR/$k/$m"
+                sed -r 's/(,context=.*:s0)//' $m >$m".tmp" && mv $m".tmp" $m
+            done
+
+            # Since we don't have SettingsLib, remove components that rely on it (which we therefore also don't use)
+            # such as CMActions/LineageActions, KeyHandler and Doze. Simply removing the folder will disable them.
+            cd $VENDOR_COMMON_TREE
+            echo "I: Removing components relying on SettingsLib from: device/$VENDOR/$k"
+            removeUnneededFolders
+
+            # Since we can have multiple common repos we need to make sure to set
+            # back the original values in case they exist. Otherwise unset the value.
+            if [ -n "$DEVICE_COMMON_HOLDER" ]; then
+                DEVICE_COMMON=$DEVICE_COMMON_HOLDER
+            else
+                unset DEVICE_COMMON
+            fi
+            if [ -n "$PLATFORM_COMMON_HOLDER" ]; then
+                PLATFORM_COMMON=$PLATFORM_COMMON_HOLDER
+            else
+                unset PLATFORM_COMMON
+            fi
+        done
+    fi
+    echo "*******************************************"
+fi
