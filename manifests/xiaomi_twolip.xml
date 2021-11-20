@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+
+  <remote name="device"
+	  fetch="https://github.com/LineageOS" 
+	  revision="lineage-16.0" />	  
+	  
+  <remote name="vendor"
+	  fetch="https://github.com/ShivamKumarJha"
+	  revision="e3edcb5d08bb1cecfcb9e9e52dac86a597cb82d0" />
+	  
+  <remote name="kernel"
+	  fetch="https://github.com/Genom-Project"
+	  revision="tulip-aosp-pie"/>
+ 
+  <!-- Halium device For Twolip -->
+  <project path="device/xiaomi/twolip" name="android_device_xiaomi_twolip" remote="device"/>
+  
+  <!-- Halium device-common For Twolip -->
+  <project path="device/xiaomi/sdm660-common" name="android_device_xiaomi_sdm660-common" remote="device"/>
+
+  <!-- Halium vendor For Twolip -->
+  <project path="vendor/xiaomi" name="proprietary_vendor_xiaomi" remote="vendor"/>
+  
+  <!-- Halium kernel For Twolip -->
+  <project path="kernel/xiaomi/sdm660" name="android_kernel_xiaomi_tulip" remote="kernel"/>
+  
+  <!-- Halium extras For Twolip -->
+  <project path="packages/resources/devicesettings" name="android_packages_resources_devicesettings" remote="device"/>
+  
+</manifest>
