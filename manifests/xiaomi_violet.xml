@@ -19,4 +19,8 @@
   <project path="vendor/xiaomi/violet"
     name="android_vendor_xiaomi_violet"
     remote="ubuntu-touch-xiaomi-violet" />
+
+  <project path="vendor/ubports/fm-bridge"
+    name="fm-bridge"
+    remote="ubuntu-touch-xiaomi-violet" />
 </manifest>
