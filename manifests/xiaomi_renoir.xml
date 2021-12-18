@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+<remote name="renoirdev"
+    fetch="https://github.com/renoir-development"
+    revision="lineage-18.1" />
+<project path="device/xiaomi/renoir" name="android_device_xiaomi_renoir" remote="renoirdev" />
+<project path="device/xiaomi/sm8350-common" name="android_device_xiaomi_sm8350-common" remote="renoirdev" />
+<project path="kernel/xiaomi/sm7350" name="android_kernel_xiaomi_sm7350" remote="renoirdev" />
+<project path="vendor/xiaomi" name="proprietary_vendor_xiaomi" remote="renoirdev" />
+</manifest>
