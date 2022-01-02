@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+  <project path="device/xiaomi/surya" name="android_device_xiaomi_surya" remote="los" />
+  <project path="hardware/xiaomi" name="android_hardware_xiaomi" remote="los" />
+  <project path="kernel/xiaomi/surya" name="android_kernel_xiaomi_surya" remote="los" />
+  <remote name="los"
+    fetch="https://github.com/LineageOS"
+    revision="lineage-18.1" />
+</manifest>
