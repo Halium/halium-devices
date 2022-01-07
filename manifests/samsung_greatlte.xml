@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+
+<remote name="pig"
+    fetch="https://github.com/pillarsingame"
+    revision="lineage-16.0" />
+
+<project path="device/samsung/greatlte" name="android_device_samsung_greatlte" remote="pig" />
+
+<project path="device/samsung/universal8895-common" name="android_device_samsung_universal8895-common" remote="pig" />
+
+</manifest>
