@@ -5,8 +5,11 @@
     fetch="https://github.com/pillarsingame"
     revision="lineage-16.0" />
 
-<project path="device/samsung/greatlte" name="android_device_samsung_greatlte" remote="pig" />
+<project path="vendor/samsung/greatlte" name="android_vendor_samsung_greatlte" remote="pig" />
 
+<project path="device/samsung/greatlte" name="android_device_samsung_greatlte" remote="pig" />
 <project path="device/samsung/universal8895-common" name="android_device_samsung_universal8895-common" remote="pig" />
+
+<project path="kernel/samsung/universal8895" name="android_kernel_samsung_universal8895" remote="pig" />
 
 </manifest>
