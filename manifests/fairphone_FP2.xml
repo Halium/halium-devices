@@ -4,7 +4,7 @@
     <project path="kernel/fairphone/msm8974" name="Halium/android_kernel_fairphone_msm8974" remote="hal" />
     <project path="vendor/fairphone" name="proprietary_vendor_fairphone" remote="them" />
 
-    <remote name="beidl" fetch="git://github.com/fredldotme" />
+    <remote name="beidl" fetch="https://github.com/fredldotme" />
 
     <project path="external/gpg" name="android_external_gpg" revision="halium-7.1" remote="beidl" />
     <remove-project path="external/toybox" name="android_external_toybox" />

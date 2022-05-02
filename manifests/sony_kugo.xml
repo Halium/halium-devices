@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
-    <remote name="kelmes" fetch="git://github.com/kelmes" />
-    <remote name="beidl" fetch="git://github.com/fredldotme" />
-    <remote name="sony" fetch="git://github.com/sonyxperiadev" />
-    <remote name="nxp" fetch="git://github.com/NXPNFCProject/" />
-    <remote name="mer-hybris" fetch="git://github.com/mer-hybris" />
-    <remote name="peat-psuwit" fetch="git://github.com/peat-psuwit" />
+    <remote name="kelmes" fetch="https://github.com/kelmes" />
+    <remote name="beidl" fetch="https://github.com/fredldotme" />
+    <remote name="sony" fetch="https://github.com/sonyxperiadev" />
+    <remote name="nxp" fetch="https://github.com/NXPNFCProject/" />
+    <remote name="mer-hybris" fetch="https://github.com/mer-hybris" />
+    <remote name="peat-psuwit" fetch="https://github.com/peat-psuwit" />
 
     <remove-project path="bootable/recovery" name="android_bootable_recovery" />
     <remove-project path="device/qcom/sepolicy" name="android_device_qcom_sepolicy" />

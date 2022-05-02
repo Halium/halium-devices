@@ -7,7 +7,7 @@
     <project path="device/huawei/angler" name="android_device_huawei_angler" remote="Flohack74" />
     <project path="kernel/huawei/angler" name="android_kernel_huawei_angler" remote="Flohack74" />
 
-    <remote name="beidl" fetch="git://github.com/fredldotme" />
+    <remote name="beidl" fetch="https://github.com/fredldotme" />
     <project path="external/gpg" name="android_external_gpg" revision="halium-7.1" remote="beidl" />
     <remove-project path="external/toybox" name="android_external_toybox" />
     <project path="external/toybox" name="android_external_toybox" revision="halium-7.1" remote="beidl" />

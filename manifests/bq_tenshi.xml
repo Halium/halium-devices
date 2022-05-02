@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
-    <remote name="guf" fetch="git://github.com/stefanomelchior" />
-    <remote name="beidl" fetch="git://github.com/fredldotme" />
-    <remote name="ubp" fetch="git://github.com/ubports" />
+    <remote name="guf" fetch="https://github.com/stefanomelchior" />
+    <remote name="beidl" fetch="https://github.com/fredldotme" />
+    <remote name="ubp" fetch="https://github.com/ubports" />
     <remove-project path="bootable/recovery" name="android_bootable_recovery" />
     <remove-project path="external/toybox" name="android_external_toybox" />
     <remove-project path="system/core" name="Halium/android_system_core" />
