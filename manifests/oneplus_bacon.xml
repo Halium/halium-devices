@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
 
-    <remote name="beidl" fetch="git://github.com/fredldotme" />
+    <remote name="beidl" fetch="https://github.com/fredldotme" />
 
     <project path="vendor/oneplus" name="proprietary_vendor_oneplus" remote="them" />
    

@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
     <remote name="mun" fetch="https://github.com/WolfLink115" revision="cm-14.1" />
-    <remote name="beidl" fetch="git://github.com/fredldotme" />
-    <remote name="rargente" fetch="git://github.com/Rargente" />
+    <remote name="beidl" fetch="https://github.com/fredldotme" />
+    <remote name="rargente" fetch="https://github.com/Rargente" />
     
     <remove-project path="external/toybox" name="android_external_toybox" />
     <remove-project path="bootable/recovery" name="android_bootable_recovery" />

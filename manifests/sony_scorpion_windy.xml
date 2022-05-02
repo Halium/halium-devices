@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
-    <remote name="sony" fetch="git://github.com/sonyxperiadev" />
-    <remote name="NXP" fetch="git://github.com/NXPNFCProject" />
+    <remote name="sony" fetch="https://github.com/sonyxperiadev" />
+    <remote name="NXP" fetch="https://github.com/NXPNFCProject" />
     <remote name="flup" fetch="https://gitlab.com/thefluppets/" />
     <remote name="lnj" fetch="https://gitlab.com/lnj" revision="halium-7.1" />
 
