@@ -11,9 +11,15 @@ DEVICE=${1:=${DEVICE}}
 JOBS=${JOBS:=12}
 ARGS=($@)
 REPO_ARGS=(${ARGS[@]:1})
+IS_LINUX=$(uname -s | grep -q "Linux" && echo 1 || echo 0)
 
-DEVICES_ROOT="$(dirname "$(readlink -f "${0}")")"
-REPO_ROOT="$(readlink -f ${DEVICES_ROOT}/../../..)"
+if [ "$IS_LINUX" == "1" ]; then
+    DEVICES_ROOT="$(dirname "$(readlink -f "${0}")")"
+    REPO_ROOT="$(readlink -f ${DEVICES_ROOT}/../..)"
+else
+    DEVICES_ROOT="$( cd -- "$(dirname "$0")" >/dev/null 2>&1 ; pwd -P )"
+    REPO_ROOT="${DEVICES_ROOT}/../../.."
+fi
 
 if [ -z $DEVICE ]; then
     echo "Please specify a device codename"
