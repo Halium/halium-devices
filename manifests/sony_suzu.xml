@@ -6,7 +6,6 @@
     <remote name="mer-hybris" fetch="https://github.com/mer-hybris" />
     <remote name="peat-psuwit" fetch="https://github.com/peat-psuwit" />
 
-    <remove-project path="bootable/recovery" name="android_bootable_recovery" />
     <remove-project path="device/qcom/sepolicy" name="android_device_qcom_sepolicy" />
     <remove-project path="external/toybox" name="android_external_toybox" />
     <remove-project path="hardware/qcom/audio" name="Halium/android_hardware_qcom_audio" />
@@ -16,7 +15,6 @@
     <remove-project path="system/core" name="Halium/android_system_core" />
     <remove-project path="vendor/qcom/opensource/dataservices" name="android_vendor_qcom_opensource_dataservices" />
 
-    <project path="bootable/recovery" name="android_bootable_recovery" remote="beidl" revision="ubp-7.1" />
 
     <project path="device/sony/suzu" name="device-sony-suzu" revision="n-mr1-ubports" remote="beidl" />
     <project path="device/sony/loire" name="device-sony-loire" revision="n-mr1-ubports" remote="beidl" />

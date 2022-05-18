@@ -18,8 +18,6 @@
     <project path="external/toybox" name="android_external_toybox" revision="halium-7.1" remote="beidl" />
 
     <remote name="ubp" fetch="https://github.com/ubports/" revision="halium-7.1" />
-    <remove-project path="bootable/recovery" name="android_bootable_recovery" />
-    <project path="bootable/recovery" name="android_bootable_recovery" remote="ubp" />
 
     <remove-project path="system/core" name="Halium/android_system_core" />
     <project path="system/core" name="Halium/android_system_core" groups="pdk" remote="hal" revision="halium-7.1-adbroot" />

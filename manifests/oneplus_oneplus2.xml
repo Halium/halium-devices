@@ -7,11 +7,9 @@
       fetch="https://github.com/fredldotme" />
     
     
-    <remove-project path="bootable/recovery" name="android_bootable_recovery" />
     <remove-project path="external/toybox" name="android_external_toybox" />
     <remove-project path="system/core" name="Halium/android_system_core" />
 
-    <project path="bootable/recovery" name="android_bootable_recovery" remote="beidl" revision="ubp-7.1" />
 
     <project path="device/oneplus/oneplus2" name="Halium/android_device_oneplus_oneplus2" remote="hal" />
     <project path="device/oppo/common" name="android_device_oppo_common" remote="los" />

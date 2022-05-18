@@ -30,11 +30,9 @@
     <remote name="ubp" fetch="https://github.com/ubports" />
 
     <!-- Recovery Repos -->
-    <remove-project path="bootable/recovery" name="android_bootable_recovery" />
     <remove-project path="external/toybox" name="android_external_toybox" />
     <remove-project path="system/core" name="Halium/android_system_core" />
     <remove-project path="vendor/cm" name="Halium/android_vendor_cm" />
-    <project path="bootable/recovery" name="android_bootable_recovery" remote="tyg" revision="halium-7.1" />
     <project path="external/gpg" name="android_external_gpg" revision="halium-7.1" remote="beidl" />
     <project path="external/toybox" name="android_external_toybox" revision="halium-7.1" remote="beidl" />
     <project path="system/core" name="Halium/android_system_core" groups="pdk" remote="hal" revision="halium-7.1-adbroot" />
