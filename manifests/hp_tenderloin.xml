@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
     <remote name="evervolv"
-            fetch="git://github.com/Evervolv/"
+            fetch="https://github.com/Evervolv/"
             revision="lollipop-5.1"
             review="review.evervolv.com"/>
 
