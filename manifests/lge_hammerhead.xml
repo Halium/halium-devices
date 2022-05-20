@@ -5,4 +5,8 @@
     <project path="kernel/lge/hammerhead" name="herrie82/android_kernel_lge_hammerhead" remote="hal" revision="halium-7.1" />
 
     <project path="vendor/lge" name="proprietary_vendor_lge" remote="them" />
+
+    <remote name="beidl" fetch="https://github.com/fredldotme" />
+    <project path="external/gpg" name="android_external_gpg" revision="halium-7.1" remote="beidl" />
+
 </manifest> 
