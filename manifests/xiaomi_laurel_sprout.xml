@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
-    <remote name="laurel" fetch="git://github.com/laurelsprouthalium" revision="halium-9.0" />
+    <remote name="laurel" fetch="https://github.com/laurelsprouthalium" revision="halium-9.0" />
     <project path="device/xiaomi/laurel_sprout" name="device" remote="laurel" />
     <project path="kernel/xiaomi/laurel_sprout" name="kernel" remote="laurel" />
     <project path="vendor/xiaomi/laurel_sprout" name="vendor" remote="laurel" />
