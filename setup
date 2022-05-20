@@ -15,7 +15,7 @@ IS_LINUX=$(uname -s | grep -q "Linux" && echo 1 || echo 0)
 
 if [ "$IS_LINUX" == "1" ]; then
     DEVICES_ROOT="$(dirname "$(readlink -f "${0}")")"
-    REPO_ROOT="$(readlink -f ${DEVICES_ROOT}/../..)"
+    REPO_ROOT="$(readlink -f ${DEVICES_ROOT}/../../..)"
 else
     DEVICES_ROOT="$( cd -- "$(dirname "$0")" >/dev/null 2>&1 ; pwd -P )"
     REPO_ROOT="${DEVICES_ROOT}/../../.."
