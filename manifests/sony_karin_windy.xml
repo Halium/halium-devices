@@ -10,4 +10,7 @@
     <project path="kernel/sony/msm8994" name="ubports/android_kernel_sony_msm8994" remote="hal" />
 
     <project path="vendor/sony" name="proprietary_vendor_sony" remote="them" />
+
+    <remote name="beidl" fetch="https://github.com/fredldotme" />
+    <project path="external/gpg" name="android_external_gpg" revision="halium-7.1" remote="beidl" />
 </manifest>
