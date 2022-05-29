@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
+    <remote name="beidl" fetch="https://github.com/fredldotme" />
     <project path="device/sony/karin_windy" name="ubports/android_device_sony_karin_windy" remote="hal" />
     <project path="device/sony/kitakami-common" name="ubports/android_device_sony_kitakami-common" remote="hal" />
-    <project path="device/sony/common" name="android_device_sony_common" remote="los" />
+    <project path="device/sony/common" name="device-sony-common" revision="n-mr1-ubports" remote="beidl" />
 
     <project path="hardware/sony/timekeep" name="android_hardware_sony_timekeep" remote="los" />
     <project path="hardware/broadcom/fm" name="android_hardware_broadcom_fm" remote="los" />
@@ -11,6 +12,5 @@
 
     <project path="vendor/sony" name="proprietary_vendor_sony" remote="them" />
 
-    <remote name="beidl" fetch="https://github.com/fredldotme" />
     <project path="external/gpg" name="android_external_gpg" revision="halium-7.1" remote="beidl" />
 </manifest>
