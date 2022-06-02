@@ -35,6 +35,13 @@ else
     repo sync --network-only -c -j$JOBS -q $REPO_ARGS
     repo sync --local-only -c -j$JOBS -q $REPO_ARGS
 
+    # Bail out here if repo sync has an error. Else this can lead to corrupted builds
+    # It is not enough to rely on previous repo sync by the user
+    if [ $? -ne 0 ]; then
+        echo "repo sync failed, check your device manifest. Stopping..."
+        exit 1
+    fi
+    
     # Refresh the device & common repositories so apks and jars are not copied
     # For this to work, all apks and jars need to be removed from
     # device/$VENDOR/$DEVICE/*proprietary-files*.txt and
