@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+  
+  <remote name="tree"
+          fetch="https://github.com/Ghost-ate-your-brains" />
+  
+  <project path="device/xiaomi/olive" name="android_device_xiaomi_olive"
+           remote="tree" revision="halium-10.0" depth="1" />
+  <project path="vendor/xiaomi/olive" name="proprietary_vendor_xiaomi_olives"
+           remote="tree" revision="halium-10.0" depth="1" />
+  <project path="kernel/xiaomi/olive" name="android_kernel_xiaomi_olive"
+           remote="tree" revision="halium-10.0" depth="1" />
+  
+</manifest>
