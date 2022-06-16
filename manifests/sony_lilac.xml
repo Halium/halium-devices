@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+	<!-- This branch works good but it is no longer updated as whatawurst focused on newer LOS versions -->
+	<remote
+		name="whatawurst"
+		fetch="https://github.com/whatawurst"
+		revision="lineage-16.0" />
+        
+	<!-- Kernel, Treble, Common platform, Device, Blobs-->
+	<project path="kernel/sony/msm8998" name="android_kernel_sony_msm8998" remote="whatawurst" />
+	<project path="device/sony/common-treble" name="android_device_sony_common-treble" remote="whatawurst" />
+	<project path="device/sony/yoshino" name="android_device_sony_yoshino" remote="whatawurst" />
+	<project path="device/sony/lilac" name="android_device_sony_lilac" remote="whatawurst" />
+	<project path="vendor/sony/lilac" name="android_vendor_sony_lilac" remote="whatawurst" />
+    
+	<!-- WARNING! Some blobs need to be extracted with dedicated script as publishing them on repo may not be lawful -->
+</manifest>
