@@ -19,5 +19,9 @@
   <project name="android_device_oppo_common" path="device/oppo/common" remote="lineage" depth="1" />
   <project name="proprietary_vendor_oneplus" path="vendor/oneplus" remote="muppets" depth="1" />
   <project name="proprietary_vendor_oppo" path="vendor/oppo" remote="muppets" depth="1" />
+  
+  <remove-project path="hybris-patches" name="Halium/hybris-patches" />
+
+  <project name="Halium/hybris-patches" path="hybris-patches" revision="halium-9.0-arm32" depth="1" />
 
 </manifest>
