@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+    <!-- Device -->
+    <project name="j1xlte-gtelwifiue/android_device_samsung_j1xlte" remote="github" revision="lineage-17.1" path="device/samsung/j1xlte"/>
+    <project name="j1xlte-gtelwifiue/android_device_samsung_universal3475-common" remote="github" revision="lineage-17.1" path="device/samsung/universal3475-common"/>
+    
+    <!--Kernel Source-->
+    <project name="j1xlte-gtelwifiue/android_kernel_samsung_exynos3475" remote="github" revision="lineage-17.1" path="kernel/samsung/exynos3475"/>
+
+    <!--Proprietary Blobs-->
+    <project name="j1xlte-gtelwifiue/android_vendor_samsung" remote="github" revision="lineage-17.1" path="vendor/samsung"/>
+
+    <!-- Toolchain -->
+    <project name="Exynos3475/android_prebuilts_gcc_linux-x86_arm_arm-eabi-4.8" remote="github" revision="android-7.1.2_r36" path="prebuilts/gcc/linux-x86/arm/arm-eabi-4.8"/>
+
+    <!--hardware trees-->
+    <project name="Exynos3475/android_hardware_samsung_slsi_exynos3475" path="hardware/samsung_slsi/exynos3475" remote="github" revision="lineage-17.1" />
+    <project name="Exynos3475/android_hardware_samsung_slsi_exynos" path="hardware/samsung_slsi/exynos" remote="github" revision="lineage-17.1" />
+    <project name="LineageOS/android_hardware_samsung_slsi_exynos5" path="hardware/samsung_slsi/exynos5" remote="github" revision="lineage-17.1" />
+    <project name="LineageOS/android_hardware_samsung_slsi_openmax" path="hardware/samsung_slsi/openmax" remote="github" revision="lineage-17.1" />
+    <project name="LineageOS/android_hardware_samsung" path="hardware/samsung" remote="github" revision="lineage-17.1" />
+
+    <!--hybris- and halium- boot-->
+    <project name="Halium/hybris-boot" path="halium/hybris-boot" remote="github" revision="toybox" />
+    <project name="Halium/halium-boot" path="halium/halium-boot" remote="github" revision="halium-9.0" />
+</manifest>
