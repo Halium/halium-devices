@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+	<project path="device/motorola/nash" name="LineageOS/android_device_motorola_nash" revision="lineage-16.0" />
+	<project path="vendor/motorola" name="erfanoabdi/proprietary_vendor_motorola" revision="lineage-16.0" />
+	<project path="kernel/motorola/sdm660" name="moto-SDM660/android_kernel_motorola_sdm660" revision="halium-9.0" />
+</manifest>
