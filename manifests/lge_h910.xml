@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+    <remote name="walid"
+            fetch="https://github.com/ubports-lg-v20/"/>
+
+    <project name="android_device_lge_h910" path="device/lge/h910" revision="halium-9.0" remote="walid" />
+    <project name="LineageOS/android_device_lge_v20-common" path="device/lge/v20-common" remote="github" revision="lineage-16.0" />
+    <project name="android_device_lge_msm8996-common" path="device/lge/msm8996-common" remote="walid" revision="halium-9.0" />
+    <project name="LineageOS/android_device_lge_common" path="device/lge/common" remote="github" revision="lineage-16.0" />
+    <project name="android_kernel_lge_msm8996" path="kernel/lge/msm8996" remote="walid" revision="halium-9.0" />
+    <project name="TheMuppets/proprietary_vendor_lge" path="vendor/lge" remote="github" revision="lineage-16.0" />
+</manifest>
+
