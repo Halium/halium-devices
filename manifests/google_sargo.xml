@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
+    <remote name="ubports-reference-devices" fetch="https://gitlab.com/ubports/porting/reference-device-ports" revision="halium-9.0" />
     <remote name="beidl" fetch="https://github.com/fredldotme" revision="halium-9.0" />
 
-    <project path="device/google/bonito" name="android_device_google_bonito" remote="beidl" />
-    <project path="kernel/google/bonito" name="android_kernel_google_bonito" remote="beidl" />
+    <project path="device/google/bonito" name="android_device_google_bonito" remote="ubports-reference-devices" />
+    <project path="kernel/google/bonito" name="android_kernel_google_bonito" remote="ubports-reference-devices" />
     <project path="vendor/google" name="proprietary_vendor_google" remote="beidl" />
 </manifest>
