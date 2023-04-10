@@ -8,7 +8,7 @@ removeUnneededFolders () {
 }
 
 stripCommonFolder () {
-    echo "I: Processing vendor common folder: /$1/$2/$3"
+    echo "I: Processing common folder: /$1/$2/$3"
     VENDOR_COMMON_TREE=$REPO_ROOT/$1/$2/$3
 
     # We need to have $VENDOR, $DEVICE and $DEVICE_COMMON or
