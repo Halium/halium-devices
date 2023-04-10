@@ -84,7 +84,7 @@ if [ -z $DEVICE ]; then
     exit 0
 fi
 
-for f in `ls $DEVICES_ROOT/manifests/*.xml`
+for f in "$DEVICES_ROOT"/manifests/*.xml
 do
     if [[ $f =~ $DEVICE_REGEX ]]; then
         VENDOR=${BASH_REMATCH[1]}
@@ -126,7 +126,7 @@ else
 
     # OnePlus uses the device/oppo/common instead of expected device/oneplus/common for some targets.
     # We use a small workaround in order to catch these as well.
-    if [ $VENDOR="oneplus" ]; then
+    if [ "$VENDOR" = "oneplus" ]; then
         DEVICE_COMMON_TEMP2=$(ls -d $REPO_ROOT/device/oppo/*common* 2>/dev/null | rev | cut -d "/" -f1 | rev)
         VENDOR_COMMON_TEMP2=$(ls -d $REPO_ROOT/vendor/oppo/*common* 2>/dev/null | rev | cut -d "/" -f1 | rev)
         VENDOR2="oppo"
