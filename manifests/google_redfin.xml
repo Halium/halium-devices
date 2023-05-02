@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+  
+    <remote name="los"
+            fetch="https://github.com/LineageOS"
+            revision="lineage-19.0" />
+            
+    <remote name="them"
+            fetch="https://github.com/stier7"
+            revision="12.1" />
+  <project path="device/google/redfin" name="android_device_google_redfin" remote="los" />
+  <project path="device/google/redbull" name="android_device_google_redbull" remote="los" />
+  <project path="kernel/google/redbull" name="android_kernel_google_redbull" remote="los" />
+  <project path="vendor/google/redfin" name="vendor_google_redfin" remote="them" />
+</manifest>
