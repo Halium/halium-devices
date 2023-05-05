@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+	<remote name="ubports"
+		fetch="https://github.com/Practice2001"
+		revision="cm-14.1" />
+	
+	<project path="device/motorola/taido" name="android_device_motorola_taido" remote="ubports" />
+		
+	<!-- Project Dependencies -->
+	<project path="kernel/motorola/mt6735" name="android_kernel_motorola_mt6735" remote="ubports" />
+	<project path="vendor/motorola" name="proprietary_vendor_motorola" remote="ubports" />
+
+</manifest>
