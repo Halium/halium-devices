@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+  <!-- Remotes -->
+  <remote name="ubuntu-touch-xiaomi-gucci"
+    fetch="https://github.com/Mayankgaj"
+    revision="halium-9.0"/>
+
+    <!-- Device Tree -->
+  <project path="device/xiaomi/gucci"
+    name="android_device_xiaomi_gucci"
+    remote="ubuntu-touch-xiaomi-gucci" />
+    
+    <!-- Common Device Tree -->
+  <project path="device/cyanogen/msm8916-common"
+    name="android_device_cyanogen_msm8916-common"
+    remote="ubuntu-touch-xiaomi-gucci" />
+
+    <!-- Kernel -->
+  <project path="kernel/xiaomi/gucci"
+    name="android_kernel_xiaomi_gucci"
+    remote="ubuntu-touch-xiaomi-gucci" />
+
+    <!-- Proprietary/Vendor blobs -->
+  <project path="vendor/xiaomi/gucci"
+    name="android_vendor_xiaomi_gucci"
+    remote="ubuntu-touch-xiaomi-gucci" />
+</manifest>
