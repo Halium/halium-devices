@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+    <remote name="leap" fetch="https://github.com/leapofazzam123" revision="cm-14.1" />
+    <project path="device/lenovo/a6000" name="android_device_lenovo_a6000" remote="leap" />
+    <project path="kernel/lenovo/a6000" name="android_kernel_lenovo_a6000" remote="leap" />
+    <project path="vendor/lenovo" name="proprietary-vendor_lenovo" remote="leap" />
+</manifest>
