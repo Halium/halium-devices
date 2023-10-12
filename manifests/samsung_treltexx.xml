@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+    <remote name="github" fetch="https://github.com/" />
+    <remote name="los"
+            fetch="https://github.com/LineageOS"
+            revision="refs/heads/cm-14.1" />
+
+    <project name="vbsampath/android_kernel_samsung_exynos5433" path="kernel/samsung/exynos5433" revision="cm-14.1-treltexx" remote="github"/>
+    <project name="edp17/android_device_samsung_treltexx" path="device/samsung/treltexx" revision="cm-14.1" remote="github"/>
+    <project name="vbsampath/android_device_samsung_trelte-common" path="device/samsung/trelte-common" revision="cm-14.1" remote="github"/>
+    <project name="vbsampath/hybris-boot" path="hybris/hybris-boot" revision="cm-14.1-treltexx" remote="github"/>
+    <!--<project name="vbsampath/android" path="\.repo/manifests" revision="hybris-14.1" remote="github"/>-->
+    <project name="edp17/proprietary_vendor_samsung" path="vendor/samsung" revision="cm-14.1-treltexx" remote="github" />
+    <project name="edp17/android_hardware_samsung_slsi-cm_exynos5433" path="hardware/samsung_slsi-cm/exynos5433" revision="cm-14.1" remote="github"/>
+    <project name="dl12345/android_hardware_samsung_slsi-cm_openmax" path="hardware/samsung_slsi-cm/openmax" revision="cm-14.1" remote="github"/>
+    <project name="LineageOS/android_hardware_samsung_slsi-cm_exynos" path="hardware/samsung_slsi-cm/exynos" revision="cm-14.1" remote="github"/>
+    <project name="vbsampath/android_hardware_samsung" path="hardware/samsung" revision="cm-14.1" remote="github"/>
+    <project name="LineageOS/android_hardware_samsung_slsi-cm_exynos5" path="hardware/samsung_slsi-cm/exynos5" revision="cm-14.1" remote="github"/>
+    <project name="android_system_bt" path="system/bt" remote="los" revision="cm-14.1" />
+    <!--<project name="LineageOS/android_external_bluetooth_bluedroid" path="external/bluetooth/bluedroid" revision="bt-next" remote="github"/>-->
+    <!--<project name="LineageOS/android_external_stlport" path="external/stlport" revision="cm-14.1" remote="github"/>-->
+    <!--<project name="edp17/droid-hal-treltexx" path="rpm/" revision="master" />
+    <project name="edp17/droid-config-treltexx" path="hybris/droid-configs" revision="master" />
+    <project name="edp17/droid-hal-version-treltexx" path="hybris/droid-hal-version-treltexx" revision="master" />-->
+</manifest>
