@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
 
-  <remote name="ubports"
-          fetch="https://github.com/UBports"
+  <remote name="device-repo"
+          fetch="https://gitlab.com/ubports/porting/community-ports/android9/oneplus-one"
           revision="halium-9.0" />
 
   <remote name="muppets"
@@ -13,9 +13,9 @@
           fetch="https://github.com/LineageOS"
           revision="lineage-16.0" />
 
-  <project name="android_device_oneplus_bacon-1" path="device/oneplus/bacon" remote="ubports" depth="1" />
-  <project name="android_kernel_oneplus_msm8974" path="kernel/oneplus/msm8974" remote="ubports" depth="1" />
-  <project name="android_device_oppo_msm8974-common" path="device/oppo/msm8974-common" remote="ubports" depth="1" />
+  <project name="android_device_oneplus_bacon" path="device/oneplus/bacon" remote="device-repo" depth="1" />
+  <project name="android_kernel_oneplus_msm8974" path="kernel/oneplus/msm8974" remote="device-repo" depth="1" />
+  <project name="android_device_oppo_msm8974-common" path="device/oppo/msm8974-common" remote="device-repo" depth="1" />
   <project name="android_device_oppo_common" path="device/oppo/common" remote="lineage" depth="1" />
   <project name="proprietary_vendor_oneplus" path="vendor/oneplus" remote="muppets" depth="1" />
   <project name="proprietary_vendor_oppo" path="vendor/oppo" remote="muppets" depth="1" />
