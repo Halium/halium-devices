@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+    <remote name="honor5xjimdo" fetch="https://github.com/honor5xjimdo" revision="lineage-16.0" />
+    <project path="device/huawei/kiwi" name="android_device_huawei_kiwi" remote="honor5xjimdo" revision="lineage-16.0" />
+    <project path="kernel/huawei/kiwi" name="android_kernel_huawei_kiwi" remote="honor5xjimdo" revision="lineage-16.0" />
+    <project path="vendor/huawei" name="proprietary_vendor_huawei" remote="honor5xjimdo" revision="lineage-16.0" />
+</manifest>
