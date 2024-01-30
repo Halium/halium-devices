@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+<remote name="dirty" fetch="https://github.com/yuweiyuan8" revision="refs/heads/cm-14.1" />
+<project path="device/asus/Z00A" name="android_device_asus_Z00A" remote="los" />
+<project path="device/asus/mofd-common" name="android_device_asus_mofd-common" remote="los" />
+<project path="kernel/asus/moorefield" name="android_kernel_asus_moorefield" remote="dirty" />
+<project path="vendor/asus" name="proprietary_vendor_asus" remote="them" />
+</manifest>
