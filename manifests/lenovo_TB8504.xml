@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+        <remote name="tb8504"
+                fetch="https://github.com/TB8504"
+                revision="halium-9.0" />
+        <project path="device/lenovo/TB8504" name="device_lenovo_TB8504" remote="tb8504" />
+        <project path="kernel/lenovo/msm8917" name="kernel_lenovo_msm8917" remote="tb8504" />
+        <project path="vendor/lenovo/TB8504" name="vendor_lenovo_TB8504" remote="tb8504" />
+</manifest>
