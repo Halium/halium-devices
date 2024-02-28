@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+  <project path="device/lge/bullhead" name="bullhead-ubuntu-touch/device_lge_bullhead" remote="github" revision="halium-9.0"/>
+  <project path="kernel/lge/bullhead" name="bullhead-ubuntu-touch/kernel_lge_bullhead" remote="github" revision="halium-9.0" />
+  <project path="vendor/lge" name="bullhead-ubuntu-touch/vendor_lge" remote="github" revision="pie" />
+</manifest>
+
