@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+
+	<remote name="parmjot"
+	    fetch="https://github.com/Parmjot-Singh"
+	    revision="halium-9.0" />
+	    
+	<remote name="halium-10"
+	    fetch="https://github.com/Halium"
+	    revision="halium-10.0" />
+
+	<project path="device/samsung/dreamlte" name="android_device_samsung_dreamlte" remote="parmjot"/>
+	<project path="device/samsung/dream2lte" name="android_device_samsung_dream2lte" remote="parmjot"/>
+	<project path="device/samsung/greatlte" name="android_device_samsung_greatlte" remote="parmjot"/>
+	<project path="device/samsung/universal8895-common" name="android_device_samsung_universal8895-common" remote="parmjot"/>
+	
+	<project path="kernel/samsung/universal8895" name="android_kernel_samsung_universal8895" remote="parmjot"/>
+	
+	<project path="vendor/samsung/dreamlte" name="android_vendor_samsung_dreamlte" remote="parmjot"/>
+	<project path="vendor/samsung/dream2lte" name="android_vendor_samsung_dream2lte" remote="parmjot"/>
+	<project path="vendor/samsung/greatlte" name="android_vendor_samsung_greatlte" remote="parmjot"/>
+	<project path="vendor/samsung/universal8895-common" name="android_vendor_samsung_universal8895-common" remote="parmjot"/>
+	
+	<project path="hardware/samsung" name="android_hardware_samsung" remote="parmjot"/>
+
+	<project path="vendor/halium/config" name="android_vendor_halium_config" remote="halium-10"/>
+</manifest>
