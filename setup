@@ -140,9 +140,13 @@ else
         DEVICE_TREE=$REPO_ROOT/device/$VENDOR/muskie
     fi
 
-    # Hack: Google Pixel has lazy device tree structure, 2 devices in one
+    # Hack: Google Pixel phones have lazy device tree structure, 2 devices in one
     if [[ ( $VENDOR = "google" ) && ( $DEVICE = "sailfish" ) ]]; then
         DEVICE_TREE=$REPO_ROOT/device/$VENDOR/marlin
+    fi
+    
+    if [[ ( $VENDOR = "google" ) && ( $DEVICE = "sargo" ) ]]; then
+        DEVICE_TREE=$REPO_ROOT/device/$VENDOR/bonito
     fi
 
     VENDOR_TREE=$REPO_ROOT/vendor/$VENDOR
