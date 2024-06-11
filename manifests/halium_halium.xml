@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+    <project path="device/halium/halium" name="Halium/android_device_halium_halium" revision="halium-13.0" />
+</manifest>
