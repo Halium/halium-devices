@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+    Copyright (C) 2020 luka177 <github.com/luka177>
+-->
+<manifest>
+    <!-- Remotes -->
+    <remote name="halium-on-karnak" fetch="https://github.com/halium-on-karnak" revision="halium-9" />
+
+    <!-- Device Tree -->
+    <project path="device/amazon/karnak" name="android_device_amazon_karnak" remote="halium-on-karnak" />
+
+    <!-- Kernel -->
+    <project path="kernel/amazon/karnak" name="android_kernel_amazon_karnak_4.9" remote="halium-on-karnak" />
+
+    <!-- Proprietary/Vendor blobs -->
+    <project path="vendor/amazon/karnak" name="android_vendor_amazon_karnak" remote="halium-on-karnak" />
+    
+    <!-- Proprietary/Vendor common tree -->
+    <project path="vendor/amazon/mt8163" name="android_vendor_amazon_mt8163" remote="halium-on-karnak" />
+    
+    <!-- This fixes build on armhf -->
+    <remove-project name="ubports/android_external_gpg" />
+    
+</manifest>
