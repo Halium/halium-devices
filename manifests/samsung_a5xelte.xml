@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+<remote name="lineage"
+    fetch="https://github.com/LineageOS"
+    revision="lineage-16.0" />
+<remote name="arca"
+    fetch="https://github.com/ArcaEge"
+    revision="lineage-16.0" />
+
+<!-- Device -->
+<project path="device/samsung/a5xelte" name="android_device_samsung_a5xelte" remote="lineage"/>
+<project path="device/samsung/universal7580-common" name="android_device_samsung_universal7580-common" remote="lineage"/>
+<!-- Hardware -->
+<project path="hardware/samsung" name="android_hardware_samsung" remote="lineage"/>
+<project path="hardware/samsung_slsi/exynos" name="android_hardware_samsung_slsi_exynos" remote="lineage"/>
+<project path="hardware/samsung_slsi/exynos5" name="android_hardware_samsung_slsi_exynos5" remote="lineage"/>
+<project path="hardware/samsung_slsi/exynos7580" name="android_hardware_samsung_slsi_exynos7580" remote="lineage"/>
+<project path="hardware/samsung_slsi/openmax" name="android_hardware_samsung_slsi_openmax" remote="lineage"/>
+<!-- Kernel -->
+<project path="kernel/samsung/universal7580" name="android_kernel_samsung_universal7580" remote="lineage"/>
+<!-- Vendor -->
+<project path="vendor/samsung" name="proprietary_vendor_samsung_a5xelte" remote="arca"/>
+</manifest>
