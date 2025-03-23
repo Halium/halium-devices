@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+	<!-- MOTOROLA MOTO G200 XPENG 7W7 -->
+	<remote name = "xpng"
+            fetch = "https://github.com/LineageOS"
+            revision = "lineage-20" 
+    />
+    <remote name = "vndor"
+            fetch = "https://github.com/TheMuppets"
+            revision = "lineage-20" 
+    />
+    
+    <!-- DEVICE REPOSITORY -->
+	<project path="device/motorola/xpeng" name="android_device_motorola_xpeng" remote="xpng" revision="lineage-20" />
+	
+	<!-- DEPENDENCY REPOSITORIES -->
+	<project path="device/motorola/sm7325-common" name="android_device_motorola_sm7325-common" remote="xpng" revision="lineage-20" />
+	<project path="vendor/motorola/xpeng" name="proprietary_vendor_motorola_xpeng" remote="vndor" revision="lineage-20" />
+</manifest>
