@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+  <project name="Exynos2100-common/android_vendor_samsung_universal2100-common" path="vendor/samsung/universal2100-common" revision="14" remote="github"/>
+  <project name="Exynos2100-common/android_vendor_samsung_p3s" path="vendor/samsung/p3s" revision="14" remote="github"/>
+  <project name="Exynos2100-common/android_vendor_samsung_o1s" path="vendor/samsung/o1s" revision="lineage-21" remote="github"/>
+  <project name="Exynos2100-common/android_vendor_samsung_r9s" path="vendor/samsung/r9s" revision="lineage-21" remote="github"/>
+  <project name="Exynos2100-common/android_device_samsung_universal2100-common" path="device/samsung/universal2100-common" revision="lineage-21-bsp" remote="github"/>
+  <project name="Exynos2100-common/android_device_samsung_p3s" path="device/samsung/p3s" revision="lineage-21" remote="github"/>
+  <project name="Exynos2100-common/android_device_samsung_o1s" path="device/samsung/o1s" revision="lineage-21" remote="github"/>
+  <project name="Exynos2100-common/android_device_samsung_r9s" path="device/samsung/r9s" revision="lineage-21" remote="github"/>
+  <project name="Exynos2100-common/android_hardware_samsung_slsi-linaro_graphics" path="hardware/samsung_slsi-linaro/graphics" revision="14" remote="github"/>
+  <project name="Exynos2100-common/android_hardware_samsung_slsi-linaro_exynos" path="hardware/samsung_slsi-linaro/exynos" revision="14" remote="github"/>
+  <project name="Exynos2100-common/android_hardware_samsung_slsi-linaro_config" path="hardware/samsung_slsi-linaro/config" revision="lineage-21" remote="github"/>
+  <project name="Exynos2100-common/android_hardware_samsung_slsi-linaro_exynos5" path="hardware/samsung_slsi-linaro/exynos5" revision="14" remote="github"/>
+  <project name="Exynos2100-common/android_hardware_samsung_slsi-linaro_openmax" path="hardware/samsung_slsi-linaro/openmax" revision="lineage-21" remote="github"/>
+  <project name="Exynos2100-common/android_kernel_samsung_universal2100" path="kernel/samsung/universal2100" revision="FWK2" remote="github"/>
+  <project name="Exynos2100-common/android_hardware_samsung-ext_interfaces" path="hardware/samsung-ext/interfaces" revision="lineage-21" remote="github"/>
+  <project name="Exynos2100-common/android_hardware_samsung_slsi-linaro_interfaces" path="hardware/samsung_slsi-linaro/interfaces" revision="lineage-21" remote="github"/>
+  <project name="Exynos2100-common/vendor_firmware" path="vendor/firmware" revision="lineage-21" remote="github"/>
+  <project name="Exynos2100-common/android_hardware_samsung" path="hardware/samsung" revision="14" remote="github"/>
+  <project name="Exynos2100-common/android_device_samsung_slsi_sepolicy" path="device/samsung_slsi/sepolicy" revision="lineage-21" remote="github"/>
+</manifest>
