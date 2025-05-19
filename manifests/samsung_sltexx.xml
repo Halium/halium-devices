@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+<remote name="local" fetch="https://github.com/trlef19" />
+<project path="device/samsung/sltexx" name="android_device_samsung_sltexx" remote="local" revision="AUDIOHW"/>
+<project path="packages/apps/SamsungServiceMode" name="android_packages_apps_SamsungServiceMode" remote="los" revision="cm-14.1"/>
+<project path="hardware/samsung" name="android_hardware_samsung" remote="los" revision="cm-14.1"/>
+<project path="hardware/samsung_slsi-cm/exynos" name="android_hardware_samsung_slsi-cm_exynos" remote="los" revision="cm-14.1"/>
+<project path="hardware/samsung_slsi-cm/exynos5" name="android_hardware_samsung_slsi-cm_exynos5" remote="los" revision="cm-14.1"/>
+<project path="hardware/samsung_slsi-cm/openmax" name="android_hardware_samsung_slsi-cm_openmax" remote="los" revision="cm-14.1"/>
+<project path="hardware/samsung_slsi-cm/exynos5430" name="android_hardware_samsung_slsi_exynos5430" remote="local" revision="cm-14.1"/>
+<project path="kernel/samsung/slte" name="android_kernel_samsung_slte" remote="local" revision="cm-14.1"/>
+<project path="vendor/samsung" name="proprietary_vendor_samsung" revision="cm-14.1" remote="them" />
+</manifest>
